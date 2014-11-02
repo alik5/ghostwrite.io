@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ghostwrite.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @ghostwrite.string %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @ghostwrite.content %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @ghostwrite.text %>
+</p>
+
+<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
+<%= link_to 'Back', ghostwrites_path %>

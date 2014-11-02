@@ -1,0 +1,2 @@
+module GhostwritesHelper
+end
