@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .jumbotron {
  	max-width: 100%; 
  	display: block; 
@@ -27,4 +28,17 @@
 	float: left;
 	margin-left: 45%; 
 	width: 10%;   
+}
+
+
+
+.font {
+  font-family: 'Raleway Dots', cursive;
+  color: #0AE8B3;
+  font-size: 3em;
+  position: relative;  
+  z-index: 3; 
+  margin-left: 35%; 
+  margin-top: -10%; 
+  margin-bottom: 40px; 
 }

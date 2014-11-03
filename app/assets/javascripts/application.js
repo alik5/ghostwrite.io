@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+      $(".element").typed({
+        strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
+        typeSpeed: 100
+      });
+
+      console.log('hi');
+      
+});
