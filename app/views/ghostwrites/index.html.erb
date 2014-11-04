@@ -1,7 +1,7 @@
 
 
-
-  <div class="head_and_body">
+<body>
+ <div class= 'ghostwrite_body'>
     <div class = "instructions">
       <li><%= image_tag "logo2.png", class: "logo-img-all"%></li>
       <span class = "element"></span>
@@ -13,16 +13,19 @@
            <p><%= ghostwrite.content%></p>
             <div class="meta">
               <%= link_to time_ago_in_words(ghostwrite.created_at) + " ago", ghostwrite %>
-              <span class="admin">
-              |<%= link_to "Edit", edit_ghostwrite_path(ghostwrite) %> |
-              <%= link_to "Delete", ghostwrite, method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+            <span class="admin">
+            |<%= link_to "Edit", edit_ghostwrite_path(ghostwrite) %> |
+            <%= link_to "Delete", ghostwrite, method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
            </span>
             </div>
         </div>
-         <%= image_tag "linedpaper.png", class: "background-img-all"%>
 
     </div>
-  </div>
-
+</body>
 
 <%end%>
+  <footer>
+    <div class= "container" id="wrap">
+      <p>Copywrite Ghostwrite.io<p>
+    </div>  
+</footer>
