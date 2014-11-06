@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 module GhostwriteIo
   class Application < Rails::Application
 
+    config.paths['app/views'] << "app/views/devise"
+
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

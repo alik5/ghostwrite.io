@@ -13,8 +13,12 @@
 		<div class="navbar-inner">
  			<div class="container">
  				<a href="#" class="brand"> Ghostwrite </a>
- 				<ul class="nav>"
+ 				<ul class="nav">
  					<li><%= link_to "All Ghostwrites", ghostwrites_path%> </li>
+ 				</ul>
+ 				<ul class="nav pull-right">
+ 					<li><%= link_to current_user.first_name %><%= link_to current_user.last_name %></li>
+
  				</ul>
  			</div>
 		</div>	
