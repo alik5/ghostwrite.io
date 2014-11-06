@@ -12,12 +12,20 @@
 	<div class =" navbar navbar-fixed-top">
 		<div class="navbar-inner">
  			<div class="container">
- 				<a href="#" class="brand"> Ghostwrite </a>
+ 				<%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
  				<ul class="nav">
- 					<li><%= link_to "All Ghostwrites", ghostwrites_path%> </li>
+ 					<li><%= link_to "All Ghostwrites", ghostwrites_path %> </li>
  				</ul>
- 				<ul class="nav pull-right">
- 					<li><%= link_to current_user.first_name %><%= link_to current_user.last_name %></li>
+ 					<li class="navbar-text pull-right">
+					<% if user_signed_in? %>
+ 					 Logged in as <strong><%= current_user.email %></strong>.
+  					<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+					<% else %>
+  					<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+ 					<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+						<% end %>
+ 					</li>
 
  				</ul>
  			</div>
