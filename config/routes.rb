@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
  # get 'user/index'
 
-    devise_for :users,
-                sign_out_via: [:post, :delete]
+    devise_for :users
  
 
     root 'welcome#index'
@@ -28,7 +27,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-      get 'modal/index' => 'modal#index'
+    #  get 'modal/index' => 'modal#index'
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

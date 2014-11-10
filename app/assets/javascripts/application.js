@@ -24,26 +24,14 @@ $(document).ready(function(){
       
 });
 
-$(document).on('open', '.remodal', function () {
-    console.log('open');
+
+$(function(){ $('#contactform').slidinglabels({ 
+/* these are all optional */ 
+  className : 'form-slider', // the class you're wrapping the label & input with -> default = slider 
+  topPosition : '5px', // how far down you want each label to start 
+  leftPosition : '5px', // how far left you want each label to start 
+  axis : 'x', // can take 'x' or 'y' for slide direction 
+  speed : 'fast' // can take 'fast', 'slow', or a numeric value 
+  }); 
 });
 
-$(document).on('opened', '.remodal', function () {
-    console.log('opened');
-});
-
-$(document).on('close', '.remodal', function () {
-    console.log('close');
-});
-
-$(document).on('closed', '.remodal', function () {
-    console.log('closed');
-});
-
-$(document).on('confirm', '.remodal', function () {
-    console.log('confirm');
-});
-
-$(document).on('cancel', '.remodal', function () {
-    console.log('cancel');
-});

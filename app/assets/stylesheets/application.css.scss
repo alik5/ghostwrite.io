@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+
 body {
 	width: 100%;
 	height: 100%; 
@@ -75,6 +78,30 @@ opacity: 1;
 	
 }
 
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.form_body {
+	padding-top: 45px; 
+	margin-left: 42%;
+}
+
+.button_body {
+
+	font-family: 'Delius Unicase', cursive;
+}
+
+
+.header_text {
+	font-family: 'Delius Unicase', cursive;
+	padding-bottom: 10px; 
+}
+
+i {
+	font-size: .5em; 
+}
 
 
 
