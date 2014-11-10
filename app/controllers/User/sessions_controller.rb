@@ -2,11 +2,11 @@ class User::SessionsController < Devise::SessionsController
 
   #before_filter :configure_sign_in_params, only: [:create]
 
-controller :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-    end
+#controller :sessions do
+#    get 'login' => :new
+ #   post 'login' => :create
+#    delete 'logout' => :destroy
+#    end
 
   #GET /resource/sign_in
   #def new

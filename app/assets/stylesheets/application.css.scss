@@ -88,9 +88,21 @@ opacity: 1;
 	margin-left: 42%;
 }
 
-.button_body {
+.button_body ul {
 
-	font-family: 'Delius Unicase', cursive;
+	list-style-type: none; 
+	text-align: center;
+	background-image: url(notebook.png);
+	padding: 15px; 
+	opacity: 0.8; 
+
+}
+
+.button_body li {
+	margin-bottom: 30px; 
+	margin-top: 55px; 
+	z-index: 1;
+
 }
 
 
@@ -102,6 +114,26 @@ opacity: 1;
 i {
 	font-size: .5em; 
 }
+
+button {
+	font-family: 'Coming Soon', cursive;
+	border: none;
+	font-size: 1.6em; 
+	background-color: transparent;
+	padding: 20px;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	border-radius: 8em/9em;
+	color: #8F8F8F;
+}
+
+#name {
+	margin-top: -10px; 
+	float: left; 
+	font-weight: bold;  
+}
+
+
+
 
 
 

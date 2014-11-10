@@ -7,13 +7,13 @@ aria-hidden="	true">
   <h2>Sign up</h2>
 
   <%= simple_form_for(:user, :url => session_path(:user)) do |f| %>
-  <%= f.text_field :first_name, label: 'First Name' %>
-  <%= f.text_field :last_name, label: 'Last Name' %>
-  <%= f.text_field :profile_name, label: 'Profile Name' %>
-  <%= f.text_field :email %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  <%= f.submit 'Sign up' %>
+  <%= f.input :first_name, label: 'First Name' %>
+  <%= f.input :last_name, label: 'Last Name' %>
+  <%= f.input :profile_name, label: 'Profile Name' %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation, autocomplete: "off" %>
+  <%= f.input'Sign up' %>
 <% end %>
 
  
