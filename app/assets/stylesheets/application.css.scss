@@ -58,7 +58,8 @@ opacity: 1;
  .logo-img-all {
  	width: 33%;
  	padding-bottom: -10px; 
- 	margin-left: -60px; 
+ 	margin-left: 25px; 
+ 
  }
 
  .element {
@@ -113,20 +114,6 @@ i {
 	font-size: .5em; 
 }
 
-button {
-	font-family: 'Coming Soon', cursive;
-	border: none;
-	font-size: 1.3em; 
-	background-color: transparent;
-	padding: 20px;
-	box-shadow: 3px 3px 5px 6px #ccc;
-	border-radius: 8em/9em;
-	color: #8F8F8F;
-}
-
-button:hover {
-	color: #0AE8B3;
-}
 
 #name {
 	font-family: 'Coming Soon', cursive;
@@ -151,6 +138,11 @@ button:hover {
 .list li{
 	margin-top: 70px;
 	
+}
+
+.main li {
+	margin: 40px; 
+	list-style: none; 
 }
 
 
