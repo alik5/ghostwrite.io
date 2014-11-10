@@ -19,7 +19,7 @@
 body {
 	width: 100%;
 	height: 100%; 
-	background-color: #525252;
+	background-color: white;
 }
 
 .ghostwrite {
@@ -58,6 +58,7 @@ opacity: 1;
  .logo-img-all {
  	width: 33%;
  	padding-bottom: -10px; 
+ 	margin-left: -60px; 
  }
 
  .element {
@@ -88,21 +89,18 @@ opacity: 1;
 	margin-left: 42%;
 }
 
-.button_body ul {
+.button_body .list {
 
 	list-style-type: none; 
 	text-align: center;
 	background-image: url(notebook.png);
-	padding: 15px; 
-	opacity: 0.8; 
+	padding: 15px;
 
 }
 
-.button_body li {
-	margin-bottom: 30px; 
+.button_body {
+	margin-bottom: 100px; 
 	margin-top: 55px; 
-	z-index: 1;
-
 }
 
 
@@ -118,7 +116,7 @@ i {
 button {
 	font-family: 'Coming Soon', cursive;
 	border: none;
-	font-size: 1.6em; 
+	font-size: 1.3em; 
 	background-color: transparent;
 	padding: 20px;
 	box-shadow: 3px 3px 5px 6px #ccc;
@@ -126,11 +124,37 @@ button {
 	color: #8F8F8F;
 }
 
-#name {
-	margin-top: -10px; 
-	float: left; 
-	font-weight: bold;  
+button:hover {
+	color: #0AE8B3;
 }
+
+#name {
+	font-family: 'Coming Soon', cursive;
+	font-size: 1.2em; 
+}
+
+#time {  
+	font-family: 'Coming Soon', cursive;
+	font-size: .8em; 
+
+}
+
+.button_body .nameanddate {
+	float: left;
+	list-style: none; 
+	padding: 5px; 
+	margin-top: 10px; 
+	text-align: left; 
+	
+}
+
+.list li{
+	margin-top: 70px;
+	
+}
+
+
+
 
 
 
