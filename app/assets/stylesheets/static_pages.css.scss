@@ -1,3 +1,35 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ ul {
+
+	list-style: none; 
+
+	
+}
+
+.first-row li {
+	padding-bottom: 25px; 
+}
+
+.second-row li {
+	padding-bottom: 25px;
+}
+
+
+
+.first-row {
+	float: left;
+	margin-left: 30%; 
+	font-size: .8em; 
+	text-align: center
+
+}
+
+.second-row {
+	float: right;
+	margin-right: 30%; 
+	font-size: .8em; 
+	text-align: center;
+}

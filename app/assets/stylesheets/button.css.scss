@@ -118,13 +118,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #0AE8B3;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #003650), color-stop(5%, #0b648d), color-stop(100%, #3dc6e3));
-  background-image: -webkit-linear-gradient(bottom, #003650 0%, #0b648d 5%, #3dc6e3 100%);
-  background-image: -moz-linear-gradient(bottom, #003650 0%, #0b648d 5%, #3dc6e3 100%);
-  background-image: -ms-linear-gradient(bottom, #003650 0%, #0b648d 5%, #3dc6e3 100%);
-  background-image: -o-linear-gradient(bottom, #003650 0%, #0b648d 5%, #3dc6e3 100%);
-  background-image: linear-gradient(bottom, #003650 0%, #0b648d 5%, #3dc6e3 100%);
+  background-color: #003650;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #003650), color-stop(5%, #0b8d6f), color-stop(100%, #0AE8B3));
+  background-image: -webkit-linear-gradient(bottom, #003650 0%, #0b8d6f 5%, #0AE8B3 100%);
+  background-image: -moz-linear-gradient(bottom, #003650 0%, #0b8d6f 5%, #0AE8B3 100%);
+  background-image: -ms-linear-gradient(bottom, #003650 0%, #0b8d6f 5%, #0AE8B3 100%);
+  background-image: -o-linear-gradient(bottom, #003650 0%, #0b8d6f 5%, #0AE8B3 100%);
+  background-image: linear-gradient(bottom, #003650 0%, #0b8d6f 5%, #0AE8B3 100%);
   border-top: 1px solid #a5efff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -156,7 +156,7 @@
   top: 11px;
   left: 6px;
 }
-
+/*****************
 .i-twitter {
   display: block;
   height: 41px;
@@ -165,3 +165,21 @@
   top: 0;
   background: url(i-twitter.png) no-repeat center top;
 }
+
+********************/
+.btn-span {
+  height: 41px; 
+  color: white;
+  margin-left: 10px; 
+  margin-top: 5px; 
+}
+
+
+
+
+
+
+
+
+
+
