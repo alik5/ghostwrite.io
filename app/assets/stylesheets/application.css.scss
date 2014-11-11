@@ -22,13 +22,6 @@ body {
 	background-color: white;
 }
 
-.ghostwrite {
-	background: url('/assets/linedpaper.png') no-repeat center; 
-	opacity: 0.4;
-	background-color: #525252;
-	background-size: 95%; 
-}
-
 body {
 	
 	font-family: 'Raleway Dots', cursive;
@@ -38,12 +31,11 @@ body {
 
 
 .ghostwrite_body {
-background-image: url('nice_snow.png');
-display: table;
+background-image: url('pixel_weave.png');
 list-style: none; 
-position: relative;
-width: 100%;
-height: 100%;
+position: absolute;
+width: auto;
+height: 1000px;
 text-align: center;
 padding: 40px; 
 z-index: 1;
@@ -59,7 +51,7 @@ z-index: 1;
  .logo-img-all {
  	width: 33%;
  	padding-bottom: -10px; 
- 	margin-left: 25px; 
+ 	 
  
  }
 
@@ -81,49 +73,16 @@ z-index: 1;
 	
 }
 
-.modal .modal-body {
-    max-height: 420px;
-    overflow-y: auto;
-}
-
-.form_body {
-	padding-top: 45px; 
-	margin-left: 42%;
-}
-
-.button_body .list {
-
-	list-style-type: none; 
-	text-align: center;
-	background-image: url(notebook.png);
-	padding: 15px;
-
-}
-
-.button_body {
-	margin-bottom: 100px; 
-	margin-top: 55px; 
-}
-
-
 
 i {
 	font-size: .5em; 
 }
 
-.main {
-	position: absolute;
-	bottom: -10%;
-	
-}
 
-.main li {
-	margin: 30px; 
-	list-style: none; 
-}
 
 .instructions {
 	margin-bottom: 40px; 
+	font-weight: bold; 
 }
 
 

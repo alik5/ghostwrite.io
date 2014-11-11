@@ -21,12 +21,12 @@
  				</ul>
  					<li class="navbar-text pull-right">
 					<% if user_signed_in? %>
- 					 
+ 					<strong><%= current_user.full_name %></strong> 
   					<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
 					<% else %>
   					<%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %> |
- 					<%= link_to "Log In", "#", data: {toggle: "modal", target: "#logInModal"}, :class => "navbar-link"  %> 
+ 					<%= link_to "Log In", new_user_session_path, :class => "navbar-link"  %> 
 						<% end %>
  					</li>
 
@@ -37,7 +37,7 @@
 	
 
 	
-	<%= render partial: 'layouts/log_in_form' %>
+	
 
 
 	

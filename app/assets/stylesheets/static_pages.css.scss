@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- ul {
+ .button-list {
 
-	list-style: none; 
-
-	
+	width: 300px;
+	margin-left: 40%;
 }
+
 
 .first-row li {
 	padding-bottom: 25px; 
@@ -32,4 +32,10 @@
 	margin-right: 30%; 
 	font-size: .8em; 
 	text-align: center;
+}
+
+.button-list li {
+	margin: 30px; 
+	list-style: none; 
+	
 }
