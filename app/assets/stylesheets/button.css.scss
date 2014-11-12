@@ -175,6 +175,23 @@
   background: url(tie-smaller.png) no-repeat center; 
 }
 
+.heart-png {
+  display: block; 
+  height: 41px; 
+  width: 121px; 
+  position: absolute; 
+  top: 0; 
+  background: url(Heart.png) no-repeat center; 
+}
+
+.ghost-png {
+  display: block; 
+  height: 41px; 
+  width: 126px; 
+  position: absolute; 
+  top: 0; 
+  background: url(ghost.png) no-repeat center; 
+}
 
 .btn-span {
   height: 41px; 
