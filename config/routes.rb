@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
       
  
+  root 'welcome#index'
 
-  get 'static_pages/home'
-  get 'static_pages/business'
+
+  
+  get 'begin', to: 'static_pages#begin', as: :begin
+  get 'business', to: 'static_pages#business', as: :business
 
  # get 'user/index'
 
     devise_for :users
  
 
-    root 'welcome#index'
+   
 
     resources :ghostwrites
 
