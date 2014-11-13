@@ -83,6 +83,39 @@ i {
 	font-weight: bold; 
 }
 
+.form_body {
+	padding-top: 40px;
+	z-index: 1; 
+
+}
+
+.header_text {
+	text-align: center; 
+	font-weight: bold;
+}
+
+.fieldset {
+	text-align: left;
+	margin-left: 15%;   
+}
+
+.element_name {
+	color: black;
+	float: right;
+	margin-right: 20%; 
+	z-index: 1; 
+}
+
+
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin: 2px 10px;
+}
+
+
+
 
 
 

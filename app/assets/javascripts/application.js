@@ -16,6 +16,9 @@
 //= require_tree .
 //= require turbolinks
 
+
+
+
 $(document).ready(function(){
       $(".element").typed({
         strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
@@ -23,11 +26,13 @@ $(document).ready(function(){
       });
 
       console.log('hi');
-      
-});
 
-$('a.pop_business').on('click',function() {
-  alert('GAH!');
-//$('#index').hide();
+ $(document).ready(function(){
+      $(".element_name").typed({
+        strings: ["What's your name?", "Is it Freddy?", "It's it Suzanne?"],
+        typeSpeed: 100
+      });
+      
+	});
 });
 

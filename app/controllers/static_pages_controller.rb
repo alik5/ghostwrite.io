@@ -11,5 +11,9 @@ class StaticPagesController < ApplicationController
   
   end
 
-def begin
-end
+  def begin
+  end
+
+  def cover_letter
+    @cover_letter = Cover_letter.new
+  end

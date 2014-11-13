@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'static_pages#business', as: :business
+  get 'cover_letter', to: 'static_pages#cover_letter', as: :cover_letter
 
  # get 'user/index'
 
