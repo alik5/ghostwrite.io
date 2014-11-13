@@ -13,6 +13,9 @@
     <%= f.input :last_name %>
     <%= f.input :profile_name %> 
     <%= f.input :email %>
+    
+
+    <legend>Optional</legend>
     <%= f.input :age, collection: 18..60, prompt: "Select your age" %>
  
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

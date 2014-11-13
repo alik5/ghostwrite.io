@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113182527) do
+ActiveRecord::Schema.define(version: 20141113184059) do
 
   create_table "ghostwrites", force: true do |t|
     t.string   "title"
     t.string   "string"
     t.string   "content"
     t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "letters", force: true do |t|
+    t.string   "letter_type"
+    t.boolean  "formal"
+    t.boolean  "long"
+    t.integer  "qualification_level"
+    t.text     "self_description"
+    t.text     "user_comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
