@@ -7,7 +7,7 @@ def add
    unless user.valid?
      flash[:error] = user.errors.full_messages.join("<br>").html_safe
    else
-     set flash[:success] to "User added successfully"   
+     flash[:success] = "User added successfully"   
    end
 
  redirect_to :action => 'index'
