@@ -1,17 +1,17 @@
 class User::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
+before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
-def add
-   user = User.create(:user => params[:first_name],[:last_name][:email][:password])
-   unless user.valid?
-     flash[:error] = user.errors.full_messages.join("<br>").html_safe
-   else
-     flash[:success] = "User added successfully"   
-   end
+#def add
+#   user = User.create(:user => params[:first_name],[:last_name][:email][:password])
+#   unless user.valid?
+#     flash[:error] = user.errors.full_messages.join("<br>").html_safe
+#   else
+#     flash[:success] = "User added successfully"   
+#   end
 
- redirect_to :action => 'index'
-end
+# redirect_to :action => 'index'
+#end
 
 
 
@@ -53,9 +53,9 @@ end
   # protected
 
   # You can put the params you want to permit in the empty array.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.for(:sign_up) << :attribute
-  # end
+  def configure_sign_up_params
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :profile_name, :email, :password, :password_confirmation) }
+  end
 
   # You can put the params you want to permit in the empty array.
   #def configure_account_update_params
