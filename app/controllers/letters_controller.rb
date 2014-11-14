@@ -1,7 +1,7 @@
 class LettersController < ApplicationController
 
   def index
-  	@ghostwrites = Ghostwrite.all
+  	@letter = Letter.new
   end
 
   def new
