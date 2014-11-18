@@ -32,7 +32,14 @@ $(document).ready(function(){
         strings: ["What's your name?", "Is it Freddy?", "It's it Suzanne?"],
         typeSpeed: 100
       });
+
+
+$( "#business" ).mouseover(function() {
+  $( "p" ).toggle( "slow" );
+});
       
 	});
 });
+
+
 
