@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 
 $( "#business" ).mouseover(function() {
-  $( "p" ).toggle( "slow" );
+  $( ".description" ).toggle( "slow" );
 });
       
 	});

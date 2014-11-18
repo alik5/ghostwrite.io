@@ -15,7 +15,9 @@
  :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
  :group_method => :last %>
 <%= f.input :user_comments %>
-<%= f.submit %>
+
+
+<%= link_to 'Show', @letter %>
 
 </fieldset>
 

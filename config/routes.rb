@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'business', to: 'static_pages#business', as: :business
   get 'cover_letter', to: 'static_pages#cover_letter', as: :cover_letter
   get 'personal', to: 'static_pages#personal', as: :personal
+  get 'custom', to: 'letters#new', as: :custom
 
  # get 'user/index'
 

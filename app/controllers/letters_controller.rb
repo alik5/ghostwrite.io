@@ -11,12 +11,20 @@ class LettersController < ApplicationController
   # GET /ghostwrites/1
   # GET /ghostwrites/1.json
   def create
-  	@letter = Letter.new(params[:letter])
-  	if @letter.save redirect to new_letter_path
+  	@letter = Letter.create(letter_params)
+  	@letter.save
   	end
-  end
+  
 
-  # GET /ghostwrites/new
+def show
+    @letter = Letter.find(params[:id])
+
+    respond_to do |format|
+        format.html # show.html.erb
+        format.js # show.js.erb
+        format.json { render json: @letter }
+    end
+end
  
 
  private
@@ -26,7 +34,7 @@ class LettersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def ghostwrite_params
+    def letter_params
       params.require(:letter).permit(:letter_type, :formal, :long, :qualification_level, :self_description, :user_comments)
     end
 
