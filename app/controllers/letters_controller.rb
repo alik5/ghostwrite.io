@@ -25,6 +25,13 @@ def show
         format.json { render json: @letter }
     end
 end
+
+  def custom_modal
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
  
 
  private

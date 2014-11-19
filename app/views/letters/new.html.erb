@@ -15,12 +15,26 @@
  :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
  :group_method => :last %>
 <%= f.input :user_comments %>
-<%= f.submit %>
+
+
+<%= link_to 'Custom Modal', custom_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+
 
 </fieldset>
 
 <% end %>
 
-	</div>
-   </div>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<%= render 'letters/custom_modal' %>
 </div>
+
+	</div>
+  </div>
+</div>
+
+
+
+
+  
+
+  
