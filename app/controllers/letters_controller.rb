@@ -11,7 +11,7 @@ class LettersController < ApplicationController
   # GET /ghostwrites/1
   # GET /ghostwrites/1.json
   def create
-  	@letter = Letter.create(letter_params)
+  	@letter = Letter.new(letter_params)
   	@letter.save
   	end
   
@@ -42,7 +42,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :formal, :long, :qualification_level, :self_description, :user_comments)
+      params.require(:letter).permit(:letter_type, :formal, :long, :qualification_level, :self_description, :user_comments, :user_id)
     end
 
 end

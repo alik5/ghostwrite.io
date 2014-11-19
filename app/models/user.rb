@@ -4,19 +4,17 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :ghostwrites
   has_many :letters
 
- def full_name
-  "#{self.first_name} #{self.last_name}"
-end
+	def full_name
+	"#{self.first_name} #{self.last_name}"
+	end
 
 
+	def kind_of_letter
+		"#{letter_type}"
+	end
 
 
-
-
-#attr_accessible :email, :password, :password_confirmation, :remember_me,
-#				:first_name, :last_name, :profile_name
 
 end

@@ -15,6 +15,8 @@
  :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
  :group_method => :last %>
 <%= f.input :user_comments %>
+<%= f.submit %>
+
 
 
 <%= link_to 'Custom Modal', custom_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
@@ -33,7 +35,14 @@
 </div>
 
 
+<script>
+$('#letter_letter_type').change(function() {
+	console.log('read this');
+	$('#letter_type').html($(this).val());
 
+});
+
+</script>
 
   
 
