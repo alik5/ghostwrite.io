@@ -2,7 +2,7 @@
    <div class="row"> 
         <div class="form_body">
 
-<%= simple_form_for(@letter, html: {class: "form-horizontal", :multipart => true}) do |f| %>
+<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 <h2 class= "header_text">Cover Letter</h2>
   <fieldset class="fieldset">
 
@@ -45,6 +45,12 @@ $('#letter_letter_type').change(function() {
 $('#letter_qualification_level').change(function() {
 	console.log('qual');
 	$('#qualification_level').html($(this).val()); 
+});
+
+$('#letter_photo').change(function() {
+	console.log('new photo');
+	$('#photo').html($(this).val());
+
 });
 
 </script>
