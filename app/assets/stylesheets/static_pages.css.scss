@@ -21,9 +21,10 @@
 
 .first-row {
 	float: left;
-	margin-left: 30%; 
+	margin-left: 43%; 
 	font-size: .8em; 
-	text-align: center
+	text-align: center; 
+	list-style: none; 
 
 }
 
@@ -46,19 +47,37 @@
 	color: black; 
 }
 
-.btn-span {
-	font-family: 'Open Sans', sans-serif;
-	color: white;
 
+.btn-span {
+	font-family: 'Merriweather', serif;
+	color: white;
+	text-align: center; 
 }
 
-.description {
+#business_description {
 	display: none;
 	margin-left: 200px; 
 	margin-top: -90px; 
 	color: black;
 }
 
+#custom_description {
+	display: none;
+	margin-left: 200px; 
+	margin-top: -90px; 
+	color: black;
+}
+
+#personal_description  {
+	display: none;
+	margin-left: 200px; 
+	margin-top: -90px; 
+	color: black;
+}
+
+.btn-span:hover {
+	color: #0AE8B3;
+}
 
 
 

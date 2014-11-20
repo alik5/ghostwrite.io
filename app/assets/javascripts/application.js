@@ -34,10 +34,17 @@ $(document).ready(function(){
       });
 
 
-$( "#business" ).mouseover(function() {
-  $( ".description" ).toggle( "slow" );
-  });
+  $( "#business" ).hover(function() {
+    $( "#business_description" ).show( "slow" );
+    });
 
+  $( "#personal" ).hover(function() {
+    $( "#personal_description" ).show( "slow" );
+    });
+
+  $( "#custom" ).hover(function() {
+    $( "#custom_description" ).show( "slow" );
+    });
 
 
   });
