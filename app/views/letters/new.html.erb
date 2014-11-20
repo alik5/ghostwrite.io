@@ -19,7 +19,7 @@
 
 <%= f.file_field :photo %>
 
-<%= link_to 'Custom Modal', custom_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+<%= link_to 'Custom Modal', custom_modal_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', method: :post } %>
 
 
 </fieldset>

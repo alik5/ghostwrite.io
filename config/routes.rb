@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'cover_letter', to: 'static_pages#cover_letter', as: :cover_letter
   get 'personal', to: 'static_pages#personal', as: :personal
   get 'custom', to: 'letters#new', as: :custom
-  get "layouts/modal" => 'layouts#custom_modal', :as => :custom_modal
+  get 'create', to: 'layouts#custom_modal', :as => :custom_modal
 
  # get 'user/index'
 

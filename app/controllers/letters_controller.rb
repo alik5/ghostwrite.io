@@ -8,13 +8,23 @@ class LettersController < ApplicationController
     @letter = Letter.new
   end
 
+  def custom_modal
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+    @letter = Letter.new(letter_params)
+    @letter.save
+  end
+
   # GET /ghostwrites/1
   # GET /ghostwrites/1.json
   def create
   	@letter = Letter.new(letter_params)
   	@letter.save
 
-    
+
   	end
   
 
@@ -28,15 +38,7 @@ def show
     end
 end
 
-  def custom_modal
-    respond_to do |format|
-      format.html
-      format.js
-    end
 
-    @letter = Letter.new(letter_params)
-    @letter.save
-  end
  
 
  private
