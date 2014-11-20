@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120170931) do
+ActiveRecord::Schema.define(version: 20141120185214) do
+
+  create_table "contacts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ghostwrites", force: true do |t|
     t.string   "title"

@@ -11,6 +11,9 @@ class Letter < ActiveRecord::Base
 	end
 
 	
+  	accepts_nested_attributes_for :contacts
+
+
 	has_attached_file :photo,:styles => { :small => "150x150>" }
 
 	has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
