@@ -10,5 +10,6 @@ class Letter < ActiveRecord::Base
 		"#{letter_type}"
 	end
 
+	has_attached_file :photo
 	
 end
