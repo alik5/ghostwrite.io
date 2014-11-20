@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 
    resources :letters
 
-    resources :ghostwrites
+   resources :ghostwrites
+   resources "contacts", only: [:new, :create]
 
 
   
