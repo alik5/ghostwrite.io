@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121215828) do
+ActiveRecord::Schema.define(version: 20141121220125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,10 @@ ActiveRecord::Schema.define(version: 20141121215828) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "type_of_meeting"
+    t.hstore   "properties"
   end
+
+  add_index "letters", ["properties"], name: "letters_properties", using: :gin
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
