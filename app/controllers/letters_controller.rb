@@ -1,8 +1,6 @@
 class LettersController < ApplicationController
 
-  def index
-  	@letter = Letter.new
-  end
+ 
 
   def new
     @letter = Letter.new
