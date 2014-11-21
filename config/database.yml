@@ -9,8 +9,14 @@
 #  pool: 5
 #  timeout: 5000
 
+
 #development:
 #  <<: *default
+
+
+#development:
+# <<: *default
+
 #  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
