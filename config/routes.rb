@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'personal', to: 'static_pages#personal', as: :personal
   get 'custom', to: 'letters#new', as: :custom
   get 'letters/new', to: 'layouts#custom_modal', :as => :custom_modal
+  get 'thank_you_note', to: 'letters#thank_you_note', :as => :thank_you_note
 
  # get 'user/index'
 

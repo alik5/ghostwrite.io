@@ -36,8 +36,10 @@ def show
     end
 end
 
-def custom
-  end
+   def thank_you_note
+    @letter = Letter.new
+
+   end
 
 
  
