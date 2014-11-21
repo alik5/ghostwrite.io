@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'static_pages#business', as: :business
-  get 'cover_letter', to: 'static_pages#cover_letter', as: :cover_letter
+  get 'cover_letter', to: 'letters#cover_letter', as: :cover_letter
   get 'personal', to: 'static_pages#personal', as: :personal
   get 'custom', to: 'letters#new', as: :custom
   get 'letters/new', to: 'layouts#custom_modal', :as => :custom_modal
