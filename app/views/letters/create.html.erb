@@ -7,8 +7,11 @@
     <% end %>
     <p class="modal_text"> What happens when I write like this and there is a div in the <span id="letter_type" class="modal_text"></span> middle of everything? <span id="qualification_level" class="modal_text"></span></p>
 
-  
+  	<% if @letter.photo.file? %>
     <div id='photo'><%= link_to 'My PDF', @letter.photo.url %></div>
+    <% else %>
+    
+    <% end %>
 
   
 

@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get 'custom', to: 'letters#new', as: :custom
   get 'letters/new', to: 'layouts#custom_modal', :as => :custom_modal
   get 'thank_you_note', to: 'letters#thank_you_note', :as => :thank_you_note
+  get 'networking', to: 'letters#networking', :as => :networking
+  get 'online_dating', to: 'letters#online_dating', :as => :online_dating
+  get 'keeping_in_touch', to: 'letters#keeping_in_touch', :as => :keeping_in_touch
+  get 'invitations', to: 'letters#invitations', :as => :invitations
 
  # get 'user/index'
 

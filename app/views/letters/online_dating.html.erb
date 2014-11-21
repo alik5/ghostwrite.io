@@ -3,13 +3,10 @@
         <div class="form_body">
 
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-<h2 class= "header_text">Thank You Note</h2>
+<h2 class= "header_text">Custom Letter</h2>
   <fieldset class="fieldset">
 
-<%= f.input :type_of_meeting, 
-:as => :grouped_select,
- :collection => Proc.new { [['Type of Meeting', ['Interview', 'Meet and Greet', 'Advise' ]]] },
-  :group_method => :last %> 
+<%= f.input :letter_type %>
 <%= f.input :self_description %>
 <%= f.input :formal %>
 <%= f.input :long %>

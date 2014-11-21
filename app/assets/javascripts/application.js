@@ -35,15 +35,15 @@ $(document).ready(function(){
 
 
   $( "#business" ).hover(function() {
-    $( "#business_description" ).show( "slow" );
+    $( "#business_description" ).fadeIn( "slow" );
     });
 
   $( "#personal" ).hover(function() {
-    $( "#personal_description" ).show( "slow" );
+    $( "#personal_description" ).fadeIn( "slow" );
     });
 
   $( "#custom" ).hover(function() {
-    $( "#custom_description" ).show( "slow" );
+    $( "#custom_description" ).fadeIn( "slow" );
     });
 
 
