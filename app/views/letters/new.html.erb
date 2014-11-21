@@ -3,7 +3,7 @@
         <div class="form_body">
 
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-<h2 class= "header_text">Cover Letter</h2>
+<h2 class= "header_text">Custom Letter</h2>
   <fieldset class="fieldset">
 
 <%= f.input :letter_type %>
@@ -48,10 +48,12 @@ $('#letter_qualification_level').change(function() {
 });
 
 $('#letter_photo').change(function() {
-	console.log('new photo');
-	$('#photo').html($(this).val());
+console.log('new photo');
+$('#photo').html($(this).val());
 
 });
+
+
 
 </script>
 
