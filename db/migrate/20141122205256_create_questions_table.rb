@@ -1,6 +1,8 @@
 class CreateQuestionsTable < ActiveRecord::Migration
   def change
-    create_table :questions_tables do |t|
+    create_table :questions do |t|
+    	t.string :content
+    	t.timestamps
     end
   end
 end
