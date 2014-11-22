@@ -1,0 +1,6 @@
+<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+<%= f.fields_for :questions do |builder| %>
+  <%= render 'question_fields', f: builder %>
+<% end %>
+<%= link_to_add_fields "Add Question", f, :questions %>
+<% end %>
