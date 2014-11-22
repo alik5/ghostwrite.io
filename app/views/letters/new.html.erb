@@ -6,7 +6,7 @@
 <h2 class= "header_text">Custom Letter</h2>
   <fieldset class="fieldset">
 
-  	<%= render 'form' %>
+  	
 
 <%= f.input :letter_type %>
 <%= f.input :self_description %>
@@ -17,6 +17,7 @@
  :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
  :group_method => :last %>
 <%= f.input :user_comments %>
+<%= render 'form' %>
 <%= f.submit %>
 
 <%= f.file_field :photo %>

@@ -70,7 +70,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :formal, :long, :qualification_level, :self_description, :user_comments, :user_id, :photo, :photo_file_name, :type_of_meeting, :answer)
+      params.require(:letter).permit(:letter_type, :formal, :long, :qualification_level, :self_description, :user_comments, :user_id, :photo, :photo_file_name, :type_of_meeting)
     end
 
 end
