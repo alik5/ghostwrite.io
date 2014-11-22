@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122201715) do
+ActiveRecord::Schema.define(version: 20141122202318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "answers", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contacts", force: true do |t|
     t.datetime "created_at"
@@ -51,7 +56,6 @@ ActiveRecord::Schema.define(version: 20141122201715) do
     t.datetime "avatar_updated_at"
     t.string   "type_of_meeting"
     t.hstore   "properties"
-    t.hstore   "answers"
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin
