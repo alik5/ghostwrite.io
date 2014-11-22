@@ -22,6 +22,8 @@ class LettersController < ApplicationController
   	@letter = Letter.new(letter_params)
   	@letter.save
 
+    @answer = Answer.new()
+
 
   	end
   
