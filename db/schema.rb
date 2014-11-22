@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122180618) do
+ActiveRecord::Schema.define(version: 20141122182259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,18 @@ ActiveRecord::Schema.define(version: 20141122180618) do
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin
+
+  create_table "survey", force: true do |t|
+    t.string   "questions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "surveys", force: true do |t|
+    t.string   "questions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
