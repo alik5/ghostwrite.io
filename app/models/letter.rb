@@ -1,5 +1,6 @@
 class Letter < ActiveRecord::Base
 	belongs_to :user
+	has_many :surveys
 
 	 def full_name
   	"#{self.first_name} #{self.last_name}"
