@@ -10,4 +10,4 @@ letter = Letter.create({category: 'business', letter_type: 'cover letter'})
 letter2 = Letter.create({category: 'personal', letter_type: 'invitation' })
 letter3 = Letter.create({category: 'custom', letter_type: 'custom' })
 
-question = Question.create({})
+question = Question.create({question: })
