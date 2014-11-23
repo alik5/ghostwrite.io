@@ -1,0 +1,61 @@
+<div class="container">
+   <div class="row"> 
+        <div class="form_body">
+
+<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+<h2 class= "header_text">Thank You Note</h2>
+  <fieldset class="fieldset">
+
+<%= f.input :type_of_meeting, 
+:as => :grouped_select,
+ :collection => Proc.new { [['Type of Meeting', ['Interview', 'Meet and Greet', 'Advise' ]]] },
+  :group_method => :last %> 
+<%= f.input :self_description %>
+<%= f.input :formal %>
+<%= f.input :long %>
+<%= f.input :qualification_level,
+ :as => :grouped_select,
+ :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
+ :group_method => :last %>
+<%= f.input :user_comments %>
+<%= f.submit %>
+
+<%= f.file_field :photo %>
+
+<!-- <%= link_to 'Custom Modal', custom_modal_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', method: :post } %> -->
+
+
+</fieldset>
+
+<% end %>
+
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<%= render 'letters/custom_modal' %>
+</div>
+
+	</div>
+  </div>
+</div>
+
+
+<script>
+$('#letter_letter_type').change(function() {
+	console.log('read this');
+	$('#letter_type').html($(this).val());
+
+});
+
+$('#letter_qualification_level').change(function() {
+	console.log('qual');
+	$('#qualification_level').html($(this).val()); 
+});
+
+$('#letter_photo').change(function() {
+console.log('new photo');
+$('#photo').html($(this).val());
+
+});
+
+
+
+</script>

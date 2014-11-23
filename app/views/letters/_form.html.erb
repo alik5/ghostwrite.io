@@ -1,5 +1,17 @@
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-   <%= f.label :question %><br />
+   <%= f.input :letter_type %>
+  
+   <%= f.fields_for :questions do |builder| %>
+   	<div>
+   		<%= builder.label :question, "Question" %>
+   		<%= builder.text_area :question %><br />
+   		<%= builder.check_box :_destroy %>
+   		<%= builder.label :_destroy, "Remove Question" %><br />
+   	</div>
+   	<% end %>
+   <div class="actions"><br />
+   <%= f.submit %>
+	</div>
   
 
 <% end %>

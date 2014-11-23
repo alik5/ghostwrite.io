@@ -38,7 +38,7 @@ def show
     end
 end
 
-   def thank_you_note
+   def cover_letter
     @letter = Letter.new
 
    end
@@ -72,7 +72,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category)
+      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category, questions_attributes: [ :id, :question ])
     end
 
 end
