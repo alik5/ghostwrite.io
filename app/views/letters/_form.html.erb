@@ -1,5 +1,5 @@
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-   <%= f.label :artist %><br />
+   <%= f.label :question %><br />
   <%= f.collection_select(:question_id, @questions, :id, :question, :include_blank => "Please select an answer...") %>
 
 <% end %>

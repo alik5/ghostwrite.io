@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122224800) do
+ActiveRecord::Schema.define(version: 20141123005254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,24 +38,16 @@ ActiveRecord::Schema.define(version: 20141122224800) do
 
   create_table "letters", force: true do |t|
     t.string   "letter_type"
-    t.boolean  "formal"
-    t.boolean  "long"
-    t.text     "self_description"
     t.text     "user_comments"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "qualification_level"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.string   "type_of_meeting"
     t.hstore   "properties"
+    t.string   "category"
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin
