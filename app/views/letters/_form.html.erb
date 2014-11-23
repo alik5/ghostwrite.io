@@ -2,12 +2,7 @@
    <%= f.input :letter_type %>
   
    <%= f.fields_for :questions do |builder| %>
-   	<div>
-   		<%= builder.label :question, "Question" %>
-   		<%= builder.text_area :question %><br />
-   		<%= builder.check_box :_destroy %>
-   		<%= builder.label :_destroy, "Remove Question" %><br />
-   	</div>
+   	<%= render 'question_fields', f: builder %>
    	<% end %>
    <div class="actions"><br />
    <%= f.submit %>

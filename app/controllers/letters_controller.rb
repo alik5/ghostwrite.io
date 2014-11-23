@@ -26,6 +26,12 @@ class LettersController < ApplicationController
 
 
   	end
+
+    def edit
+      @letter = Letter.find(params[:id])
+      @question = Question.find(:all)
+      @ansert = Answer.find(:all)
+   end
   
 
 def show
@@ -72,7 +78,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category, questions_attributes: [ :id, :question ])
+      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category, questions_attributes: [ :question_id, :question ])
     end
 
 end
