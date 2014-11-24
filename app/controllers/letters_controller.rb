@@ -37,7 +37,7 @@ respond_to :html
   
 
 def show
-    respond_with(@letter)
+    
     end
 
  

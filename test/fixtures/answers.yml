@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  answer: MyString
+  letter_type_id: 
+
+two:
+  answer: MyString
+  letter_type_id: 
