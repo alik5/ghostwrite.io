@@ -6,9 +6,7 @@
 </div>
 <% end %>
 
-<%= form_tag new_type_of_letter_path, method: :get do %>
-  <%= select_tag :type_of_letter_id, 
-  options_from_collection_for_select(KindOfLetter.all, :id, :kind_of_letter) %>
-  <%= submit_tag "New Letter", name:nil %>
-  <% end %>  
-</body>
+<%= form_tag new_letter_path, method: :get do %>
+  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.all, :id, :name) %>
+  <%= submit_tag "New Letter", name: nil %>
+<% end %>

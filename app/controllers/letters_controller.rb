@@ -1,9 +1,13 @@
 class LettersController < ApplicationController
 
- 
+ def index
+    @letter = Letter.all
+  end
 
   def new
-    @letter = Letter.new
+   # @letter = Letter.new
+    @letter = Letter.new(letter_type_id: params[:letter_type_id])
+
   end
 
   def custom_modal
@@ -20,9 +24,7 @@ class LettersController < ApplicationController
   # GET /ghostwrites/1.json
   def create
   	@letter = Letter.new(letter_params)
-  	@letter.save
-
-    @answer = Answer.new()
+  	
 
 
   	end
@@ -78,7 +80,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category, questions_attributes: [ :question_id, :question ])
+      params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :category, :letter_type_id, {:properties => []})
     end
 
 end

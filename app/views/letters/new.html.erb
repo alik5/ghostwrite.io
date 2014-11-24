@@ -6,50 +6,20 @@
 <h2 class= "header_text">Letter</h2>
   <fieldset class="fieldset"> 	
 
-<%= f.input :letter_type %>
-<%= f.input :category,
- :as => :grouped_select,
- :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
- :group_method => :last %>
-<%= f.input :user_comments %>
+
 <%= render 'form' %>
 
 <%= f.submit %> </br>
 
 <%= f.file_field :photo %>
 
-<!-- <%= link_to 'Custom Modal', custom_modal_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', method: :post } %> -->
-
-
-
+		</div>
+	</div>
+</div>
 
 <% end %>
 
-<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<%= render 'letters/custom_modal' %>
-</div>
 
-	</div>
-  </div>
-</div>
-
-
-<script>
-$('#letter_letter_type').change(function() {
-	console.log('read this');
-	$('#letter_type').html($(this).val());
-
-});
-
-$('#letter_photo').change(function() {
-console.log('new photo');
-$('#photo').html($(this).val());
-
-});
-
-
-
-</script>
 
   
 

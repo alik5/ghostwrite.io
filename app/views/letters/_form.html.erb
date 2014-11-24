@@ -1,12 +1,11 @@
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-   <%= f.input :letter_type %>
   
-   <%= f.fields_for :questions do |builder| %>
-   	<%= render 'question_fields', f: builder %>
-   	<% end %>
-   <div class="actions"><br />
-   <%= f.submit %>
-	</div>
-  
+  <%= f.hidden_field :letter_type_id %>
+
+<%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
+  <% @letter.letter_type.fields.each do |field| %>
+    <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
+  <% end %>
+<% end %>
 
 <% end %>
