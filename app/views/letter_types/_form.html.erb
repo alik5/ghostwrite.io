@@ -1,11 +1,20 @@
 <%= simple_form_for(@letter_type) do |f| %>
   <%= f.error_notification %>
 
+  
+
   <div class="form-inputs">
     <%= f.input :name %>
   </div>
 
-  <div class="form-actions">
+  
+
+  <%= f.fields_for :fields do |builder| %>
+  <%= render 'field_fields', f: builder %>
+	<% end %>
+	<%= link_to_add_fields "Add Field", f, :fields %>
+
+	<div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
