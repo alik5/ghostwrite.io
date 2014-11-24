@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
       
  
+  resources :letter_types
+
   root 'welcome#index'
 
 

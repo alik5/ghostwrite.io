@@ -1,0 +1,2 @@
+module LetterTypesHelper
+end

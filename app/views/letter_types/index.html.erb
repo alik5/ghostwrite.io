@@ -1,0 +1,27 @@
+<div class="backend">
+<h1>Listing letter_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letter_types.each do |letter_type| %>
+      <tr>
+        <td><%= letter_type.name %></td>
+        <td><%= link_to 'Show', letter_type %></td>
+        <td><%= link_to 'Edit', edit_letter_type_path(letter_type) %></td>
+        <td><%= link_to 'Destroy', letter_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Letter type', new_letter_type_path %>
+</div>
