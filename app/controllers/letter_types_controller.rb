@@ -14,7 +14,11 @@ class LetterTypesController < ApplicationController
 
   def new
     @letter_type = LetterType.new
+    @letter_type.fields.build
     respond_with(@letter_type)
+    
+  
+  
   end
 
   def edit
@@ -42,6 +46,6 @@ class LetterTypesController < ApplicationController
     end
 
     def letter_type_params
-      params.require(:letter_type).permit(:name, fields_attributes: [ :id, :name, :field_type, :_destroy, :letter_type_id ])
+      params.require(:letter_type).permit(:name, :fields_attributes => [ :id, :name, :field_type, :_destroy, :letter_type_id ])
     end
 end

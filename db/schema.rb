@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124163141) do
+ActiveRecord::Schema.define(version: 20141124172851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20141124163141) do
 
   create_table "letters", force: true do |t|
     t.string   "letter_type"
-    t.text     "user_comments"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -60,8 +59,8 @@ ActiveRecord::Schema.define(version: 20141124163141) do
     t.datetime "photo_updated_at"
     t.hstore   "properties"
     t.string   "category"
-    t.text     "props"
     t.integer  "letter_type_id"
+    t.string   "name"
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin

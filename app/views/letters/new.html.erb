@@ -1,6 +1,4 @@
-<div class="container">
-   <div class="row"> 
-        <div class="form_body">
+<div class="backend"
 
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 <h2 class= "header_text">Letter</h2>
@@ -13,9 +11,7 @@
 
 <%= f.file_field :photo %>
 
-		</div>
-	</div>
-</div>
+</div>		
 
 <% end %>
 

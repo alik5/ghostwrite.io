@@ -9,15 +9,10 @@ Rails.application.routes.draw do
   
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'static_pages#business', as: :business
-  get 'cover_letter', to: 'letters#cover_letter', as: :cover_letter
   get 'personal', to: 'static_pages#personal', as: :personal
-  get 'custom', to: 'letters#new', as: :custom
-  get 'letters/new', to: 'letters#new', :as => :new
-  get 'thank_you_note', to: 'letters#thank_you_note', :as => :thank_you_note
-  get 'networking', to: 'letters#networking', :as => :networking
-  get 'online_dating', to: 'letters#online_dating', :as => :online_dating
-  get 'keeping_in_touch', to: 'letters#keeping_in_touch', :as => :keeping_in_touch
-  get 'invitations', to: 'letters#invitations', :as => :invitations
+
+  resources :letters
+ 
 
  # get 'user/index'
 

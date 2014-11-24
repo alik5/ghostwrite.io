@@ -1,0 +1,11 @@
+<div class="backend">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @letter.name %>
+</p>
+
+<%= link_to 'Edit', edit_letter_type_path(@letter_type) %> |
+<%= link_to 'Back', letter_types_path %>
+</div>
