@@ -3,5 +3,8 @@
   <%= f.text_field :name, placeholder: "question_text" %>
   <%= f.check_box :required %> <%= f.label :required %>
   <%= f.hidden_field :_destroy %>
+  <%= fields_for :answers do |builder| %>
+  <%= render 'answer_fields', f: builder %>
   <%= link_to "remove", '#', class: "remove_fields" %>
 </fieldset>
+<% end %>
