@@ -1,21 +1,22 @@
-<div class="backend"
+<div class="backend">
 
 <%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 <h2 class= "header_text">Letter</h2>
   <fieldset class="fieldset"> 	
 
+  	 <%= @letter.letter_type.fields.each do  %>
   
 
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= f.submit %> </br>
+	<%= f.submit %> </br>
 
-<%= f.file_field :photo %>
+	<%= f.file_field :photo %>
 
-</div>		
+	</div>		
 
-<% end %>
+	<% end %>
 
 
 

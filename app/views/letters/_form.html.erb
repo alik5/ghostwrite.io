@@ -1,4 +1,4 @@
-<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+<%= form_for(@letter) do |f| %>
   
   <%= f.hidden_field :letter_type_id %>
 

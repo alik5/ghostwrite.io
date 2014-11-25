@@ -51,7 +51,7 @@ respond_to :html
   
 
 def show
-    @letter = Letter.all
+    @letter = Letter.find(params[:id])
     end
 
  
