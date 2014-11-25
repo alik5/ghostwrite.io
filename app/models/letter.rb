@@ -1,6 +1,9 @@
 class Letter < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :letter_type
+	hstore_accessor :properties,
+    				fields: :string
+
 	
 	
 	

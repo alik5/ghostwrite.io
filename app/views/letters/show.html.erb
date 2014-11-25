@@ -6,6 +6,13 @@
   <%= @letter.name %>
 </p>
 
+<% @letter.properties.each do |name, value| %>
+	<p>
+		<b><%= name.humanize %>:</b>
+		<%= value %>
+	</p>
+	<% end %>
+	
 <%= link_to 'Edit', edit_letter_type_path(@letter_type) %> |
 <%= link_to 'Back', letter_types_path %>
 </div>

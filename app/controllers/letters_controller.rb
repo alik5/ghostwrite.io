@@ -23,7 +23,22 @@ respond_to :html
   # GET /ghostwrites/1
   # GET /ghostwrites/1.json
   def create
-  	@letter = Letter.new(letter_params)
+  	 @leter = Letter.new(params[:letter])
+    if @letter.save
+      redirect_to @letter, notice: 'Product was successfully created.'
+    else
+      render action: "new"
+    end
+  end
+
+   def update
+    @letter = Letter.find(params[:id])
+    if @letter.update_attributes(params[:letter])
+      redirect_to @letter, notice: 'Product was successfully updated.'
+    else
+      render action: "edit"
+    end
+  end
   	
 
 
@@ -31,13 +46,12 @@ respond_to :html
 
     def edit
       @letter = Letter.find(params[:id])
-      @question = Question.find(:all)
-      @ansert = Answer.find(:all)
+    
    end
   
 
 def show
-    
+    @letter = Letter.all
     end
 
  
@@ -54,6 +68,6 @@ def show
     whitelisted[:properties] = params[:letter][:properties]
   end
 end
-    end
+    
 
 
