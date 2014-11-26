@@ -1,0 +1,14 @@
+<%= simple_form_for(@form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :question_one, as: :check_boxes, collection: [['Day 1', 1], ['Day 2', 2]] %>
+    <%= f.input :question_two %>
+    <%= f.input :question_three %>
+    <%= f.input :question_four %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

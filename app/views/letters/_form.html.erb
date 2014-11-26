@@ -7,7 +7,8 @@
   </div>
 
 <%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
-  <% @letter.letter_type.fields.each do |field| %>
+  <% @letter.letter_type.letter_fields.each do |field| %>
+  	<%= field.name %>
     <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
   
   <% end %>

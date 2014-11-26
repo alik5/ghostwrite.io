@@ -1,0 +1,55 @@
+<div class="container">
+   <div class="row"> 
+        <div class="form_body">
+
+<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+<h2 class= "header_text">Custom Letter</h2>
+  <fieldset class="fieldset">
+
+
+<%= f.input :schedule, as: :check_boxes, collection: [['Day 1', 1], ['Day 2', 2]] %>
+<%= f.input :formal %>
+<%= f.input :long %>
+<%= f.input :qualification_level,
+ :as => :grouped_select,
+ :collection => Proc.new { [['Level', ['Very Qualified', 'Qualified', 'Bit of a Stretch', 'Maybe', 'Not at All' ]]] },
+ :group_method => :last %>
+<%= f.input :user_comments %>
+<%= f.submit %>
+
+
+</fieldset>
+
+<% end %>
+
+
+
+	</div>
+  </div>
+</div>
+
+
+<script>
+$('#letter_letter_type').change(function() {
+	console.log('read this');
+	$('#letter_type').html($(this).val());
+
+});
+
+$('#letter_qualification_level').change(function() {
+	console.log('qual');
+	$('#qualification_level').html($(this).val()); 
+});
+
+$('#letter_photo').change(function() {
+console.log('new photo');
+$('#photo').html($(this).val());
+
+});
+
+
+
+</script>
+
+
+

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question one:</strong>
+  <%= @form.question_one %>
+</p>
+
+<p>
+  <strong>Question two:</strong>
+  <%= @form.question_two %>
+</p>
+
+<p>
+  <strong>Question three:</strong>
+  <%= @form.question_three %>
+</p>
+
+<p>
+  <strong>Question four:</strong>
+  <%= @form.question_four %>
+</p>
+
+<%= link_to 'Edit', edit_form_path(@form) %> |
+<%= link_to 'Back', forms_path %>

@@ -1,0 +1,4 @@
+<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+<h2 class= "header_text">Custom Letter</h2>
+
+<%= f.file_field :photo %>

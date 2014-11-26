@@ -1,0 +1,36 @@
+<h1>Listing forms</h1>
+
+
+<%= simple_form_for(@form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :question_one, as: :check_boxes, collection: [['Day 1', 1], ['Day 2', 2]] %>
+    <%= f.input :question_two %>
+    <%= f.input :question_three %>
+    <%= f.input :question_four %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+  <tbody>
+    <% @forms.each do |form| %>
+      <tr>
+        <td><%= form.question_one %></td>
+        <td><%= form.question_two %></td>
+        <td><%= form.question_three %></td>
+        <td><%= form.question_four %></td>
+        <td><%= link_to 'Show', form %></td>
+        <td><%= link_to 'Edit', edit_form_path(form) %></td>
+        <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Form', new_form_path %>

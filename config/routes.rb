@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'static_pages#business', as: :business
   get 'personal', to: 'static_pages#personal', as: :personal
+  get 'cover_letter', to: 'forms#cover_letter', as: :cover_letter
 
   resources :letters
  
@@ -20,8 +21,7 @@ Rails.application.routes.draw do
  
 
    resources :letters
-
-   resources :ghostwrites
+   resources :forms 
    resources "contacts", only: [:new, :create]
 
    
