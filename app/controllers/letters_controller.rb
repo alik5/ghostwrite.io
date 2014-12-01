@@ -59,12 +59,12 @@ def show
  private
     # Use callbacks to share common setup or constraints between actions.
     def letter
-      @letter = Letter.find(params[:id])
+      @letter = Letter.new(letter_type_id: params[:letter_type_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :category, :letter_type_id).tap do |whitelisted|
+      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :category, :letter_type_id, :letter_types_attributes => [ :id, :name]).tap do |whitelisted|
     whitelisted[:properties] = params[:letter][:properties]
   end
 end

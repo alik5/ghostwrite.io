@@ -4,9 +4,6 @@ class Letter < ActiveRecord::Base
 	hstore_accessor :properties,
     				fields: :string
 
-	
-	
-	
 
 	 def full_name
   	"#{self.first_name} #{self.last_name}"
@@ -18,7 +15,7 @@ class Letter < ActiveRecord::Base
 	end
 
 	
-  	
+  
 
 
 	has_attached_file :photo

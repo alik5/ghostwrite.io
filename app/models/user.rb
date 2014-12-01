@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :letters
 
+   def full_name
+  	"#{self.first_name} #{self.last_name}"
+	end
+
 
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"

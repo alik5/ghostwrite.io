@@ -2,9 +2,7 @@
   
   <%= f.hidden_field :letter_type_id %>
 
-   <div class="form-inputs">
-    <%= @letter.name %>
-  </div>
+  
 
 <%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
   <% @letter.letter_type.letter_fields.each do |field| %>
