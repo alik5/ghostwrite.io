@@ -1,5 +1,6 @@
 class LettersController < ApplicationController
 respond_to :html
+layout 'home'
  def index
     @letter = Letter.all
   end
@@ -7,6 +8,8 @@ respond_to :html
   def new
    # @letter = Letter.new
     @letter = Letter.new(letter_type_id: params[:letter_type_id])
+    @letter_types = LetterType.all
+    respond_with(@letter_types)
 
   end
 
@@ -23,12 +26,9 @@ respond_to :html
   # GET /ghostwrites/1
   # GET /ghostwrites/1.json
   def create
-  	 @leter = Letter.new(params[:letter])
-    if @letter.save
-      redirect_to @letter, notice: 'Product was successfully created.'
-    else
-      render action: "new"
-    end
+  	@letter = Letter.new(letter_params)
+    @letter.save
+    respond_with(@letter)
   end
 
    def update

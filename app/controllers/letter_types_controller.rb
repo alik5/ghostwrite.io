@@ -46,6 +46,6 @@ class LetterTypesController < ApplicationController
     end
 
     def letter_type_params
-      params.require(:letter_type).permit(:name, :letter_fields_attributes => [ :id, :name, :field_type, :letter_type_id ], :questions_attributes => [ :id, :name])
+      params.require(:letter_type).permit(:name, allow_destroy: true, :letter_fields_attributes => [ :id, :name, :field_type, :letter_type_id, allow_destroy: true ], :questions_attributes => [ :id, :name])
     end
 end

@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
   
   get 'begin', to: 'static_pages#begin', as: :begin
-  get 'business', to: 'static_pages#business', as: :business
-  get 'personal', to: 'static_pages#personal', as: :personal
-  get 'cover_letter', to: 'forms#cover_letter', as: :cover_letter
+  get 'business', to: 'letters#index', as: :business
+  get 'personal', to: 'letters#index', as: :personal
+
 
   resources :letters
  

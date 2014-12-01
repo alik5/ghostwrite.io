@@ -1,16 +1,18 @@
-<%= form_for(@letter) do |f| %>
+<div class="questions">
+<%= simple_form_for(@letter) do |f| %>
   
   <%= f.hidden_field :letter_type_id %>
 
   
 
 <%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
+  <%= @letter.letter_type.name %> 
   <% @letter.letter_type.letter_fields.each do |field| %>
-  	<%= field.name %>
-    <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
+  <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
   
   <% end %>
 <% end %>
 
 <% end %>
+</div>
 
