@@ -3,10 +3,10 @@
   
   <%= f.hidden_field :letter_type_id %>
 
-  
+  <h1><%= @letter.letter_type.name %></h1> <br />
 
 <%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
-  <%= @letter.letter_type.name %> 
+  
   <% @letter.letter_type.letter_fields.each do |field| %>
   <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
   
@@ -16,3 +16,26 @@
 <% end %>
 </div>
 
+
+<script>
+$('#letter_properties_one_word_that_describes_you').change(function() {
+	console.log('read this');
+	$('#letter_one').html($(this).val());
+
+});
+
+$('#letter_properties_Hi').change(function() {
+	console.log('qual');
+	$('#qualification_level').html($(this).val()); 
+});
+
+$('#letter_properties_what').change(function() {
+console.log('new photo');
+$('#photo').html($(this).val());
+
+});
+
+
+
+
+</script>
