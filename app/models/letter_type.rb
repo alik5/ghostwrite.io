@@ -3,4 +3,8 @@ class LetterType < ActiveRecord::Base
 	has_many :answers
 	accepts_nested_attributes_for :letter_fields
 	accepts_nested_attributes_for :answers
-end
+
+ 
+
+
+  end
