@@ -28,6 +28,7 @@ class LetterTypesController < ApplicationController
     @letter_type = LetterType.new(letter_type_params)
     @letter_type.save
     respond_with(@letter_type)
+
   end
 
   def update

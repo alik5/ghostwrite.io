@@ -1,8 +1,7 @@
 class Letter < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :letter_type
-	hstore_accessor :properties,
-    				fields: :string
+	store_accessor :properties, :origin, :company, :last_job, :one_word, :position
 
 
 	 def full_name
@@ -13,6 +12,8 @@ class Letter < ActiveRecord::Base
 	def kind_of_letter
 		"#{letter_type}"
 	end
+
+
 
 
 	
