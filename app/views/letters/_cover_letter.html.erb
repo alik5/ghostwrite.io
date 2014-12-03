@@ -1,11 +1,18 @@
-<div class="questions">
-Hello <%= @letter.properties["company"] %>
+<div class="questions-cover">
+Hello <%= @letter.properties["company"] %> ,
+</br>
+</br>
 
 I’m interested in the <%= @letter.properties["position"] %> position. I heard about the position <%= @letter.properties["origin"] %> and think my past experience as <%= @letter.properties["last_job"] %>  makes me a great candidate. 
+<br>
 
 I am <%= @letter.properties["one_word"] %>, and very interested in learning more about <%= @letter.properties["company"] %> and what I can contribute as <%= @letter.properties["position"] %>. I look forward to speaking with you. 
 
+<br>
+<br>
+
 Thank you,
+<br>
 <% if user_signed_in? %> 
 <%= current_user.full_name %>
 

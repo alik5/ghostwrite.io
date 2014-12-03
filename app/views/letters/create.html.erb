@@ -1,7 +1,15 @@
-   <body>
+<body>
+
+	<% if @letter.letter_type.name = "cover letter" %>
 
    
   <%= render 'cover_letter' %>
+
+  	<% else %>
+
+  	<% render 'form' %>
+
+  	<% end %>
 
   	<% if @letter.photo.file? %>
     <div id='photo'><%= link_to 'My PDF', @letter.photo.url %></div>
