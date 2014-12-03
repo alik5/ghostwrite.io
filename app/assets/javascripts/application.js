@@ -50,6 +50,13 @@ $(document).ready(function(){
   });
 });
 
+$("#letter_properties_position").change(function() {
+  console.log('qual');
+  $('#letter_properties_position').html($(this).val()); 
+});
+
+$( ".span_class" ).append( "#letter_properties_position" );
+
 
 
 
