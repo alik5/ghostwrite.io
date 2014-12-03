@@ -133,6 +133,12 @@ i {
 	margin-left: 15%; 
 }
 
+.questions h1 {
+	text-align: left;
+	margin-left: 10%; 
+	margin-bottom: 7.5%; 
+}
+
 .letter_text {
 	font-family: 'Merriweather', serif;
 	font-weight: light; 
@@ -151,6 +157,21 @@ i {
 	padding: 30px;
 	margin-left: 100px; 
 	margin-right: 100px; 
+}
+
+.simple_form div.controls {
+  margin-left: 0px;
+  clear: both; /* Required for Webkit, but not for Gecko */
+  padding-top: 10px; 
+}
+
+input {
+	color: white;
+	background-color: #0AE8B3;
+	font-family: 'Raleway Dots'; 
+	font-size: 1em; 
+	border: none;
+	padding: 20px;  
 }
 
 
