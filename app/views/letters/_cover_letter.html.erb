@@ -1,9 +1,9 @@
 <div class="questions">
-Hello<%= @letter.properties["origin"] %>
+Hello <%= @letter.properties["company"] %>
 
-I’m interested in the <span id="32"></span> position. I heard about the position <span id="25"></span> and think my past experience as <span id="26"></span>  makes me a great candidate. 
+I’m interested in the <%= @letter.properties["position"] %> position. I heard about the position <%= @letter.properties["origin"] %> and think my past experience as <%= @letter.properties["last_job"] %>  makes me a great candidate. 
 
-I am <span id="27"></span>, and very interested in learning more about <span id="31"></span> and what I can contribute as <span id="32"></span>. I look forward to speaking with you. 
+I am <%= @letter.properties["one_word"] %>, and very interested in learning more about <%= @letter.properties["company"] %> and what I can contribute as <%= @letter.properties["position"] %>. I look forward to speaking with you. 
 
 Thank you,
 <% if user_signed_in? %> 
