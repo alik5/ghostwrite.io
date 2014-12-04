@@ -32,6 +32,9 @@
       </div>
     </div>  
   </div>
+  
+  <div class="background">
+</div>
  <div class= 'ghostwrite_body'>
     <div class = "instructions">
       <li><%= image_tag "logo2.png", class: "logo-img-all"%></li>
@@ -39,6 +42,10 @@
     </div>
    
    <%= yield %>
+
+   <style media="screen">
+  .background { background-image: url(<%= image_tag "squared_metal.png" %>); }
+</style>
 
 
 

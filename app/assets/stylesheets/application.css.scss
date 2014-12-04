@@ -23,7 +23,6 @@ body {
 }
 
 body {
-	
 	font-family: 'Raleway Dots', cursive;
 	color: #0AE8B3;
 	font-size: 1.6em;
@@ -31,7 +30,6 @@ body {
 
 
 .ghostwrite_body {
-background-image: url(squared_metal.png);
 list-style: none; 
 position: absolute;
 width: auto;
@@ -39,6 +37,7 @@ height: 1000px;
 text-align: center;
 padding: 40px; 
 z-index: 1;
+background-color: #EBEBEB;
 }
 
 .ghostwrite {
@@ -174,6 +173,7 @@ input {
 	border: none;
 	padding: 20px;  
 }
+
 
 
 
