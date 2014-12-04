@@ -30,9 +30,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: ghostwriteio_development
+  port: 5452
   pool: 5
-  username:
-  password:
   host: localhost 
 
 test:
