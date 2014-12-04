@@ -35,6 +35,7 @@ $(document).ready(function(){
 
 
   $( "#business" ).hover(function() {
+    console.log('bitch, please');
     $( "#business_description" ).fadeIn( "slow" );
     });
 
@@ -50,19 +51,7 @@ $(document).ready(function(){
   });
 });
 
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Raleway+Dots::latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
+
 
 
 
