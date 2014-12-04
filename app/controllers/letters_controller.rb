@@ -27,7 +27,6 @@ layout 'home'
   # GET /ghostwrites/1.json
   def create
   	@letter = Letter.new(letter_params)
-    @letter.save
     @letter_types = LetterType.all
     respond_with(@letter)
   end
