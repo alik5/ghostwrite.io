@@ -1,5 +1,5 @@
 class LetterTypesController < ApplicationController
-  layout 'home'
+
   before_action :set_letter_type, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
