@@ -1,11 +1,10 @@
 <div>
 
+<% if @letter.letter_type_id == 4 %>
    
   <%= render 'cover_letter' %>
 
-  
-
-<% if @letter.letter_type_id == 20 %>
+  <% elsif @letter.letter_type_id == 20 %>
 
   <%= render 'networking' %>
 
