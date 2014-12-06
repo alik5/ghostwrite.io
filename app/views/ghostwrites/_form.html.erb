@@ -1,4 +1,5 @@
-<%= simple_form_for(@ghostwrite, html: {class: "form-horizontal"}) do |f| %>
+<div class="backend">
+<%= simple_form_for(@ghostwrite, html: {class: "form-horizontal", :multipart => true })  do |f| %>
   <% if @ghostwrite.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ghostwrite.errors.count, "error") %> prohibited this ghostwrite from being saved:</h2>
@@ -10,21 +11,21 @@
       </ul>
     </div>
   <% end %>
+  <fieldset>
+ 
 
-  <%= f.input :title %>
-  <div class="field">
-    <%= f.label :string %><br>
-    <%= f.text_field :string %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :text %><br>
-    <%= f.text_field :text %>
-  </div>
-  <div class="actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.text_field :title, placeholder: "Your Name" %>
+  <%= f.text_field :string, placeholder: "What kind of message do you want to send?" %> 
+  
+  <%#= @ghostwrite.photo.file? %>
+    <%= f.file_field :photo, id: "pdf" %>
+    <div id='photo'><%= link_to 'My PDF', @ghostwrite.photo.url %></div>
+
+    
+ 
+
+</fieldset>
 <% end %>
+</div>
+
+
