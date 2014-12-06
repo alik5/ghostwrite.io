@@ -15,11 +15,13 @@
  
 
   <%= f.text_field :title, placeholder: "Your Name" %>
-  <%= f.text_field :string, placeholder: "What kind of message do you want to send?" %> 
+  <%= f.input :text_box, label: false, placeholder: "Paste what you want to be ghostwritten here..." %> 
   
-  <%#= @ghostwrite.photo.file? %>
+  
     <%= f.file_field :photo, id: "pdf" %>
-    <div id='photo'><%= link_to 'My PDF', @ghostwrite.photo.url %></div>
+    <% @ghostwrite.photo.file? %>
+    <div id='photo'><%#= link_to 'My PDF', @ghostwrite.photo.url %></div>
+
 
     
  
