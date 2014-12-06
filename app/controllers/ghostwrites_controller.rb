@@ -30,7 +30,7 @@ class GhostwritesController < ApplicationController
     
 
     def ghostwrite_params
-      params.require(:ghostwrites).permit(:string, :title, :letter_attributes => [ :user_id, :photo, :photo_file_name,])
+      params.require(:ghostwrites).permit(:text_box, :string, :title, :letter_attributes => [ :user_id, :photo, :photo_file_name,])
     end
 
 	
