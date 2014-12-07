@@ -1,5 +1,6 @@
 class Ghostwrite < ActiveRecord::Base
 	belongs_to :letters
+	has_many :contacts
 
 	has_attached_file :photo
 
