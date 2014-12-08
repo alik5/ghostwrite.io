@@ -29,7 +29,7 @@ $(document).ready(function(){
 
  $(document).ready(function(){
       $(".element_name").typed({
-        strings: ["What's your name?", "Is it Freddy?", "It's it Suzanne?"],
+        strings: ["What's your name?", "Is it Freddy?", "Is it Suzanne?"],
         typeSpeed: 100
       });
 

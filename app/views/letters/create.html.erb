@@ -14,9 +14,11 @@
 
   <% elsif @letter.letter_type_id == 9 %>
 
-  	<% render 'feedback' %>
+  	<%= render 'feedback' %>
 
   	 <% else %>
+
+  	 <%= render 'form' %>
 
  <% end %>
 
