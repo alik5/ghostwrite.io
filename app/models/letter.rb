@@ -1,7 +1,7 @@
 class Letter < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :letter_type
-	store_accessor :properties, :origin, :company, :last_job, :one_word, :position, :achieve, :admire, :common_ground, :thanks, :remember, :their_name
+	store_accessor :properties, :origin, :company, :last_job, :one_word, :position, :achieve, :admire, :common_ground, :thanks, :remember, :their_name, :positive, :industry, :frequency, :pay, :rating, :mobile
 
 
 	 def full_name
