@@ -11,16 +11,16 @@
   <h2 class= "header_text">Sign up</h2>
   <fieldset class="fieldset">
     <br>
-    <%= f.input :first_name %> 
+    <%= f.input :first_name, label: false, placeholder: "First Name" %> 
     <div><span class = "element_name"></span></div>
-    <%= f.input :last_name %>
-    <%= f.input :profile_name %>
-    <%= f.input :email %>
+    <%= f.input :last_name, label: false, placeholder: "Last Name" %>
+    <%= f.input :profile_name, label: false, placeholder: "Profile Name" %>
+    <%= f.input :email, label: false, placeholder: "Email" %>
     <% if @validatable %>
     <i>(<%= @minimum_password_length %> characters minimum)</i>
     <% end %>
-    <%= f.input :password, autocomplete: "off" %>
-    <%= f.input :password_confirmation, autocomplete: "off"%>
+    <%= f.input :password, autocomplete: "off", label: false, placeholder: "Password" %>
+    <%= f.input :password_confirmation, autocomplete: "off", label: false,  placeholder: "Password confirmation"%>
 
     <div>
     <%= f.submit "Sign up" %>
