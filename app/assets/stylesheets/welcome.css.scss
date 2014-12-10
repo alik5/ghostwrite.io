@@ -33,9 +33,10 @@
 
 
 .font {
-  position: absolute;  
+  position: relative;  
   z-index: 3; 
-  margin-left: 32%; 
+  margin-left: 33%; 
+  width: 35%; 
   margin-top: -10%; 
   margin-bottom: 40px; 
 }
