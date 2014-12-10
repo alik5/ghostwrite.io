@@ -64,7 +64,7 @@ def show
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :category, :letter_type_id, :letter_types_attributes => [ :id, :name]).tap do |whitelisted|
+      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :letter_type_id, :letter_types_attributes => [ :id, :name]).tap do |whitelisted|
     whitelisted[:properties] = params[:letter][:properties]
   end
 end

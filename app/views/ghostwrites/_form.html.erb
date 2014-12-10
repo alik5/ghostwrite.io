@@ -19,10 +19,8 @@
   <%= f.input :text_box, label: false, placeholder: "Paste what you want to be ghostwritten here..." %> 
   
   
-    <%= f.file_field :photo, id: "pdf" %>
-    <% @ghostwrite.photo.file? %>
-    <div id='photo'><%#= link_to 'My PDF', @ghostwrite.photo.url %></div>
-
+   
+ <%= submit_tag "Create Message" %>
 
     
  
