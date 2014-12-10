@@ -24,9 +24,9 @@ class UserController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
-   
 
-    TransactionMailer.welcome(@user).deliver
+
+  
 
 
 	def user_params
