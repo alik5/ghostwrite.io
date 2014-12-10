@@ -40,3 +40,9 @@
   margin-top: -10%; 
   margin-bottom: 40px; 
 }
+
+@media only screen and (min-device-width : 320px) and  (max-width: 568px) {
+    .font {
+        margin-left: 28%;
+    }
+}
