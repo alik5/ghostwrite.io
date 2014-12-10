@@ -19,7 +19,8 @@
 .background-img {
 	position: absolute;
 	z-index: 1; 
-	float: right;  
+	float: right; 
+  width: 100%; 
 }
 
 #button {
@@ -43,6 +44,11 @@
 
 @media only screen and (min-device-width : 320px) and  (max-width: 568px) {
     .font {
-        margin-left: 28%;
+        margin-left: 32%;
+    }
+
+    .background-img {
+      border: solid;
+      border-color: gray;
     }
 }
