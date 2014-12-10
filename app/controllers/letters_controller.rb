@@ -54,6 +54,8 @@ def show
     @letter = Letter.find(params[:id])
     end
 
+    TransactionMailer.welcome(@letter).deliver
+
  
 
  private

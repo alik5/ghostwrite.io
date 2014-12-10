@@ -14,7 +14,6 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
 
 body {
 	width: 100%;
@@ -26,6 +25,7 @@ body {
 	font-family: 'Raleway', cursive;
 	color: #0AE8B3;
 	font-size: 1.6em;
+	font-weight: lighter; 
 }
 
 
@@ -182,9 +182,11 @@ input {
 	padding: 20px;
 }
 
-.string-optional-control-label {
-	
-}
+
+ .simple_form
+  div.input {
+  	width: 800px; 
+  }
 
 
 

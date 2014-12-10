@@ -14,6 +14,9 @@ class Letter < ActiveRecord::Base
 		"#{letter_type}"
 	end
 
+	
+    
+
 
 
 

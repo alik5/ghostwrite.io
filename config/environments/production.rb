@@ -13,11 +13,18 @@ config.action_mailer.default :charset => "utf-8"
 config.action_mailer.smtp_settings = {
 address: "smtp.gmail.com",
 port: 587,
-domain: ENV["GMAIL_DOMAIN"],
+domain: ENV["example.com"],
 authentication: "plain",
 enable_starttls_auto: true,
 user_name: ENV["alikfitz@gmail.com"],
 password: ENV["yogiBEAR12"]
+}
+
+config.action_mailer.smtp_settings = {
+  :address   => "smtp.mandrillapp.com",
+  :port      => 25,
+  :user_name => ENV["app32189780@heroku.com"],
+  :password  => ENV["wiRYg_LdBNW6dzaEXDWp_w"]
 }
 
   # Code is not reloaded between requests.

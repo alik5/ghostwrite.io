@@ -24,6 +24,11 @@ class UserController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
+   
+
+    TransactionMailer.welcome(@user).deliver
+
+
 	def user_params
 		params.require(:user).permit(:first_name, :last_name, :profile_name, :email, :avatar)
 	end
