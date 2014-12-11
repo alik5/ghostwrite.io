@@ -6,7 +6,7 @@ class GhostwritesController < ApplicationController
 	
 	def index 
 		@ghostwrite = Ghostwrite.all
-		@ghostwrite = Ghostwrite.new(ghostwrite_params)
+		
 
 	end
 
@@ -16,10 +16,11 @@ class GhostwritesController < ApplicationController
 
 	def create
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
+    CustomMailer.mail_letter(@ghostwrite).deliver
     
  	respond_to do |format|
       if @ghostwrite.save
-      CustomMailer.custom_message(@ghostwrite).deliver
+      
       flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
     else
       flash.now[:error] = 'Cannot send message.'
@@ -29,6 +30,10 @@ class GhostwritesController < ApplicationController
 	end
 
 	private
+
+	def ghostwrite
+      @ghostwrite = Ghostwrite.find(params[:id])
+    end
     
 
     def ghostwrite_params

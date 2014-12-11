@@ -8,6 +8,15 @@ class CustomMailer < ActionMailer::Base
 
     @user = user
 
-    mail(:to => user.email, :subject => "Registered", :from => "ghost@ghostwrite.io")
+    mail(:to => user.email, :subject => "Registered")
+  end
+
+
+  def mail_letter(ghostwrite)
+    @greeting = "Hi"
+
+    @ghostwrite = ghostwrite
+
+    mail(:to => "alikfitz@gmail.com", :subject => "Custom Letter", :from => "ghost@ghostwrite.io")
   end
 end

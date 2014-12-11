@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'letters#index', as: :business
   get 'personal', to: 'letters#index', as: :personal
+  get 'ghostwrites', to: 'ghostwrites#new', as: :ghostwrite
 
  
  resources :ghostwrites
