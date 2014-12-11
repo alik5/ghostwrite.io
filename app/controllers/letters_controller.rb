@@ -29,7 +29,7 @@ layout 'home'
   	@letter = Letter.new(letter_params)
     @letter_types = LetterType.all
     respond_with(@letter)
-    CustomMailer.signup_confirmation.deliver
+    
   end
 
    def update
