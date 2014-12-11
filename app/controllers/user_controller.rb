@@ -5,12 +5,13 @@ class UserController < ApplicationController
 
 	def create
     @user = User.new(user_params)
+    CustomMailer.signup_confirmation(@user).deliver
 
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
-        CustomMailer.signup_confirmation(@user).deliver
+
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
