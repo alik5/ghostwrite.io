@@ -10,22 +10,17 @@ config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default :charset => "utf-8"
 
-config.action_mailer.smtp_settings = {
-address: "smtp.gmail.com",
-port: 587,
-domain: ENV["example.com"],
-authentication: "plain",
-enable_starttls_auto: true,
-user_name: ENV["alikfitz@gmail.com"],
-password: ENV["yogiBEAR12"]
-}
 
 config.action_mailer.smtp_settings = {
-  :address   => "smtp.mandrillapp.com",
-  :port      => 25,
-  :user_name => ENV["app32189780@heroku.com"],
-  :password  => ENV["wiRYg_LdBNW6dzaEXDWp_w"]
-}
+    :address   => "smtp.mandrillapp.com",
+    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "app32189780@heroku.com",
+    :password  => "wiRYg_LdBNW6dzaEXDWp_w", # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
+  }
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

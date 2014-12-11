@@ -23,16 +23,14 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: ENV["example.com"],
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "alikfitz@gmail.com",
-    password: "yogiBEAR12",
-    :openssl_verify_mode  => 'none'
-
-    }
+    :address   => "smtp.mandrillapp.com",
+    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "app32189780@heroku.com",
+    :password  => "wiRYg_LdBNW6dzaEXDWp_w", # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
