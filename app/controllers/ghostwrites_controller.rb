@@ -17,6 +17,7 @@ class GhostwritesController < ApplicationController
 	def create
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
     CustomMailer.mail_letter(@ghostwrite).deliver
+     @ghostwrite.save
     
  	respond_to do |format|
       if @ghostwrite.save
