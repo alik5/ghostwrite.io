@@ -12,7 +12,7 @@ class CustomMailer < ActionMailer::Base
   end
 
 
-  def mail_letter(ghostwrite,photo)
+  def mail_letter(ghostwrite)
     @greeting = "Hi"
 
     @ghostwrite = ghostwrite
