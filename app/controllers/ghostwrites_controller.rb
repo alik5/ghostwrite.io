@@ -38,6 +38,6 @@ class GhostwritesController < ApplicationController
     
 
     def ghostwrite_params
-      params.require(:ghostwrite).permit(:text_box, :string, :title, :photo,:photo_file_name, :photo_content_type, :letter_attributes => [ :user_id, :photo, :photo_file_name, :photo_content_type ])
+      params.require(:ghostwrite).permit(:text_box, :string, :title, :photo, :photo_file_name, :photo_content_type, :letter_attributes => [ :user_id, :photo, :photo_file_name, :photo_content_type ])
     end
 end
