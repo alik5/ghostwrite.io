@@ -1,4 +1,4 @@
-<p> YAAAAAAAS </p>
+<p> Create </p>
 
 <%= @ghostwrite.title %>
 
@@ -6,6 +6,6 @@
 
 <%= image_tag @ghostwrite.photo.url %>
 
-<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
+<%= submit_tag "Create Message" %>
 <%= link_to 'Back', ghostwrites_path %>
 

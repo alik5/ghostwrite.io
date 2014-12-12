@@ -14,27 +14,25 @@ class GhostwritesController < ApplicationController
 	def new
 	    @ghostwrite = Ghostwrite.new
 	end
-
-	def create
+  
+  def create
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
-    CustomMailer.mail_letter(@ghostwrite).deliver
-     @ghostwrite.save
-     respond_with(@ghostwrite)
-    
- 	respond_to do |format|
-      if @ghostwrite.save
-      
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-    else
-      flash.now[:error] = 'Cannot send message.'
-      render :new
-        end
-      end
-	end
+
+    if @ghostwrite.save
+      redirect_to @ghostwrite, notice: 'Ghostwrite was successfully created.'
+      CustomMailer.mail_letter(@ghostwrite).deliver
+     else
+       render action: 'new'
+  end
+end
 
   def show
     @ghostwrite = Ghostwrite.find(params[:id])
-    end
+
+  end
+
+   
+   
 
     def photo
     @user = Photo.find(params[:id])
