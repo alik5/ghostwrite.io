@@ -14,11 +14,10 @@ class CustomMailer < ActionMailer::Base
 
   def mail_letter(ghostwrite)
     @greeting = "Hi"
-
+   
     @ghostwrite = ghostwrite
     
-
-    attachments[photo.pdf_file_file_name] = File.read(photo.pdf_file.path) 
+   
     mail(:to => "alikfitz@gmail.com", :subject => "Custom Letter", :from => "ghost@ghostwrite.io")
   end
 end

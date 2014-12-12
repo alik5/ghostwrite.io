@@ -1,24 +1,10 @@
-<p id="notice"><%= notice %></p>
+<p> YAAAAAAAS </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @ghostwrite.title %>
-</p>
+<%= @ghostwrite.title %>
 
-<p>
-  <strong>String:</strong>
-  <%= @ghostwrite.string %>
-</p>
+<%= @ghostwrite.text_box %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @ghostwrite.content %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @ghostwrite.text %>
-</p>
+<%= image_tag @ghostwrite.photo.url %>
 
 <%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
 <%= link_to 'Back', ghostwrites_path %>

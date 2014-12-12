@@ -18,6 +18,7 @@ class GhostwritesController < ApplicationController
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
     CustomMailer.mail_letter(@ghostwrite).deliver
      @ghostwrite.save
+     respond_with(@ghostwrite)
     
  	respond_to do |format|
       if @ghostwrite.save
@@ -29,6 +30,14 @@ class GhostwritesController < ApplicationController
         end
       end
 	end
+
+  def show
+    @ghostwrite = Ghostwrite.find(params[:id])
+    end
+
+    def photo
+    @user = Photo.find(params[:id])
+    end
 
 	private
 
