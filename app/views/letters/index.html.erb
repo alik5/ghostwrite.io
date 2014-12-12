@@ -1,6 +1,7 @@
 <div class="backend">
-	
+<% if @letter.if_business == true %>	
 <% @letter.each do |letter| %>
+
 <div class= "letter">
 	
 </div>
@@ -12,6 +13,7 @@
   <%= submit_tag "Create Message" %>
 <% end %>
 </div>
+<%end%>
 
 
 

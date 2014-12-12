@@ -4,7 +4,7 @@
 
 <%= @ghostwrite.text_box %>
 
-<%= image_tag @ghostwrite.photo.url %>
+<%= ghostwrite.photo.url(http://bucket.s3.amazonaws.com/…) %>
 
 <%= submit_tag "Create Message" %>
 <%= link_to 'Back', ghostwrites_path %>

@@ -10,6 +10,8 @@ gem 'mail_form'
 gem "figaro"
 gem 'mandrill-api'
 gem 'mandrill_mailer'
+gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-sdk'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
