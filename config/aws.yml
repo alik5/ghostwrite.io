@@ -1,4 +1,0 @@
-AWS.config(
-  access_key_id: "AKIAJLDB53JOY4G6YBPA"
-  secret_access_key:"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"
-  bucket: "www.ghostwrite.io")
