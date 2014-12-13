@@ -16,7 +16,7 @@ class GhostwritesController < ApplicationController
 	end
   
   def create
-    @ghostwrite = Ghostwrite.new(ghostwrite_params)
+    @ghostwrite = Ghostwrite.create(ghostwrite_params)
 
   end
 

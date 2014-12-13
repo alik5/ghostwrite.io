@@ -3,8 +3,7 @@ class Ghostwrite < ActiveRecord::Base
 	has_many :contacts
 
 	
-    
-
+   
 	
 	has_attached_file :photo,
 	:storage => :s3,
