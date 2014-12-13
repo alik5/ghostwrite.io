@@ -1,9 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-config.action_mailer.default_url_options = { :host => 'ghostwrite.herokuapp.com' }
+#config.action_mailer.default_url_options = { :host => 'ghostwrite.herokuapp.com' }
 
-Rails.application.routes.default_url_options[:host] = 'ghostwrite.herokuapp.com'
+#Rails.application.routes.default_url_options[:host] = 'ghostwrite.herokuapp.com'
 
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
@@ -18,7 +18,7 @@ config.action_mailer.smtp_settings = {
     :user_name => "app32189780@heroku.com",
     :password  => "wiRYg_LdBNW6dzaEXDWp_w", # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
+    :domain => 'heroku.com', # your domain to identify your server when connecting
   }
 
 config.paperclip_defaults = {
