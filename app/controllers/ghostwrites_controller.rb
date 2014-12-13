@@ -24,9 +24,7 @@ class GhostwritesController < ApplicationController
     @ghostwrite = Ghostwrite.find(params[:id])
      #if @ghostwrite.save
       #CustomMailer.mail_letter(@ghostwrite).deliver
-     else
-       render action: 'new'
-  end
+  
 
   end
 
