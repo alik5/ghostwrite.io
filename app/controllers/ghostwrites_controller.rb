@@ -18,7 +18,7 @@ class GhostwritesController < ApplicationController
   def create
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
 
-    @document = current_user.documents.create(params[:document])
+   
 
 
     if @ghostwrite.save
