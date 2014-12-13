@@ -6,5 +6,8 @@
 
 <%= image_tag @ghostwrite.photo.url %>
 
+<%= mail_to "alikfitz@gmail.com" %>
+<% end %>
+
 <%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
 <%= link_to 'Back', ghostwrites_path %>
