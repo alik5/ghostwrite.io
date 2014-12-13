@@ -3,6 +3,7 @@ respond_to :html
 layout 'home'
  def index
     @letter = Letter.all
+    
   end
 
   def new
@@ -20,9 +21,13 @@ layout 'home'
   def create
   	@letter = Letter.new(letter_params)
     @letter_types = LetterType.all
-    respond_with(@letter)
-    
+     if @friend.save
+      redirect_to @friend, notice: 'Friend was successfully created.'
+     else
+       render action: 'new'
+    end
   end
+    
 
    def update
     @letter = Letter.find(params[:id])

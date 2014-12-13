@@ -9,11 +9,12 @@ class Ghostwrite < ActiveRecord::Base
 	attr_accessible :photo
 	has_attached_file :photo,
 	:storage => :s3,
-	:s3_credentials=>{:access_key_id=>"AWS_ACCESS_KEY_ID",
-	:secret_access_key => "AWS_SECRET_ACCESS_KEY"},
+	:s3_credentials=>{:access_key_id=>"AKIAIVMXYVUHIN3AID5Q",
+	:secret_access_key => "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"},
 	:s3_permissions => "public-read",
 	:path => ":id",
-	:bucket => "AWS_BUCKET"
+	:bucket => "ghostwrite.io"
+
 
 
 end

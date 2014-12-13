@@ -32,6 +32,13 @@ Rails.application.configure do
     :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
   }
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => 'ghostwrite.io'
+  }
+}
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

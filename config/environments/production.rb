@@ -21,6 +21,13 @@ config.action_mailer.smtp_settings = {
     :domain => 'www.ghostwrite.io', # your domain to identify your server when connecting
   }
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => 'ghostwrite.io'
+  }
+}
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

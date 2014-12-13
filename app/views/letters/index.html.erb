@@ -1,10 +1,10 @@
 <div class="backend">
-<% if @letter.if_business == true %>	
-<% @letter.each do |letter| %>
-
-<div class= "letter">
 	
-</div>
+	<% @letter.each do |letter| %>
+
+	<div class= "letter">
+		
+	</div>
 <% end %>
 
 <%= form_tag new_letter_path, method: :get do %>
@@ -13,7 +13,7 @@
   <%= submit_tag "Create Message" %>
 <% end %>
 </div>
-<%end%>
+
 
 
 
