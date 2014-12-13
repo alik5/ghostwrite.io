@@ -18,18 +18,15 @@ class GhostwritesController < ApplicationController
   def create
     @ghostwrite = Ghostwrite.new(ghostwrite_params)
 
-   
+  end
 
-
-    if @ghostwrite.save
+  def show
+    @ghostwrite = Ghostwrite.find(params[:id])
+     if @ghostwrite.save
       CustomMailer.mail_letter(@ghostwrite).deliver
      else
        render action: 'new'
   end
-end
-
-  def show
-    @ghostwrite = Ghostwrite.find(params[:id])
 
   end
 

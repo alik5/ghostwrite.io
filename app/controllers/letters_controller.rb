@@ -21,11 +21,7 @@ layout 'home'
   def create
   	@letter = Letter.new(letter_params)
     @letter_types = LetterType.all
-     if @friend.save
-      redirect_to @friend, notice: 'Friend was successfully created.'
-     else
-       render action: 'new'
-    end
+    
   end
     
 
