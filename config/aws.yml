@@ -1,14 +1,4 @@
-# config/aws.yml
-defaults: &defaults
-  access_key_id: "devkey"
-  secret_access_key: "devsecret"
-development:
-  <<: *defaults
-  bucket: "myapp-development"
-test:
-  <<: *defaults
-  bucket: "myapp-test"
-production:
-  access_key_id: <%=ENV["AKIAJLDB53JOY4G6YBPA"]%>
-  secret_access_key: <%=ENV["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"]%>
-  bucket: "www.ghostwrite.io"
+AWS.config(
+  access_key_id: "AKIAJLDB53JOY4G6YBPA"
+  secret_access_key:"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"
+  bucket: "www.ghostwrite.io")
