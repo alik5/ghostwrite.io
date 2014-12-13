@@ -9,6 +9,6 @@ test:
   <<: *defaults
   bucket: "myapp-test"
 production:
-  access_key_id: <%=ENV["AWS_ACCESS_KEY_ID"]%>
-  secret_access_key: <%=ENV["AWS_SECRET_ACCESS_KEY"]%>
+  access_key_id: <%=ENV["AKIAJLDB53JOY4G6YBPA"]%>
+  secret_access_key: <%=ENV["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"]%>
   bucket: "www.ghostwrite.io"
