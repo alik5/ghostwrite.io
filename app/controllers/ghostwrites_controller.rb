@@ -22,7 +22,6 @@ class GhostwritesController < ApplicationController
 
 
     if @ghostwrite.save
-      redirect_to @ghostwrite, notice: 'Ghostwrite was successfully created.'
       CustomMailer.mail_letter(@ghostwrite).deliver
      else
        render action: 'new'
