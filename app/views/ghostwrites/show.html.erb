@@ -4,7 +4,13 @@
 
 <%= @ghostwrite.text_box %>
 
-<%= image_tag @ghostwrite.photo.url %>
+<% @ghostwrites.each do |ghostwrite| %>
+<% if ghostwrite.photo.photo_content_type == 'application/pdf' %>
+   <iframe src=<%= @ghostwrite.photo.url(:original) %> frameborder="0"></iframe>
+<% else %>
+    <%=  image_tag(ghostwrite.photo.url(:original)) %>
+<% end %>
+<% end %>
 
 
 <%= mail_to "alikfitz@gmail.com" %>
