@@ -13,7 +13,7 @@ class Ghostwrite < ActiveRecord::Base
   
 	
 
-	validates_attachment_content_type :photo, content_type: [ "image/jpg", "image/jpeg", "image/png", "image/gif", "application/pdf" ]
+	validates_attachment_content_type :photo, content_type: [ "image/jpg", "image/jpeg", "image/png", "image/gif", "application/pdf", "application/x-pdf" ]
 
 
 
