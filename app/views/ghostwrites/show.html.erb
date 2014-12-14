@@ -5,11 +5,10 @@
 <%= @ghostwrite.text_box %>
 
 
-<% if @ghostwrite.photo.content_type == 'application/pdf' %>
-   <iframe src=<%= @ghostwrite.photo.url(:original) %> frameborder="0"></iframe>
-<% else %>
+
+   
     <%=  image_tag(@ghostwrite.photo.url(:original)) %>
-<% end %>
+
 
 
 
