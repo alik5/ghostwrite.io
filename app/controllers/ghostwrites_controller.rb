@@ -14,20 +14,36 @@ class GhostwritesController < ApplicationController
 	def new
 	    @ghostwrite = Ghostwrite.new
 	end
-  
-  def create
-    @ghostwrite = Ghostwrite.create(ghostwrite_params)
-
+   
+   def create
+    @ghostwrite = Ghostwrite.new(ghostwrite_params)
+    if @ghostwrite.save
+      redirect_to @ghostwrite
+    else
+      # This line overrides the default rendering behavior, which
+      # would have been to render the "create" view.
+      render "new"
+    end
   end
+
 
   def show
     @ghostwrite = Ghostwrite.find(params[:id])
-     #if @ghostwrite.save
+ 
+    respond_to do |format|
+      format.html
+      format.pdf { render pdf: generate_pdf(@ghostwrite) }
+    end
+  end
+
       #CustomMailer.mail_letter(@ghostwrite).deliver
   
 
+  
+    
+  def download
+  redirect_to @ghostwrite.photo.expiring_url(10)
   end
-
    
    
 

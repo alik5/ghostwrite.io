@@ -9,7 +9,8 @@ class Ghostwrite < ActiveRecord::Base
 	:storage => :s3,
   	:bucket => ENV['S3_BUCKET_NAME'],
   	:url => "/system/:attachment/:id/:style/:basename.:extension",
-    :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
+    :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension",
+    :s3_permissions => :private
   
 	
 
