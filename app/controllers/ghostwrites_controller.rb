@@ -33,10 +33,12 @@ class GhostwritesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf { render pdf: generate_pdf(@ghostwrite) }
+      if @ghostwrite.save
+        CustomMailer.mail_letter(@ghostwrite).deliver
     end
   end
 
-      #CustomMailer.mail_letter(@ghostwrite).deliver
+      
   
 
   
