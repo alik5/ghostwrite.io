@@ -2,7 +2,12 @@ class LettersController < ApplicationController
 respond_to :html
 layout 'home'
  def index
-    @letter = Letter.all
+    @letter = if params[:if_business]
+              IfBusiness.find(params[:if_business]).letter
+            else                
+              Letter.all
+            end
+    @letter_types = LetterType.all
     
   end
 

@@ -3,16 +3,12 @@
 <h1>Log in</h1>
  
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+   <%= f.input :email, label: false, placeholder: "Email" %>
+  
+   <%= f.input :password, autocomplete: "off", label: false, placeholder: "Password" %>
+
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
@@ -21,7 +17,7 @@
     </div>
   <% end -%>
 
-  <div class="actions">
+  <div class="actions"> <br>
     <%= f.submit "Log in" %>
   </div>
 <% end %>

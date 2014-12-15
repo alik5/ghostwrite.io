@@ -17,4 +17,7 @@ class StaticPagesController < ApplicationController
   def cover_letter
     
   end
+
+  def about
+  end
 end

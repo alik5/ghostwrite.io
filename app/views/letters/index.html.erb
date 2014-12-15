@@ -8,11 +8,15 @@
 <% end %>
 
 <%= form_tag new_letter_path, method: :get do %>
+ 
   <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.all, :id, :name, {:class=>'my-custom-class'}) %>
   <br>
   <%= submit_tag "Create Message" %>
 <% end %>
+
 </div>
+
+
 
 
 
