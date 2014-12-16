@@ -13,6 +13,7 @@ gem 'mandrill_mailer'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'aws-sdk'
 gem 'newrelic_rpm'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record

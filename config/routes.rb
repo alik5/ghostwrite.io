@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
  
  resources :ghostwrites
-
+ resources :charges
 
   resources :letters
  
