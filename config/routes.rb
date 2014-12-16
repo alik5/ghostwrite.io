@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get 'begin', to: 'static_pages#begin', as: :begin
   get 'business', to: 'letters#index', as: :business
-  get 'personal', to: 'letters#index', as: :personal
+  get 'personal', to: 'letters#personal_index', as: :personal
   get 'custom', to: 'ghostwrites#new', as: :custom
   get 'about', to: 'static_pages#about', as: :about
 

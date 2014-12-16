@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212172757) do
+ActiveRecord::Schema.define(version: 20141216181448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20141212172757) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category"
   end
 
   create_table "letters", force: true do |t|
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 20141212172757) do
     t.string   "type_of_meeting"
     t.hstore   "properties"
     t.integer  "letter_type_id"
+    t.string   "category"
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin

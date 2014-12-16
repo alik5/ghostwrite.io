@@ -6,5 +6,5 @@ class LetterType < ActiveRecord::Base
 
  
 
+end
 
-  end

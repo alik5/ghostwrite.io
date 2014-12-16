@@ -2,14 +2,16 @@ class LettersController < ApplicationController
 respond_to :html
 layout 'home'
  def index
-    @letter = if params[:if_business]
-              IfBusiness.find(params[:if_business]).letter
-            else                
-              Letter.all
-            end
+    @letter= Letter.all
     @letter_types = LetterType.all
-    
   end
+
+  def personal_index
+    @letter= Letter.all
+    @letter_types = LetterType.all
+
+  end
+
 
   def new
    # @letter = Letter.new
@@ -65,7 +67,7 @@ def show
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :letter_type_id, :letter_types_attributes => [ :id, :name, :if_business]).tap do |whitelisted|
+      params.require(:letter).permit(:letter_type, :name, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :letter_type_id, :letter_types_attributes => [ :id, :name, :category]).tap do |whitelisted|
     whitelisted[:properties] = params[:letter][:properties]
   end
 end
