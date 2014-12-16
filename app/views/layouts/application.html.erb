@@ -18,6 +18,8 @@
 		<div class="navbar-inner">
  			<div class="container">
  				<%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
+ 				<li class="navbar-text pull-left">
+ 					<%= link_to 'About', about_path, :class => 'navbar-link' %>
  					<li class="navbar-text pull-right">
 					<% if user_signed_in? %>
  					<strong><%= current_user.full_name %></strong> 

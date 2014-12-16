@@ -22,7 +22,13 @@ module ApplicationHelper
     end
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
-end
 
+
+ def embed(youtube_url)
+    youtube_id = youtube_url.split("=").last
+    content_tag(:iframe, nil, src: "//www.youtube.com/embed/#{youtube_id}")
+  end
+
+end
 
  
