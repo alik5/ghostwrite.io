@@ -16,10 +16,12 @@
  
 
   <%= f.text_field :title, placeholder: "Your Name" %>
+  <%= f.text_field :string, placeholder: "Your Email" %>
   <%= f.input :text_box, label: false, placeholder: "Paste what you want to be ghostwritten here..." %> 
-   <%= f.file_field :photo %>
-  
-   
+  <p> Attach resume/application/drafts here: </p>
+  <%= f.file_field :photo %>
+ <br> 
+ <br>  
  <%= f.submit "Create Message" %>
 
     
