@@ -7,12 +7,14 @@ gem 'rails_12factor', group: :production
 gem "paperclip", "~> 4.2"
 gem 'actionview-encoded_mail_to'
 gem 'mail_form'
+ gem 'unicorn'
 gem "figaro"
 gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'aws-sdk'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
@@ -26,6 +28,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem 'devise'
+gem 'rack-timeout'
 
 gem 'simple_form'
 
