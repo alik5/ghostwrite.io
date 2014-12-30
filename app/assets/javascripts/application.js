@@ -31,7 +31,8 @@ $(document).ready(function(){
       $(".element_name").typed({
         strings: ["What's your name?", "Is it Freddy?", "Is it Suzanne?"],
         typeSpeed: 100
-      });
+       });
+     
 
 
   $( "#business" ).hover(function() {
@@ -47,21 +48,11 @@ $(document).ready(function(){
     $( "#custom_description" ).fadeIn( "slow" );
     });
 
-
-  });
+   });
+  
 });
 
-$(function() {
-  $('#s3_uploader').S3Uploader(
-    { 
-      remove_completed_progress_bar: false,
-      progress_bar_target: $('#uploads_container')
-    }
-  );
-  $('#s3_uploader').bind('s3_upload_failed', function(e, content) {
-    return alert(content.filename + ' failed to upload');
-  });
-});
+
 
 
 
