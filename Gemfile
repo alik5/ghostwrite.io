@@ -14,6 +14,7 @@ gem 'mandrill_mailer'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'aws-sdk'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'font-awesome-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

@@ -73,6 +73,8 @@ GEM
     execjs (2.2.2)
     figaro (1.0.0)
       thor (~> 0.14)
+    font-awesome-sass (4.2.2)
+      sass (~> 3.2)
     hike (1.2.3)
     hstore_accessor (0.6.1)
       activesupport (>= 3.2.0)
@@ -198,6 +200,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   figaro
+  font-awesome-sass
   hstore_accessor
   jbuilder (~> 2.0)
   jquery-rails

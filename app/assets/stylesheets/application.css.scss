@@ -10,9 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
  *= require_tree .
  *= require_self
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 body {
@@ -220,6 +224,20 @@ input {
 #about-headline {
 	font-family: 'Raleway', serif;
 }
+
+.text {
+	width: 70%;
+}
+
+.modal-body  {
+	background-color: #0AE8B3; 
+}
+
+.modal-header {
+	background-color: #0AE8B3; 
+}
+
+
 
 
 
