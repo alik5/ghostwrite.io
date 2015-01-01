@@ -62,6 +62,17 @@ input {
   color: white;
 }
 
+span.add-on {
+	color: white;
+	
+}
+
+.input-append span.add-on {
+	background-color: #333333;
+	border: none;
+
+}
+
 
 .ghostwrite_body {
 list-style: none; 
@@ -261,16 +272,15 @@ i {
 	font-family: 'Raleway';
 }
 
-span.add-on {
-	color: white;
-	
+.ghostgirl-modal {
+	height: 18%;
+	width: 18%;
+	background-color: #ACACAC;
+	position: absolute;
+	margin-left: 80%;
+	margin-top: 8%;
 }
 
-.input-append span.add-on {
-	background-color: #333333;
-	border: none;
-
-}
 
 
 
