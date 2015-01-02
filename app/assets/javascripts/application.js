@@ -10,11 +10,19 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require greensock/TweenMax.min
+//= require jquery.scrollmagic
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
 //= require turbolinks
+
+
+window.onload = function(){
+    var logo = document.getElementById("logo");
+    TweenLite.to(logo, 1, {left:"632px"});
+}
 
 
 
