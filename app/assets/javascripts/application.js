@@ -50,7 +50,20 @@ $(document).ready(function(){
 
    });
   
-});
+
+
+
+ $( "button" ).hover(
+  function() {
+     $( ".lock ").toggle();
+  }
+);
+
+  });
+  
+
+
+console.log('lock');
 
 
 
