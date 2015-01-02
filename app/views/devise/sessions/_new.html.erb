@@ -13,8 +13,8 @@
        <!-- Your first column here -->
   
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-           <%#= f.input :email, label: false, placeholder: "Email" %>
 
            <%= f.input :email, :class => "input-class", :wrapper_html => {class: "input-append"} do %>
                 <%= f.input_field :email, placeholder: "email" %>

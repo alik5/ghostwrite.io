@@ -1,20 +1,23 @@
-<div class="questions">
-<%= simple_form_for(@letter) do |f| %>
-  
-  <%= f.hidden_field :letter_type_id %>
 
-  <h1><%= @letter.letter_type.name %></h1> 
+		<div class="questions">
+		<%= simple_form_for(@letter) do |f| %>
+		  
+		  <%= f.hidden_field :letter_type_id %>
 
-<%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
-  
-  <% @letter.letter_type.letter_fields.each do |field| %>
-  <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
-  
-  <% end %>
-<% end %>
+		  <h1><%= @letter.letter_type.name %></h1> 
 
-<% end %>
-</div>
+		<%= f.fields_for :properties, OpenStruct.new(@letter.properties) do |builder| %>
+		  
+		  <% @letter.letter_type.letter_fields.each do |field| %>
+		  <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
+		  
+		  <% end %>
+		<% end %>
+
+		<% end %>
+		</div>
+	
+    
 
 
 

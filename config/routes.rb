@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     devise_for :users
  
 
-   resources :letters
+   
    resources :forms 
    resources "contacts", only: [:new, :create]
 

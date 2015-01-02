@@ -11,9 +11,12 @@
 
 
   <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 1), :id, :name) %>
+  
   <br>
   <%= submit_tag "Create Message" %>
 <% end %>
+
+
 
 </div>
 

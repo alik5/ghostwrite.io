@@ -16,9 +16,9 @@
     <%= f.input :profile_name, label: false, placeholder: "Profile Name" %>
     <%= f.input :email, label: false, placeholder: "Email" %>
     <% if @validatable %>
-    <i>(<%= @minimum_password_length %> characters minimum)</i>
+    <i style="display:none">(<%= @minimum_password_length %> characters minimum)</i>
     <% end %>
-    <%= f.input :password, autocomplete: "off", label: false, placeholder: "Password" %>
+    <%= f.input :password, autocomplete: "off", label: false, placeholder: "Password", hint: false, error_html: { id: 'password_error'} %>
     <%= f.input :password_confirmation, autocomplete: "off", label: false,  placeholder: "Password confirmation"%>
 
     <div>

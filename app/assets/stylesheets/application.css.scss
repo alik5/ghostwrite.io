@@ -275,7 +275,7 @@ i {
 
 .modal-title {
 	color: white; 
-	font-family: 'Raleway';
+	font-family: 'Raleway', serif;
 }
 
 .ghostgirl-modal {
@@ -289,11 +289,20 @@ i {
 
 .btn {
 	width: 30%;
-	height: 70px;  
+	height: 70px;
+	padding-top: 15%;   
 }
 
 #unlock {
 	display: none;
+}
+
+select {
+	font-family: 'Raleway', serif;
+	font-size: 0.8em;
+	padding: 10px; 
+	background-color: #ACACAC;
+	color: white;
 }
 
 

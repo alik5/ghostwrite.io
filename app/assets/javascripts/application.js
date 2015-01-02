@@ -60,10 +60,7 @@ $(document).ready(function(){
 );
 
   });
-  
 
-
-console.log('lock');
 
 
 
