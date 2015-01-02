@@ -42,6 +42,7 @@ body {
   margin-left: 0px;
   clear: both; /* Required for Webkit, but not for Gecko */
   padding-top: 10px; 
+
 }
 
 input {
@@ -54,11 +55,10 @@ input {
 }
 
 
+
  div.boolean, .simple_form input {
   background-color: #333333;
   border: none;
-}
-  div.boolean, .simple_form input[type='submit'] {
   color: white;
 }
 
@@ -71,6 +71,11 @@ span.add-on {
 	background-color: #333333;
 	border: none;
 
+}
+
+
+.modal-body {
+	color: white;
 }
 
 
@@ -246,6 +251,7 @@ i {
 
 .modal-body  {
 	background-color: #ACACAC; 
+	color: white;
 }
 
 .modal-header {
@@ -279,6 +285,11 @@ i {
 	position: absolute;
 	margin-left: 80%;
 	margin-top: 8%;
+}
+
+.btn {
+	width: 30%;
+	height: 70px;  
 }
 
 
