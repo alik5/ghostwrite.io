@@ -6,8 +6,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway', :media => "all" %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Merriweather', :media => "all" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'assets/javascripts/bower_components/typed.js' %>
+  <%= javascript_include_tag 'application', "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -43,7 +44,6 @@
 
  </div>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
 </body>
 </html>

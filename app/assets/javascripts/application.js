@@ -10,19 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require greensock/TweenMax.min
+
 //= require jquery.scrollmagic
+//= require greensock/TweenMax.min
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
 //= require turbolinks
 
-
-window.onload = function(){
-    var logo = document.getElementById("logo");
-    TweenLite.to(logo, 1, {left:"632px"});
-}
 
 
 
@@ -69,6 +65,23 @@ $(document).ready(function(){
 
   });
 
+var controller = new ScrollMagic();
+var scene = new ScrollScene();
+
+var scene = new ScrollScene({
+  triggerElement: '#pinned-trigger1', // starting point of the scene
+  duration: 400 // pin the element for 400px of scrolling
+})
+
+var scene = new ScrollScene({
+  triggerElement: '#trigger1'
+})
+.addTo(controller); // Add Scene to ScrollMagic Controller
+
+var scene2 = new ScrollScene({
+  triggerElement: '#trigger2'
+})
+.addTo(controller); // Add Scene to ScrollMagic Controller
 
 
 
