@@ -324,6 +324,15 @@ body.onepage .menu-wrapper.affix {
   text-transform: uppercase;
 }
 
+/*******Carousel*******************/
+.trees {
+  width: 100%; 
+}
+
+.carousel-control.left, 
+.carousel-control.right {
+    background-image: none
+}
 
 /******* simple form styles *******/
 
@@ -586,6 +595,33 @@ select {
 	margin-left: 40%;
 	margin-top: -40%;
 }
+
+.ghost-png {
+  background: no-repeat center; 
+}
+
+.white-wrapper {
+  position: relative;
+  display: block;
+  z-index:1000;
+  padding:80px 0;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.btn-group {
+  margin-top: 50px;
+  position: relative;
+}
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    height: 200%;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
 
 
 
