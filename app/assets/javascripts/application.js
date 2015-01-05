@@ -11,13 +11,16 @@
 // about supported directives.
 //
 
-//= require jquery.scrollmagic
-//= require greensock/TweenMax.min
+
+
+
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
-//= require_tree .
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require_tree .
+
+
 
 
 
@@ -65,23 +68,7 @@ $(document).ready(function(){
 
   });
 
-var controller = new ScrollMagic();
-var scene = new ScrollScene();
 
-var scene = new ScrollScene({
-  triggerElement: '#pinned-trigger1', // starting point of the scene
-  duration: 400 // pin the element for 400px of scrolling
-})
-
-var scene = new ScrollScene({
-  triggerElement: '#trigger1'
-})
-.addTo(controller); // Add Scene to ScrollMagic Controller
-
-var scene2 = new ScrollScene({
-  triggerElement: '#trigger2'
-})
-.addTo(controller); // Add Scene to ScrollMagic Controller
 
 
 

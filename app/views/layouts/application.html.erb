@@ -6,7 +6,6 @@
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway', :media => "all" %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Merriweather', :media => "all" %>
   <%= javascript_include_tag 'assets/javascripts/bower_components/typed.js' %>
-  <%= javascript_include_tag 'application', "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
  
@@ -14,52 +13,84 @@
 
   <%= csrf_meta_tags %>
 </head>
-
-
 <body>
-	<div class=" navbar navbar-fixed-top">
-		<div class="navbar-inner">
- 			<div class="container">
- 				<%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
- 				<li class="navbar-text pull-left">
- 					<%= link_to 'About', about_path, :class => 'navbar-link' %>
- 					<li class="navbar-text pull-right">
-					<% if user_signed_in? %>
- 					<strong><%= current_user.full_name %></strong> 
-  					<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-					<% else %>
-  					<%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link', :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", method: 'get' %> |
- 					<%= link_to "Log In", new_user_session_path, :class => 'navbar-link', :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", method: 'get' %>
-						<% end %>
- 					</li>
 
- 				</ul>
- 			</div>
-		</div>	
-	</div>
+
+	<div class="wrapper">
+        <header class="header">
+            <div class="menu-wrapper">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-menu-3"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">Ghostwrite.io</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Works <span class="icon-angle-down"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                       <%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
+							 		<li class="navbar-text pull-left">
+							 		<%= link_to 'About', about_path, :class => 'navbar-link' %>				
+							 					
+                                    </ul>
+                                </li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                           <ul class="nav navbar-nav navbar-right">
+                            <% if user_signed_in? %>
+                            <li><strong><%= current_user.full_name %></strong></li> 
+							<li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
+							<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+						
+							<% else %>
+							 <li><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", method: 'get' %></li>
+							 <li><%= link_to "Log In", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", method: 'get' %></li>
+							<% end %>
+							 					
+                            </li>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </nav>
+            </div><!-- end menu-wrapper -->
+        </header><!-- end header -->
 		
-
-	
-
-
-	
-
-	
-	
-
-
-	
-
-				
 
 
 	
 	<%= yield %>
-	<%= render 'devise/sessions/new' %>
+
+
+
 	<%= render 'devise/registrations/new' %>
 	
+	
 </body>
+
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ajax-modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+  <div class='modal-header'>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="modal-title">LOG IN</h3>
+
+    
+  </div>
+  <div class='modal-body'>
+<div class="ghostgirl-modal"><%=image_tag "ghostgirl.svg" %></div>
+    <%= render 'devise/sessions/new' %> 
+
+	</div>
+ </div>
+</div>
 
 
 </html>
