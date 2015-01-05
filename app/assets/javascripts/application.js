@@ -18,6 +18,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap/modal
 //= require_tree .
 
 
@@ -39,6 +40,13 @@ $(document).ready(function(){
         strings: ["What's your name?", "Is it Freddy?", "Is it Suzanne?"],
         typeSpeed: 100
        });
+
+  $(document).ready(function() {
+   $('#ajax-modal').modal('show');
+   $('.modal-body').html('<%= escape_javascript(render "devise/sessions/new" %>'); 
+});
+
+
      
 
 
@@ -56,6 +64,9 @@ $(document).ready(function(){
     });
 
    });
+
+
+
   
 
 

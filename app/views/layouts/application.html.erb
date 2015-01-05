@@ -7,16 +7,15 @@
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Merriweather', :media => "all" %>
   <%= javascript_include_tag 'assets/javascripts/bower_components/typed.js' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   
  
 
 
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-
-	<div class="wrapper">
+ <body>
+  <div class="wrapper">
         <header class="header">
             <div class="menu-wrapper">
                 <nav class="navbar navbar-default" role="navigation">
@@ -36,25 +35,25 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Works <span class="icon-angle-down"></span></a>
                                         <ul class="dropdown-menu" role="menu">
                                        <%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
-							 		<li class="navbar-text pull-left">
-							 		<%= link_to 'About', about_path, :class => 'navbar-link' %>				
-							 					
+                  <li class="navbar-text pull-left">
+                  <%= link_to 'About', about_path, :class => 'navbar-link' %>       
+                        
                                     </ul>
                                 </li>
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                            <ul class="nav navbar-nav navbar-right">
-                            <% if user_signed_in? %>
+                              <% if user_signed_in? %>
                             <li><strong><%= current_user.full_name %></strong></li> 
-							<li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
-							<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-						
-							<% else %>
-							 <li><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", method: 'get' %></li>
-							 <li><%= link_to "Log In", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", method: 'get' %></li>
-							<% end %>
-							 					
+              <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            
+              <% else %>
+               <li><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", method: 'get' %></li>
+               <li><%= link_to "Log In", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", method: 'get' %></li>
+              <% end %>
+                        
                             </li>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
@@ -70,6 +69,7 @@
 
 
 	<%= render 'devise/registrations/new' %>
+   </div> <!-- end wrapper -->
 	
 	
 </body>
@@ -85,10 +85,11 @@
     
   </div>
   <div class='modal-body'>
-<div class="ghostgirl-modal"><%=image_tag "ghostgirl.svg" %></div>
+	<div class="ghostgirl-modal"><%=image_tag "ghostgirl.svg" %></div>
     <%= render 'devise/sessions/new' %> 
 
 	</div>
+  </div>
  </div>
 </div>
 
