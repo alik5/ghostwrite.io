@@ -1,6 +1,6 @@
 class LettersController < ApplicationController
 respond_to :html
-layout 'home'
+layout 'application'
  def index
     @letter= Letter.all
     @letter_types = LetterType.all
