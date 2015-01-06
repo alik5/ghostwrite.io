@@ -1,10 +1,14 @@
 <div class="container">
 	<div class="row">
 		
-  		<div class="col-xs-6 col-md-4">
+  		<div class="col-xs-6">
+  			<div class="inner-logo-column">
+  			<%= image_tag "greengirl.jpg", class: "logo-img-all"%>
   			<span class = "element"></span>
+  			</div>
   		</div>
-  		<div class="col-xs-12 col-md-8">.
+  		<div class="col-xs-6">
+  		
 			<% @letter.each do |letter| %>
 
 				<div class= "letter">

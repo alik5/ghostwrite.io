@@ -378,16 +378,10 @@ span.add-on {
 }
 
 
-.ghostwrite {
-	margin: 10%;
-	padding: 20px;  
-}
 
  .logo-img-all {
- 	width: 33%;
- 	padding-bottom: -10px; 
- 	 
- 
+ 	width: 45%;
+  height: auto; 
  }
 
  .element {
@@ -614,6 +608,11 @@ select {
        -moz-border-radius: 8px;
             border-radius: 8px;
     }
+
+  .inner-logo-column {
+    background-color: white; 
+    margin: 10px;
+  }
 
 
 
