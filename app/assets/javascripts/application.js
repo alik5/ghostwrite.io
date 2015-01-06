@@ -18,8 +18,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap
 //= require bootstrap/modal
 //= require_tree .
+
 
 
 
@@ -41,10 +43,11 @@ $(document).ready(function(){
         typeSpeed: 100
        });
 
-  $(document).ready(function() {
-   $('#ajax-modal').modal('show');
-   $('.modal-body').html('<%= escape_javascript(render "devise/sessions/new" %>'); 
-});
+
+  jQuery(document).ready(function($){
+  $('#myModal').modal('options')
+  var body = $( 'show' );
+  });
 
 
      
