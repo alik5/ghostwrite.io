@@ -25,7 +25,7 @@ gem 'sqlite3', group: :development
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
-
+gem "animate-rails"
 
 
 # Use Uglifier as compressor for JavaScript assets

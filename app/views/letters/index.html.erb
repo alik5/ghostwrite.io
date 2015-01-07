@@ -1,23 +1,34 @@
+
 <div class="container">
-	
-	<% @letter.each do |letter| %>
-
-	<div class= "letter">
+	<div class="row">
 		
-	</div>
-<% end %>
+  		<div class="col-xs-6">
+  			<div class="inner-logo-column">
+  			<%= image_tag "ghostgirl-business.jpg", class: "logo-img-all"%>
+  			<span class="element"></span>
+  			</div>
+  		</div>
+  		<div class="col-xs-6">
+  			<div class="inner-button-column">
+  		
+			<% @letter.each do |letter| %>
 
-<%= form_tag new_letter_path, method: :get do %>
+				<div class= "letter">
+					
+				</div>
+				<% end %>
 
+			<%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
 
-  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 1), :id, :name) %>
-  
-  <br>
-  <%= submit_tag "Create Message" %>
-<% end %>
-
-
-
+			<div class="select-tag">
+			  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 1), :id, :name) %>
+			  <br>
+			</div>
+			  <%= submit_tag "Create Message", :class => "business-submit" %>
+			<% end %>
+			</div>
+		</div>
+    </div>
 </div>
 
 

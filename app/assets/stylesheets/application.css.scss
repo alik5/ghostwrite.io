@@ -13,6 +13,7 @@
 
  *= require_tree .
  *= require_self
+ *= require animate
  */
 
 
@@ -107,7 +108,7 @@ transition:background-color .2s linear, color .2s linear;
 }
 
 .navbar-header a:hover {
-border-color:#a86846;
+border-color:#24FFCB;
 }
 
 a:hover,a:focus {
@@ -569,14 +570,6 @@ i {
 	display: none;
 }
 
-select {
-	font-family: 'Raleway', serif;
-	font-size: 0.8em;
-	padding: 10px; 
-	background-color: #ACACAC;
-	color: white;
-}
-
 #sign-up {
 	width: 35%;
   height: auto;
@@ -613,6 +606,109 @@ select {
     background-color: white; 
     margin: 10px;
   }
+
+  .inner-button-column {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .letter-form {
+    margin: 30px;
+    padding: 30px;
+  }
+
+
+
+  .business-submit {
+    background-color: #9B2600;
+    color: white;
+  }
+
+  #business_description {
+  display: none; 
+  color: black;
+  position: relative;
+}
+
+ #personal_description {
+  display: none; 
+  color: black;
+  position: relative;
+}
+
+ #custom_description {
+  display: none; 
+  color: black;
+  position: relative;
+}
+
+.select-tag select  {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+    padding-bottom: 25px;
+    font-weight: bold;
+    color: #9B2600;
+    margin-bottom: 30px;
+    
+
+}
+
+/* ----------------------------------------------------
+  FOOTER
+------------------------------------------------------- */
+
+.copyrights .list-inline > li a {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-transform: uppercase;
+  color: #a6a7a8 !important;
+}
+.footer {
+  background: #4e5660;
+  color: #a6a7a8;
+  padding-bottom: 60px;
+  padding-top: 75px;
+}
+.footer .title h3,
+.footer .widget h3{
+  margin:10px 0; 
+  color:#fff;
+}
+
+.title {
+  margin-bottom: 65px; 
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+}
+
+.copyrights {
+  background: #434b55;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.copymessage  p,
+.copymessage  a{
+  text-transform: uppercase;
+  font-size:14px !important;
+  font-weight: 400 !important;
+  color:#fff;
+  padding-top:8px;
+  letter-spacing: 0.6px;
+}
+.hbottom {
+  position: absolute;
+  width: 100%;
+  z-index:9999;
+  left: 0;
+  background-color:#fff; 
+  bottom: 0;
+}
 
 
 

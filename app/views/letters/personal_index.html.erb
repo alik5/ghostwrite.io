@@ -8,6 +8,7 @@
   			</div>
   		</div>
   		<div class="col-xs-6">
+  			<div class="inner-button-column">
   		
 			<% @letter.each do |letter| %>
 
@@ -16,13 +17,14 @@
 				</div>
 				<% end %>
 
-			<%= form_tag new_letter_path, method: :get do %>
+			<%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
 
 
 			  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 2), :id, :name) %>
 			  <br>
 			  <%= submit_tag "Create Message" %>
 			<% end %>
+			</div>
 		</div>
 	
 	

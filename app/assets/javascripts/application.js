@@ -23,7 +23,6 @@
 
 
 
-
 $(document).ready(function(){
       $(".element").typed({
         strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
@@ -32,26 +31,17 @@ $(document).ready(function(){
 
       console.log('hi');
 
- $(document).ready(function(){
-      $(".element_name").typed({
-        strings: ["What's your name?", "Is it Freddy?", "Is it Suzanne?"],
-        typeSpeed: 100
-       });
+ $( "#business" ).hover(function() {
+    console.log('bitch, please');
+   $('#business_description').fadeIn( "slow" );
+});
 
 
-  jQuery(document).ready(function($){
+  $(document).ready(function($){
   $('#myModal').modal('options')
   var body = $( 'show' );
   });
 
-
-     
-
-
-  $( "#business" ).hover(function() {
-    console.log('bitch, please');
-    $( "#business_description" ).fadeIn( "slow" );
-    });
 
   $( "#personal" ).hover(function() {
     $( "#personal_description" ).fadeIn( "slow" );
@@ -65,17 +55,8 @@ $(document).ready(function(){
 
 
 
-  
 
 
-
- $( "button" ).hover(
-  function() {
-     $( ".lock ").toggle();
-  }
-);
-
-  });
 
 
 
