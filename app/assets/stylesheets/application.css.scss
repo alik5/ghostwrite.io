@@ -620,8 +620,8 @@ i {
 
 
   .business-submit {
-    background-color: #9B2600;
-    color: white;
+    background-color: #24FFCB;
+    color: gray;
   }
 
   #business_description {
@@ -677,7 +677,7 @@ i {
   color:#fff;
 }
 
-.title {
+footer .title {
   margin-bottom: 65px; 
   text-align: center;
   font-size: 18px;
@@ -708,6 +708,17 @@ i {
   left: 0;
   background-color:#fff; 
   bottom: 0;
+}
+
+.buttons small,
+.buttons h3,
+.section-sub-title {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5em;
+  margin-top: 30px;
+  text-transform: uppercase;
 }
 
 

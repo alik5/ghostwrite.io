@@ -20,9 +20,11 @@
 			<%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
 
 
+			  <div class="select-tag">
 			  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 2), :id, :name) %>
 			  <br>
-			  <%= submit_tag "Create Message" %>
+			</div>
+			  <%= submit_tag "Create Message", :class => "business-submit" %>
 			<% end %>
 			</div>
 		</div>
