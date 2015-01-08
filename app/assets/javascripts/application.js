@@ -12,50 +12,44 @@
 //
 
 
-
-
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require jquery.easing
+//= require jquery.turbolinks
 //= require_tree .
 
 
 
-
 $(document).ready(function(){
-      $(".element").typed({
+
+
+$(".element").typed({
         strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
         typeSpeed: 100
       });
+    
 
       console.log('hi');
 
  $( "#business" ).hover(function() {
     console.log('bitch, please');
    $('#business_description').fadeIn( "slow" );
-});
-
-
-  $(document).ready(function(){
-    $("#next").on( "click", function() {
-    $("fieldset").next().fadeIn( "slow");
   });
-});
-  
-
-
 
   $( "#personal" ).hover(function() {
     $( "#personal_description" ).fadeIn( "slow" );
-    });
+  });
 
   $( "#custom" ).hover(function() {
     $( "#custom_description" ).fadeIn( "slow" );
-    });
+  });
 
-   });
+
+
+
+});
+
 
 
 
