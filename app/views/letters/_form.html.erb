@@ -1,6 +1,6 @@
 
 		<div class="questions">
-		<%= simple_form_for(@letter) do |f| %>
+		<%= simple_form_for(@letter, html: {class: 'form-horizontal' }, :remote => true) do |f| %>
 		  
 		  <%= f.hidden_field :letter_type_id %>
 
@@ -11,7 +11,7 @@
 		  <% @letter.letter_type.letter_fields.each do |field| %>
 		  <%= render "letters/fields/#{field.field_type}", field: field, f: builder %>
 		  
-		
+
 		  <% end %>
 		<% end %>
 

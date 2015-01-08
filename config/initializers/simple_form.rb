@@ -108,10 +108,10 @@ SimpleForm.setup do |config|
   config.label_class = 'control-label'
 
   # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  config.form_class = :simple_form
 
   # You can define which elements should obtain additional classes
-  # config.generate_additional_classes_for = [:wrapper, :label, :input]
+   config.generate_additional_classes_for = [:wrapper, :label, :input]
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
@@ -130,6 +130,8 @@ SimpleForm.setup do |config|
   # to match as key, and the input type that will be used when the field name
   # matches the regexp as value.
   # config.input_mappings = { /count/ => :integer }
+
+  config.form_class = "simple_form form-horizontal"
 
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.

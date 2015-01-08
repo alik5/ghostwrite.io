@@ -45,7 +45,25 @@ $(".element").typed({
     $( "#custom_description" ).fadeIn( "slow" );
   });
 
+ $("div.questions fieldset").hide()
+ $(".green input").hide(); 
+ $("div.questions fieldset").first().show().append("<a class='fake' href='#'>Next</span>");
 
+
+ $("a.fake").click(function() {
+   $("div.questions fieldset").first().hide();
+   $("div.questions fieldset").first().next().fadeIn("slow").append("<a class='fake2' href='#'>Next</span>");
+
+
+ $("a.fake2").click(function() {
+  console.log("nope");
+   $("div.questions fieldset").first().next().hide();
+   $("div.questions fieldset").first().next().next().fadeIn("slow");
+   $("a.fake2").hide();
+   $(".green input").show();
+
+  });
+});
 
 
 });
