@@ -18,6 +18,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.easing
 //= require_tree .
 
 
@@ -37,10 +38,13 @@ $(document).ready(function(){
 });
 
 
-  $(document).ready(function($){
-  $('#myModal').modal('options')
-  var body = $( 'show' );
+  $(document).ready(function(){
+    $("#next").on( "click", function() {
+    $("fieldset").next().fadeIn( "slow");
   });
+});
+  
+
 
 
   $( "#personal" ).hover(function() {
@@ -52,6 +56,8 @@ $(document).ready(function(){
     });
 
    });
+
+
 
 
 
