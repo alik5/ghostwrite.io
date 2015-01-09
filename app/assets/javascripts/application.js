@@ -45,14 +45,22 @@ $(".element").typed({
     $( "#custom_description" ).fadeIn( "slow" );
   });
 
+
+
  $("div.questions fieldset").hide()
  $(".green input").hide(); 
- $("div.questions fieldset").first().show().append("<a class='fake' href='#'>Next</span>");
+ $("div.questions fieldset").first().show().append("<span><a class='fake' href='#'>Next</a></span>");
 
 
  $("a.fake").click(function() {
    $("div.questions fieldset").first().hide();
-   $("div.questions fieldset").first().next().fadeIn("slow").append("<a class='fake2' href='#'>Next</span>");
+   $("div.questions fieldset").first().next().fadeIn("slow").append("<span><a class='fake2' href='#'>Next</a></span>");
+   $("a.prev").show();
+
+     $("a.prev").click(function() { 
+     $("div.questions fieldset").first().next().prev().show();
+      });
+
 
 
  $("a.fake2").click(function() {
