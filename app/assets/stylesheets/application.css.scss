@@ -727,6 +727,40 @@ a.prev {
 
 span.next, span.prev{cursor:pointer;}
 
+div.green {
+  text-align: center;
+}
+
+.green input {
+  width: 200px;
+}
+
+.green input:hover {
+  background-color: #24FFCB;
+}
+
+div.progress {
+  margin: 80px
+}
+
+.contsnextprev {
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.prev:hover  {
+  color: #24FFCB;
+}
+
+.next:hover {
+  color: #24FFCB;
+}
+
+.contsnextprev span.prev {
+  padding-right: 30px; 
+}
+
 
 
 

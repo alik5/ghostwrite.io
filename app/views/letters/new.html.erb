@@ -9,9 +9,15 @@
   
 	<%= render 'form' %>
 
-<div class="contsnextprev"><span class="prev floatleft">&lt;</span> <span class="next floatright">&gt;</span></div>
+<div class="contsnextprev"><span class="prev floatleft"><i class="fa fa-angle-double-left fa-3x"></i></span><span class="next floatright"><i class="fa fa-angle-double-right fa-3x"></i></span></div>
 <div class="green">
   <%= f.submit %>
+</div>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
 </div>
 
 
