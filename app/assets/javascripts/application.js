@@ -28,6 +28,11 @@ $(".element").typed({
         strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
         typeSpeed: 100
       });
+
+$(".typed-cursor").typed({
+        strings: [""],
+        typeSpeed: 200
+      });
     
 
       console.log('hi');

@@ -1,6 +1,6 @@
 
 		<div class="questions">
-		<%= simple_form_for(@letter, html: {class: 'form-horizontal' }, :remote => true) do |f| %>
+		<%= simple_form_for(@letter, html: {class: 'form-horizontal', :autofocus => true }, :remote => true) do |f| %>
 		  
 		  <%= f.hidden_field :letter_type_id %>
 

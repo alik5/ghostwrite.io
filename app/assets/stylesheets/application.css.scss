@@ -350,9 +350,9 @@ body.onepage .menu-wrapper.affix {
 
 input {
 	font-family: 'Raleway'; 
-	font-size: 1.3em; 
+	font-size: 1em; 
 	border: none;
-	padding: 15px;  
+	padding: 10px;  
 }
 
 
@@ -433,7 +433,7 @@ i {
 
 .backend {
 	padding-top: 40px; 
-	background-color: #EBEBEB;
+	background-color: white;
 }
 
 .questions {
@@ -441,14 +441,8 @@ i {
 	font-weight: light; 
 	color: black;
 	font-size: 12pt; 
-	margin-left: 15%; 
-}
-
-.questions h1 {
-	text-align: left;
-	margin-left: 10%; 
-	margin-bottom: 5%; 
-	margin-top: -20px; 
+	width: 100%;
+  background-color: white;
 }
 
 .letter_text {
@@ -733,6 +727,7 @@ div.green {
 
 .green input {
   width: 200px;
+  font-size: 1.5em;
 }
 
 .green input:hover {
@@ -761,6 +756,52 @@ div.progress {
   padding-right: 30px; 
 }
 
+.fieldset input {
+  background-color: none;
+  border: 2px dotted;
+  border-color: #24FFCB;
+}
+
+.questions {
+  margin: 35px 0 0 0; 
+}
+
+.questions h1 {
+  padding-top: 10px;
+  margin-bottom: 20px; 
+  text-align: center;
+  font-family: 'Raleway';
+
+}
+
+.questions fieldset {
+  margin-left: 30px;
+}
+
+/*********typed.js************/
+
+.typed-cursor{
+    color: #24FFCB;
+    opacity: 1;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 
 
