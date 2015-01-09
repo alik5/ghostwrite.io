@@ -45,32 +45,34 @@ $(".element").typed({
     $( "#custom_description" ).fadeIn( "slow" );
   });
 
-
-
- $("div.questions fieldset").hide()
- $(".green input").hide(); 
- $("div.questions fieldset").first().show().append("<span><a class='fake' href='#'>Next</a></span>");
-
-
- $("a.fake").click(function() {
-   $("div.questions fieldset").first().hide();
-   $("div.questions fieldset").first().next().fadeIn("slow").append("<span><a class='fake2' href='#'>Next</a></span>");
-   $("a.prev").show();
-
-     $("a.prev").click(function() { 
-     $("div.questions fieldset").first().next().prev().show();
-      });
+  $('.questions').find('fieldset').each(function (i) {
+    $(this).attr('id', + i);
+});
 
 
 
- $("a.fake2").click(function() {
-  console.log("nope");
-   $("div.questions fieldset").first().next().hide();
-   $("div.questions fieldset").first().next().next().fadeIn("slow");
-   $("a.fake2").hide();
-   $(".green input").show();
+ $('div.questions fieldset:gt(0)').hide();
 
-  });
+var $allSlides = $('div.questions fieldset'), traverseDefault = "last", actionDefault ="prev";
+$('span.next, span.prev').click(function(){
+    
+    var traverse = traverseDefault,
+        action = actionDefault;
+    
+    if($(this).is('.next')){
+        traverse = "first";
+        action = "next";
+    }
+    
+    var $curr = $allSlides.filter(':visible'), 
+        $nxtTarget =  $curr[action]("fieldset");
+    
+    $curr.stop(true, true).fadeIn(1000).hide();
+    if (!$nxtTarget.length){
+        $nxtTarget = $allSlides[traverse]();
+    }
+    $nxtTarget.stop(true, true).fadeIn(1000);
+
 });
 
 
