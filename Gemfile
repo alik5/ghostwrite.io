@@ -28,7 +28,7 @@ gem 'autoprefixer-rails'
 gem "animate-rails"
 gem 'wicked'
 gem 'jquery-easing-rails'
-
+gem 'nprogress-rails'
 # use pry for debugging ruby
 gem 'pry'
 

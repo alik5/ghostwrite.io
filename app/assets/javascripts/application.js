@@ -17,6 +17,9 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.turbolinks
+//= require nprogress
+//= require nprogress-turbolinks
+//= require nprogress-ajax
 //= require_tree .
 
 
@@ -28,10 +31,7 @@ $(".element").typed({
         typeSpeed: 100
       });
 
-$(".typed-cursor").typed({
-        strings: [""],
-        typeSpeed: 200
-      });
+
     
 
       console.log('hi');

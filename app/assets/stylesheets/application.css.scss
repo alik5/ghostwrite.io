@@ -14,6 +14,8 @@
  *= require_tree .
  *= require_self
  *= require animate
+ *= require nprogress
+ *= require nprogress-bootstrap
  */
 
 
@@ -512,11 +514,9 @@ i {
 }
 
 .modal-body  {
-	background-color: none; 
+	background-color: black; 
 	color: white;
 	border: none;
-  z-index: 2000;
-
 }
 
 .modal-header {
