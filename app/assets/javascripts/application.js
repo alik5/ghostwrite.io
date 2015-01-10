@@ -23,7 +23,6 @@
 
 $(document).ready(function(){
 
-
 $(".element").typed({
         strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
         typeSpeed: 100
@@ -59,8 +58,8 @@ $(".typed-cursor").typed({
  $('div.questions fieldset:gt(0)').hide();
 
 var $allSlides = $('div.questions fieldset'), traverseDefault = "last", actionDefault ="prev";
-$('span.next, span.prev').click(function(){
-    
+$('span.next, span.prev').click(function(e){
+
     var traverse = traverseDefault,
         action = actionDefault;
     
@@ -77,6 +76,15 @@ $('span.next, span.prev').click(function(){
         $nxtTarget = $allSlides[traverse]();
     }
     $nxtTarget.stop(true, true).fadeIn(1000);
+
+    var numberOfFields = $('fieldset').length;
+    var thisFieldId = $('fieldset').not(':hidden')[0].id;
+
+    if (parseInt(thisFieldId) < numberOfFields - 1) $('.next').parent().show();
+    if (parseInt(thisFieldId) === 0 ) $('.prev').parent().hide();
+
+    if (parseInt(thisFieldId) > 0) $('.prev').parent().show();
+    if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
   });
 

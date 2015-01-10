@@ -29,6 +29,8 @@ gem "animate-rails"
 gem 'wicked'
 gem 'jquery-easing-rails'
 
+# use pry for debugging ruby
+gem 'pry'
 
 
 # Use Uglifier as compressor for JavaScript assets

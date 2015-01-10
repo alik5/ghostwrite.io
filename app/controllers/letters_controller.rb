@@ -16,7 +16,11 @@ layout 'application'
   def new
    # @letter = Letter.new
     @letter = Letter.new(letter_type_id: params[:letter_type_id])
+    # @letter.number_of_fields = number of fields on letter_type
+    # get the fields out of the params
+    # letter.fields = [{letter_type.field1: }]
     @letter_types = LetterType.all
+
     respond_with(@letter_types)
 
   end
