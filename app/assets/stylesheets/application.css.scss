@@ -375,6 +375,10 @@ span.add-on {
 	
 }
 
+.select-tag input {
+  font-size: 1.5em;
+}
+
 
 
 
@@ -384,7 +388,12 @@ span.add-on {
  }
 
  .element {
- 	margin-bottom: 40px; 
+ 	margin-bottom: 40px;
+
+ }
+
+ span.element {
+   font-size: 1.5em; 
  }
 
  #wrap {
