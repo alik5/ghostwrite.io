@@ -2,15 +2,16 @@
 	<div class="row">
 		
   		<div class="col-xs-6">
-  			<div class="inner-logo-column">
-  			<%= image_tag "greengirl.jpg", class: "logo-img-all"%>
-  			<span class = "element"></span>
+  			
+  			  <div class="inner-logo-column">
+  				<%= image_tag "greengirl.jpg", class: "logo-img-all"%>
+  			<span id="element"class="element"></span>
   			</div>
   		</div>
-  		<div class="col-xs-6">
-  			<div class="inner-button-column">
+  			<div class="col-xs-6">
+  				<div class="inner-button-column">
   		
-			<% @letter.each do |letter| %>
+				<% @letter.each do |letter| %>
 
 				<div class= "letter">
 					
@@ -28,8 +29,6 @@
 			<% end %>
 			</div>
 		</div>
-	
-	
- 
+	</div>
  </div>
 </div>
