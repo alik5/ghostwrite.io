@@ -513,8 +513,8 @@ i {
 	width: 70%;
 }
 
-.modal-body  {
-	background-color: black; 
+div.modal-body  {
+	background-color: white; 
 	color: white;
 	border: none;
 }
@@ -524,19 +524,6 @@ i {
 	
 }
 
-.first-column {
-  width: 60%;
-  float: left;
-  margin-left: 5%;
-}
-
-.second-column {
-  width: 40%;
-  float: right;
-  margin-top: -20%;
-  margin-left: 10px;
-  position: relative;
-}
 
 .login-second-column {
   margin-top: 20px;
@@ -554,19 +541,20 @@ i {
 
 
 .btn {
-	width: 30%;
-	height: 70px;
-	padding-top: 15%;  
+	width: 20%;
+	height: 70px; 
+}
+
+#sign-up {
+  float: right;
+  position: relative;
 }
 
 #unlock {
 	display: none;
 }
 
-#sign-up {
-	width: 35%;
-  height: auto;
-}
+
 
 .ghost-png {
   background: no-repeat center; 
@@ -869,8 +857,21 @@ div.progress {
   font-weight: 300;
 }
 
+div.modal-body {
+  margin-bottom: 60px; 
+}
+
+.controls input {
+  border: 1px dotted;
+  border-color: #24FFCB;
+  font-size: 1.3em;
+
+}
 
 
+.modal-header h3 {
+  color: black;
+}
 
 
 
