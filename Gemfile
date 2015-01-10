@@ -29,6 +29,7 @@ gem "animate-rails"
 gem 'wicked'
 gem 'jquery-easing-rails'
 gem 'nprogress-rails'
+gem 'wow-rails'
 # use pry for debugging ruby
 gem 'pry'
 

@@ -20,6 +20,7 @@
 //= require nprogress
 //= require nprogress-turbolinks
 //= require nprogress-ajax
+//= require wow
 //= require_tree .
 
 
