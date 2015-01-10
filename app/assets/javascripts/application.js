@@ -54,7 +54,7 @@ $(".typed-cursor").typed({
     $(this).attr('id', + i);
 });
 
-
+///form///
 
  $('div.questions fieldset:gt(0)').hide();
 
@@ -78,7 +78,7 @@ $('span.next, span.prev').click(function(){
     }
     $nxtTarget.stop(true, true).fadeIn(1000);
 
-});
+  });
 
 
 });
