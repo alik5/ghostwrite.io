@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  layout 'home'
+  layout 'application'
 
 
   
