@@ -1,27 +1,34 @@
-<p> Confirmation </p>
+<div class="container-fluid">
+  <div class="row">
+  	 
+   <div class="col-md-9 col-md-push-3">
+		<p> Confirmation </p>
 
-<div class="about">
+		<div class="about">
 
-<h2><%= @ghostwrite.title %></h2>
+		<h2><%= @ghostwrite.title %></h2>
 
-<p><%= @ghostwrite.text_box %></p>
+		<p><%= @ghostwrite.text_box %></p>
 
-</div>
+		</div>
 
 
-<div>
-   
-    <%= link_to "My Attachment", @ghostwrite.photo.url %>
+		<div>
+		   
+		    <%= link_to "My Attachment", @ghostwrite.photo.url %>
 
-</div>
+		</div>
 
-<div class="payment">
+		<div class="payment">
 
-<%= render 'charges/form' %>
+		<%= render 'charges/form' %>
 
-<div>
+		<div>
 
-<div class = "bottom">
-<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
-<%= link_to 'Back', ghostwrites_path %>
+		<div class = "bottom">
+		<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
+		<%= link_to 'Back', ghostwrites_path %>
+	</div>
+
+	</div>
 </div>
