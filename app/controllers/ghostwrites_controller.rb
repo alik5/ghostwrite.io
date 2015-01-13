@@ -1,5 +1,5 @@
 class GhostwritesController < ApplicationController
-	layout 'home'
+	layout 'application'
   respond_to :html
 
 

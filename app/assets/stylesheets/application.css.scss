@@ -153,7 +153,7 @@ clear:both;
   margin-right: 7px;
 }
 
-.custom {
+.personal {
   background:#434b55;
   border-left: 0 none;
   color: #fff;
@@ -612,14 +612,12 @@ div.modal-body  {
     color: gray;
   }
 
-  #business_description {
-  display: none; 
+  #business_description { 
   color: black;
   position: relative;
 }
 
  #personal_description {
-  display: none; 
   color: black;
   position: relative;
 }
@@ -878,6 +876,11 @@ div.modal-body {
 
 .modal-header h3 {
   color: black;
+}
+
+#ghostwrite_text_box {
+  width: 475px; 
+  height: 250px; 
 }
 
 

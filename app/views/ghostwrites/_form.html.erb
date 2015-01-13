@@ -1,4 +1,4 @@
-<div class="backend">
+
 <%= simple_form_for(@ghostwrite, html: {class: "form-horizontal", :multipart => true })  do |f| %>
   <% if @ghostwrite.errors.any? %>
     <div id="error_explanation">
@@ -15,10 +15,10 @@
     <h1>Custom Letter</h1>
  
 
-  <%= f.text_field :title, placeholder: "Your Name" %>
-  <%= f.text_field :string, placeholder: "Your Email" %>
-  <%= f.input :text_box, label: false, placeholder: "Paste what you want to be ghostwritten here..." %> 
-  <p> Attach resume/application/drafts here: </p>
+  <%= f.input :title, placeholder: "Your Name" %>
+  <%= f.input :string, placeholder: "Your Email" %>
+  <%= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
+  <p> Attach Resume/Application/Drafts here: </p>
   <%= f.file_field :photo %>
  <br> 
  <br>  
@@ -29,7 +29,7 @@
 
 </fieldset>
 <% end %>
-</div>
+
 
 
 
