@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
 
   
-
+  get 'business', to: 'letters#index', as: :business
+  get 'personal', to: 'letters#personal_index', as: :personal
   get 'custom', to: 'ghostwrites#new', as: :custom
   get 'about', to: 'static_pages#about', as: :about
   get 'examples', to: 'static_pages#examples', as: :examples
