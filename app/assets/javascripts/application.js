@@ -21,6 +21,8 @@
 //= require nprogress-turbolinks
 //= require nprogress-ajax
 //= require wow
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales
 //= require_tree .
 
 
@@ -88,6 +90,9 @@ $('span.next, span.prev').click(function(e){
     if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
   });
+
+
+
 
 
 });

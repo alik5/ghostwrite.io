@@ -17,7 +17,8 @@
 
   <%= f.input :title, placeholder: "Your Name" %>
   <%= f.input :string, placeholder: "Your Email" %>
-  <%= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
+  <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
+  <%= f.input :text_box, as: :wysihtml5 %>
   <p> Attach Resume/Application/Drafts here: </p>
   <%= f.file_field :photo %>
  <br> 

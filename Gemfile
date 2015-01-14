@@ -7,7 +7,7 @@ gem 'rails_12factor', group: :production
 gem "paperclip", "~> 4.2"
 gem 'actionview-encoded_mail_to'
 gem 'mail_form'
- gem 'unicorn'
+gem 'unicorn'
 gem "figaro"
 gem 'mandrill-api'
 gem 'mandrill_mailer'
@@ -26,7 +26,8 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
 gem "animate-rails"
-gem 'wicked'
+gem 'bootstrap-wysihtml5-rails'
+
 gem 'jquery-easing-rails'
 gem 'nprogress-rails'
 gem 'wow-rails'

@@ -16,6 +16,7 @@
  *= require animate
  *= require nprogress
  *= require nprogress-bootstrap
+ *= require bootstrap-wysihtml5
  */
 
 
@@ -547,10 +548,6 @@ div.modal-body  {
 }
 
 
-.btn {
-	width: 20%;
-	height: 70px; 
-}
 
 #sign-up {
   float: right;
@@ -576,10 +573,7 @@ div.modal-body  {
   background: #fff;
 }
 
-.btn-group {
-  margin-top: 50px;
-  position: relative;
-}
+
 .btn-xlarge {
     padding: 18px 28px;
     font-size: 22px;
@@ -878,10 +872,7 @@ div.modal-body {
   color: black;
 }
 
-#ghostwrite_text_box {
-  width: 475px; 
-  height: 250px; 
-}
+
 
 div.letter_types {
   font-size: 2em; 
@@ -892,6 +883,10 @@ div.letter_types {
   padding: 12px; 
 }
 
+#ghostwrite_text_box {
+  width: 750px;
+  font-size: 1.3em; 
+}
 
 
 
