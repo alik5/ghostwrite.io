@@ -31,6 +31,8 @@ Rails.application.routes.draw do
    resources :forms 
    resources "contacts", only: [:new, :create]
 
+   mount Monologue::Engine, at: '/blog' # or whatever path, be it "/blog" or "/monologue"
+
    
   
 

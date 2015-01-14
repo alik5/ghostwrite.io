@@ -23,6 +23,7 @@
 //= require wow
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales
+//= require sweet-alert
 //= require_tree .
 
 
@@ -34,6 +35,7 @@ $(".element").typed({
         typeSpeed: 100
       });
 
+ swal({   title: "Welcome to Ghostwrite.io!",   text: "Pick a category below to get a free template!" });
 
     
 
@@ -92,7 +94,7 @@ $('span.next, span.prev').click(function(e){
   });
 
 
-
+  
 
 
 });

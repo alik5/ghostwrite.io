@@ -31,6 +31,8 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'jquery-easing-rails'
 gem 'nprogress-rails'
 gem 'wow-rails'
+gem 'sweet-alert'
+gem 'monologue'
 # use pry for debugging ruby
 gem 'pry'
 
