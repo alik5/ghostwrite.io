@@ -376,7 +376,7 @@ span.add-on {
 	
 }
 
-.select-tag input {
+.select-tag #letter_type_id {
   font-size: 1.5em;
 }
 
@@ -388,14 +388,16 @@ span.add-on {
   height: auto; 
  }
 
- .element {
- 	margin-bottom: 40px;
+ 
 
+
+ span#element {
+  font-size: 1.8em;
  }
 
-
- #element {
-  font-size: .9em;
+ span#element-business {
+ 
+  font-size: 1.5em; 
  }
 
 
