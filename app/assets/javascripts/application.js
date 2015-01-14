@@ -35,7 +35,7 @@ $(".element").typed({
         typeSpeed: 100
       });
 
- swal({   title: "Welcome to Ghostwrite.io!",   text: "Pick a category below to get a free template!" });
+ 
 
     
 

@@ -27,10 +27,10 @@ Monologue.config do |config|
 
   #SOCIAL
   config.twitter_username = "alik5"
-  config.facebook_url = "https://www.facebook.com/afitzgerald71"
+  config.facebook_url = "https://www.facebook.com/ali.fitzgerald.71"
   config.facebook_logo = 'logo.png'
   config.google_plus_account_url = "https://plus.google.com/u/1/115273180419164295760/posts"
-  config.linkedin_url = "http://www.linkedin.com/in/alikfitz"
+  config.linkedin_url = "https://www.linkedin.com/pub/alexandra-fitzgerald/96/814/616"
   config.github_username = "alik5"
   config.show_rss_icon = true
 

@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+  <div class="row">
+  	 
+   	<div class="col-md-8 col-md-push-4">
+		<div class="select-tag">
+			 <%#= select_tag :letter_type_id, options_from_collection_for_select(LetterType.all, :id, :name) %>
+			 <% @letter_types.each do |letter_type| %>
+			 <td><%= letter_type.name %></td> <br>
+			 <% end %>
+		<br>
+		</div>
+	</div>
+  </div>
+</div>

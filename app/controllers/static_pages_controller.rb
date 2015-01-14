@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  respond_to :html
   layout 'application'
 
 
@@ -7,15 +8,12 @@ class StaticPagesController < ApplicationController
   	
   end
 
-  def business
-  
-  end
-
-  def begin
-  end
-
-  def cover_letter
+  def examples
+      @letter = Letter.new(letter_type_id: params[:letter_type_id])
     
+      @letter_types = LetterType.all
+
+      respond_with(@letter_types)
   end
 
   def about
