@@ -395,10 +395,6 @@ span.add-on {
   font-size: 1.8em;
  }
 
- span#element-business {
- 
-  font-size: 1.5em; 
- }
 
 
  #wrap {
@@ -607,6 +603,13 @@ div.modal-body  {
   .business-submit {
     background-color: #24FFCB;
     color: gray;
+    width: 125px;
+    font-size: 1.5em; 
+  }
+
+  .business-submit:hover {
+    background-color: gray; 
+    color: #24FFCB;
   }
 
   #business_description { 
@@ -891,6 +894,9 @@ div.letter_types {
   font-size: 1.3em; 
 }
 
+.example {
+  width: 1100px; 
+}
 
 
 
