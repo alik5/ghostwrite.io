@@ -1,9 +1,9 @@
 Monologue.config do |config|
-  config.site_name = "www.ghostwrite.io"
+  config.site_name = "Ghostwrite.io"
   config.site_subtitle = "Write Well, Easier."
   config.site_url = "http://www.ghostwrite.io"
 
-  config.meta_description = "A blog about ghostwrite.io, bothin the making and beyong"
+  config.meta_description = "A blog about ghostwrite.io, both in the making and beyond"
   config.meta_keyword = "cover letter, startup, ruby, tech"
 
   config.admin_force_ssl = false
