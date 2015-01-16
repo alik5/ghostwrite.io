@@ -16,6 +16,7 @@ gem 'aws-sdk'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'font-awesome-sass'
 gem 'scrollmagicjs-rails'
+gem 'angularjs-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

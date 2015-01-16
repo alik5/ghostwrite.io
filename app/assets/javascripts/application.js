@@ -21,6 +21,8 @@
 //= require nprogress-turbolinks
 //= require nprogress-ajax
 //= require wow
+//= require angular
+//= require angular-resource
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales
 //= require sweet-alert
@@ -36,9 +38,6 @@ $(".element").typed({
       });
 
  
-
-    
-
       console.log('hi');
 
  $( "#business" ).hover(function() {
@@ -92,6 +91,9 @@ $('span.next, span.prev').click(function(e){
     if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
   });
+
+
+$('#some-textarea').wysihtml5();
 
 
   
