@@ -132,6 +132,7 @@ $('span.next, span.prev').click(function(e){
 
   $('#company').on('keyup', function(){
   $('#companyDiv').html($('#company').val());
+  $('#companyDiv2').html($('#company').val());
 
   });
 

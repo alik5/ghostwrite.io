@@ -349,6 +349,7 @@ body.onepage .menu-wrapper.affix {
 .simple_form div.controls {
   clear: both; /* Required for Webkit, but not for Gecko */
   padding-top: 10px; 
+  width: 50%;
 
 }
 
@@ -914,8 +915,14 @@ div.letter_types {
 }
 
 .letter span {
-  color: #24FFCB;
+  color: #039B6F;
 }
+
+.letter {
+  font-size: 1.5em;
+}
+
+
 
 
 

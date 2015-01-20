@@ -36,6 +36,7 @@ gem 'sweet-alert'
 gem 'monologue'
 # use pry for debugging ruby
 gem 'pry'
+gem 'paypal-sdk-rest'
 
 
 # Use Uglifier as compressor for JavaScript assets

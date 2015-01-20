@@ -38,7 +38,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    angularjs-rails (1.3.8)
     animate-rails (1.0.7)
       rails
     arel (5.0.1.20140414130214)
@@ -141,6 +140,12 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paypal-sdk-core (0.3.1)
+      multi_json (~> 1.0)
+      xml-simple
+    paypal-sdk-rest (0.10.0)
+      paypal-sdk-core (~> 0.3.1)
+      uuidtools (~> 2.1)
     pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -223,6 +228,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.5)
     warden (1.2.3)
       rack (>= 1.0)
     wow-rails (0.0.1)
@@ -233,7 +239,6 @@ PLATFORMS
 
 DEPENDENCIES
   actionview-encoded_mail_to
-  angularjs-rails
   animate-rails
   autoprefixer-rails
   aws-s3
@@ -255,6 +260,7 @@ DEPENDENCIES
   monologue
   nprogress-rails
   paperclip (~> 4.2)
+  paypal-sdk-rest
   pg
   pry
   rack-timeout
