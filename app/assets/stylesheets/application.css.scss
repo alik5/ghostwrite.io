@@ -349,7 +349,6 @@ body.onepage .menu-wrapper.affix {
 .simple_form div.controls {
   clear: both; /* Required for Webkit, but not for Gecko */
   padding-top: 10px; 
-  width: 50%;
 
 }
 
@@ -764,7 +763,7 @@ div.progress {
 .questions h1 {
   padding-top: 10px;
   margin-bottom: 20px; 
-  text-align: center;
+  text-align: left;
   font-family: 'Raleway';
 
 }
@@ -920,6 +919,11 @@ div.letter_types {
 
 .letter {
   font-size: 1.5em;
+}
+
+#form-container {
+  background-color: white; 
+  padding: 15px;
 }
 
 
