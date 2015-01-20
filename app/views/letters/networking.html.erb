@@ -1,0 +1,19 @@
+<div class="questions-cover">
+Hi <%= @letter.properties["their_name"] %>,
+<br>
+<br>
+I really admire <%= @letter.properties["admire"] %>. We both <%= @letter.properties["common_ground"] %>. I realize you are incredibly busy, but I would really like the opportunity to learn from you and 
+<%= @letter.properties["achieve"] %> . 
+
+<br>
+<br>
+Thank you, 
+
+<br>
+<% if user_signed_in? %> 
+<%= current_user.full_name %>
+
+
+<% end %>
+
+</div>

@@ -1,23 +1,26 @@
-<div class="questions-cover">
-Hello <%= @letter.properties["company"] %>,
-</br>
-</br>
 
-I’m interested in the <%= @letter.properties["position"] %> position. I heard about the position <%= @letter.properties["origin"] %> and think my past experience as <%= @letter.properties["last_job"] %>  makes me a great candidate. 
-<br>
+<div class="letter">
+	Dear <span id="companyDiv"></span> Team,
+	</br>
+	</br>
 
-I am <%= @letter.properties["one_word"] %>, and very interested in learning more about <%= @letter.properties["company"] %> and what I can contribute as <%= @letter.properties["position"] %>.  
+	I’m interested in applying for the <span id="positionDiv"></span>position. I heard about the position <span id="originDiv"></span>and think my past experience as <span id="lastJobDiv"></span> makes me a great candidate. I have <span id="skill1"></span> and <span id="skill2"></span>and have a lot of interest in <span id="interestDiv"></span>. 
+	<br>
 
-<br>
+	I am <span id="oneWordDiv"></span>, and very excited about <span id="company"></span>and what I can contribute as <span id="positionDiv"></span>.  
 
-Thank you for taking the time to consider this application and I look forward to hearing from you in the near future.
-<br>
+	<br>
 
-Thank you,
-<br>
-<% if user_signed_in? %> 
-<%= current_user.full_name %>
+	Thank you for taking the time to consider this application and I look forward to learning more about the position. I will follow up next week to confirm you've received my application. 
+	<br>
 
-<% end %>
+	Thank you,
+	<br>
+	<% if user_signed_in? %> 
+	<%= current_user.full_name %>
+
+	<% end %>
 
 </div>
+
+

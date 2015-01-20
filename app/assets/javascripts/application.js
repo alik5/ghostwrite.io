@@ -21,8 +21,6 @@
 //= require nprogress-turbolinks
 //= require nprogress-ajax
 //= require wow
-//= require angular
-//= require angular-resource
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales
 //= require sweet-alert
@@ -93,10 +91,51 @@ $('span.next, span.prev').click(function(e){
   });
 
 
-$('#some-textarea').wysihtml5();
+  $('#some-textarea').wysihtml5();
+
+  //cover letter//
+
+  $('#origin').on('keyup', function(){
+  $('#originDiv').html($('#origin').val());
+
+  });
+
+  $('#one_word').on('keyup', function(){
+  $('#oneWordDiv').html($('#one_word').val());
+
+  });
+
+  $('#position').on('keyup', function(){
+  $('#positionDiv').html($('#position').val());
+
+  });
+
+  $('#last_job').on('keyup', function(){
+  $('#lastJobDiv').html($('#last_job').val());
+
+  });
+
+  $('#interest').on('keyup', function(){
+  $('#interestDiv').html($('#interest').val());
+
+  });
+
+  $('#skill1').on('keyup', function(){
+  $('#skill1Div').html($('#skill1').val());
+
+  });
+
+  $('#skill2').on('keyup', function(){
+  $('#skill2Div').html($('#skill2').val());
+
+  });
+
+  $('#company').on('keyup', function(){
+  $('#companyDiv').html($('#company').val());
+
+  });
 
 
-  
 
 
 });
