@@ -96,9 +96,16 @@ $('span.next, span.prev').click(function(e){
   //cover letter//
 
   $('#origin').on('keyup', function(){
-  $('#originDiv').html($('#origin').val());
-
+  $('#inputDiv').html($('#origin').val()).append( "?" );
   });
+
+  $('input').on('blur', function(){
+  $('#ugh').hide();
+  });
+
+ 
+   
+
 
   $('#one_word').on('keyup', function(){
   $('#oneWordDiv').html($('#one_word').val());

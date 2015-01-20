@@ -366,7 +366,7 @@ input {
   border: none;
   color: black;
   border-radius: 3px;
-  width: 50%;
+  width: 80%;
 
 }
 
@@ -901,7 +901,13 @@ div.letter_types {
 
 .wisi {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
+}
+
+.ugh {
+  font-size: 1.5em;
+  font-family: 'Merriweather';
+  line-height: .5em;
 }
 
 #some-textarea {
@@ -913,13 +919,6 @@ div.letter_types {
   margin-top: 50px; 
 }
 
-.letter span {
-  color: #039B6F;
-}
-
-.letter {
-  font-size: 1.5em;
-}
 
 #form-container {
   background-color: white; 
