@@ -100,52 +100,55 @@ $('span.next, span.prev').click(function(e){
   //});
 
   $('input#origin').on('blur', function(){
-  $('#ugh').hide();
+  $('#originHint').hide();
   });
 
+
+  $('input#one_word').on('focus', function(){
+  $("#oneWordHint").show();
+  });
 
   $('input#one_word').on('blur', function(){
-    console.log('this works');
-  });
- 
-   
-
-
-  $('#one_word').on('keyup', function(){
-  $('#oneWordDiv').html($('#one_word').val());
-
+  $("#oneWordHint").hide();
   });
 
-  $('#position').on('keyup', function(){
-  $('#positionDiv').html($('#position').val());
-
+  $('input#last_job').on('focus', function(){
+  $("#lastJobHint").show();
   });
 
-  $('#last_job').on('keyup', function(){
-  $('#lastJobDiv').html($('#last_job').val());
-
+  $('input#last_job').on('blur', function(){
+  $("#lastJobHint").hide();
   });
 
-  $('#interest').on('keyup', function(){
-  $('#interestDiv').html($('#interest').val());
-
+  $('input#position').on('focus', function(){
+  $("#positionHint").show();
   });
 
-  $('#skill1').on('keyup', function(){
-  $('#skill1Div').html($('#skill1').val());
-
+  $('input#position').on('blur', function(){
+  $("#positionHint").hide();
   });
 
-  $('#skill2').on('keyup', function(){
-  $('#skill2Div').html($('#skill2').val());
+  $('input#interest').on('focus', function(){
+  $("#interestHint").show();
+  });
+  
+  $('input#interest').on('blur', function(){
+  $("#interestHint").hide();
+  });
 
+  $('input#skill1').on('focus', function(){
+  $("#skillHint").show();
+  });
+
+  $('input#skill2').on('blur', function(){
+  $("#skillHint").hide();
   });
 
   $('#company').on('keyup', function(){
-  $('#companyDiv').html($('#company').val());
-  $('#companyDiv2').html($('#company').val());
-
+  $('#inputDiv').html($('#company').val()).append(" would be lucky to have you!");
   });
+   
+
 
 
 
