@@ -95,11 +95,8 @@ $('span.next, span.prev').click(function(e){
 
   //cover letter//
 
- // $('#origin').on('keyup', function(){
- // $('#inputDiv').html($('#origin').val()).append( "?" );
-  //});
 
-  $('input#origin').on('blur', function(){
+  $('.next').on('click', function(){
   $('#originHint').hide();
   });
 
