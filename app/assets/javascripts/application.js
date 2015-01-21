@@ -95,14 +95,18 @@ $('span.next, span.prev').click(function(e){
 
   //cover letter//
 
-  $('#origin').on('keyup', function(){
-  $('#inputDiv').html($('#origin').val()).append( "?" );
-  });
+ // $('#origin').on('keyup', function(){
+ // $('#inputDiv').html($('#origin').val()).append( "?" );
+  //});
 
-  $('input').on('blur', function(){
+  $('input#origin').on('blur', function(){
   $('#ugh').hide();
   });
 
+
+  $('input#one_word').on('blur', function(){
+    console.log('this works');
+  });
  
    
 
