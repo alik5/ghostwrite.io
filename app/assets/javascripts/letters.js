@@ -49,5 +49,45 @@ $(document).ready(function(){
   $('#company').on('keyup', function(){
   $('#inputDiv').html($('#company').val()).append(" would be lucky to have you!");
   });
+
+  //networking//
+
+  $('.next').on('click', function(){
+  $('#commonGroundHint').hide();
+  });
+
+  $('input#common_ground').on('focus', function(){
+  $('#commonGroundHint').show(); 
+  });
+
+  $('input#reason').on('focus', function(){
+  $("#reasonHint").show();
+  });
+
+  $('input#reason').on('blur', function(){
+  $("#reasonHint").hide();
+  });
+
+  $('input#admire').on('focus', function(){
+  $("#admireHint").show();
+  });
+
+  $('input#admire').on('blur', function(){
+  $("#admireHint").hide();
+  });
+
+  $('input#background').on('focus', function(){
+  $("#backgroundHint").show();
+  });
+
+  $('input#background').on('blur', function(){
+  $("#backgroundHint").hide();
+  });
+
+  $('#their_name').on('keyup', function(){
+  $('#inputDiv').html($('#their_name').val()).prepend("OH HEY, ");
+  });
+
+
  });
 

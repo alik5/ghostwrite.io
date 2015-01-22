@@ -18,7 +18,11 @@
 
 					 	  <% if @letter.letter_type.name.to_s == "Cover Letter"  %>
 		   
-		  					<%= render 'cover_letter_divs' %>
+		  					<%= render 'letters/divs/cover_letter_divs' %>
+
+		  					<% elsif @letter.letter_type.name.to_s == "Networking" %>
+
+		  					<%= render 'letters/divs/networking_divs' %>
 
 		  					<% else %>
 
