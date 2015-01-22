@@ -95,10 +95,6 @@ $('span.next, span.prev').click(function(e){
   $('#some-textarea').wysihtml5();
 
 
-   
-
-
-
 
 
 });
