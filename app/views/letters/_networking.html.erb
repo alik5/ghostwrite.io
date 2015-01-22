@@ -1,19 +1,23 @@
-<div class="questions-cover">
-Hi <%= @letter.properties["their_name"] %>,
-<br>
-<br>
-I really admire <%= @letter.properties["admire"] %>. We both <%= @letter.properties["common_ground"] %>. I realize you are incredibly busy, but I would really like the opportunity to learn from you and 
-<%= @letter.properties["achieve"] %> . 
+<div class="col-md-8">
+	<div class="letter-output">
+		<%= @letter.properties["their_name"] %>,
+		<br>
+		<br>
+		 I am reaching out to you because <%= @letter.properties["reason"] %>. We both <%= @letter.properties["common_ground"] %>. I am <%= @letter.properties["background"] %>. In the hopes of
+		<%= @letter.properties["achieve"] %> . 
 
-<br>
-<br>
-Thank you, 
+		I realize that you are on a tight schedule and I would greatly appreciate any time that you could spare to speak with me. I really admire <%= @letter.properties["admire"] %>, and would love the opportunity to learn from you. Thank you in advance for your help.
 
-<br>
-<% if user_signed_in? %> 
-<%= current_user.full_name %>
+		<br>
+		<br>
+		Thank you, 
+
+		<br>
+		<% if user_signed_in? %> 
+		<%= current_user.full_name %>
 
 
-<% end %>
+		<% end %>
 
-</div>
+	</div>
+</div>	

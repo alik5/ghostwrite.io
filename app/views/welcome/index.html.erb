@@ -10,7 +10,7 @@
          <%= image_tag "trees-words.jpg", :class => 'trees' %>
           <div class="container">
             <div class="carousel-caption">
-            	<p><a class="btn btn-lg" href="#" role="button">Sign up now</a></p>
+            	<p><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></p>
             </div>
           </div>
         </div>
