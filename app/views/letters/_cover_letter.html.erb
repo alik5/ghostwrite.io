@@ -1,27 +1,29 @@
 
-<div class="letter">
-	Dear <span id="companyDiv">_________</span> Team,
-	<br>
-	<br>
-	<br>
-	I’m interested in applying for the <span id="positionDiv">_________</span>position. I heard about the position <span id="originDiv">_________</span>and think my past experience as <span id="lastJobDiv">___________</span> makes me a great candidate. I have <span id="skill1">__________</span> and <span id="skill2">__________</span>and have a lot of interest in <span id="interestDiv">__________</span>. 
-	<br>
-	<br>
-	I am <span id="oneWordDiv">__________</span>, and very excited about <span id="companyDiv2">_________</span>and what I can contribute as <span id="positionDiv">__________</span>.  
-	<br>
-	<br>
+<div class="col-md-8">
+	<div class="letter-output">
+		Dear <%= @letter.properties["company"] %> Team,
+		<br>
+		<br>
+		<br>
+		I’m interested in applying for the <%= @letter.properties["position"] %>position. I heard about the position <%= @letter.properties["origin"] %>and think my past experience as <%= @letter.properties["last_job"] %> makes me a great candidate. I have <%= @letter.properties["skill1"] %> and <%= @letter.properties["skill2"] %> and have a lot of interest in <%= @letter.properties["interest"] %>. 
+		<br>
+		<br>
+		I am <%= @letter.properties["one_word"] %>, and very excited about<%= @letter.properties["company"] %>and what I can contribute as <%= @letter.properties["position"] %>.  
+		<br>
+		<br>
 
-	Thank you for taking the time to consider this application and I look forward to learning more about the position. I will follow up next week to confirm you've received my application. 
-	<br>
+		I look forward to learning more about the position. I will follow up next week to confirm you've received my application. 
+		<br>
+		<br>
+		Thank you for your consideration,
+		<br>
+		<br>
+		<% if user_signed_in? %> 
+		<%= current_user.full_name %>
 
-	Thank you,
-	<br>
-	<br>
-	<% if user_signed_in? %> 
-	<%= current_user.full_name %>
-
-	<% end %>
-
+		<% end %>
+	</div>
 </div>
+
 
 

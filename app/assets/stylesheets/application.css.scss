@@ -581,9 +581,16 @@ div.modal-body  {
     padding: 10px;
   }
 
-  .letter-form {
+  .letter-output {
     margin: 30px;
     padding: 30px;
+    font-size: 1.1em; 
+  }
+
+   .letter-form {
+    margin: 30px;
+    padding: 30px;
+    font-size: 1.1em; 
   }
 
 
@@ -908,6 +915,18 @@ div.letter_types {
 #form-container {
   background-color: white; 
   padding: 15px;
+}
+
+#ghostwrite_title {
+  width: 50%;
+}
+
+#ghostwrite_string {
+  width: 50%; 
+}
+
+#ghostwrite_photo {
+  width: 30%; 
 }
 
 
