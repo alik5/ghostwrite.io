@@ -80,6 +80,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     excon (0.42.1)
     execjs (2.2.2)
@@ -247,6 +248,7 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails
   coffee-rails (~> 4.0.0)
   devise
+  dynamic_sitemaps
   figaro
   font-awesome-sass
   hstore_accessor
