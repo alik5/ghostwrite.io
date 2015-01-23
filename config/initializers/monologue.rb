@@ -3,7 +3,7 @@ Monologue.config do |config|
   config.site_subtitle = "Write Well, Easier."
   config.site_url = "http://www.ghostwrite.io"
 
-  config.meta_description = "A blog about ghostwrite.io, both in the making and beyond"
+  config.meta_description = "Learn how to write a cover letter, networking email, or get a date online with fun, and current 'how to' posts."
   config.meta_keyword = "cover letter, startup, ruby, tech"
 
   config.admin_force_ssl = false
