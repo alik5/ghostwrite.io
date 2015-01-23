@@ -341,6 +341,10 @@ body.onepage .menu-wrapper.affix {
 
 /******* simple form styles *******/
 
+.field_with_errors {
+  background-color: #9B2200;
+}
+
  label {
     display: none;
     }
@@ -362,11 +366,9 @@ input {
 
 
  div.boolean, .simple_form input {
-  background-color: white;
   border: none;
   color: black;
   border-radius: 3px;
-  width: 80%;
 
 }
 
@@ -396,6 +398,13 @@ span.add-on {
   font-size: 1.8em;
  }
 
+#user_email {
+  width: 45%;
+}
+
+.form-controls input {
+  width: 45%;
+}
 
 
  #wrap {
@@ -904,7 +913,7 @@ div.letter_types {
   background-color: white; 
   margin-top: 50px; 
 }
-
+/****custom form styles*****/
 
 #form-container {
   background-color: white; 
@@ -920,7 +929,13 @@ div.letter_types {
 }
 
 #ghostwrite_photo {
-  width: 30%; 
+  background-color: none;
+}
+
+#custom-form-container {
+  background-color: rgba(36,255,203,0.8);
+  margin-top: 20px; 
+  box-shadow: 2px 2px 2px 2px #888888;
 }
 
 
