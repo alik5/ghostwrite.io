@@ -26,7 +26,8 @@ Rails.application.routes.draw do
 
     devise_for :users
  
-
+  get "sitemap.xml" => "home#sitemap", format: :xml, as: :sitemap
+  get "robots.txt" => "home#robots", format: :text, as: :robots
    
    resources :forms 
    resources "contacts", only: [:new, :create]
