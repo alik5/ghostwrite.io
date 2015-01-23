@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@ghostwrite, html: {class: "form-horizontal", :multipart => true })  do |f| %>
+<%= simple_form_for @ghostwrite  do |f| %>
   <% if @ghostwrite.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ghostwrite.errors.count, "error") %> prohibited this ghostwrite from being saved:</h2>
@@ -13,17 +13,28 @@
   <% end %>
   <fieldset>
     <h1>Custom Letter</h1>
- 
-
-  <%= f.input :title, placeholder: "Your Name" %>
-  <%= f.input :string, placeholder: "Your Email" %>
-  <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
-  <%= f.input :text_box, as: :wysihtml5 %>
-  <p> Attach Resume/Application/Drafts here: </p>
-  <%= f.file_field :photo %>
- <br> 
- <br>  
- <%= f.submit "Create Message" %>
+ <div class="row">
+  <div class="form-header">
+    <div class=".col-md-6 .col-md-offset-3">
+      <%= f.input :title, placeholder: "Your Name" %>
+      <%= f.input :string, placeholder: "Your Email" %>
+    </div>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="form-body">
+      
+    <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
+    <%= f.input :text_box, as: :wysihtml5 %>
+    <p> Attach Resume/Application/Drafts here: </p>
+    <%= f.file_field :photo %>
+   <br> 
+   <br>  
+   <%= f.submit "Create Message" %>
+   
+    </div>
+  </div>
 
     
  

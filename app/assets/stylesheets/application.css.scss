@@ -350,10 +350,9 @@ body.onepage .menu-wrapper.affix {
     }
 
 
-.simple_form div.controls {
-  clear: both; /* Required for Webkit, but not for Gecko */
+.simple_form div.controls { 
   padding-top: 10px; 
-
+  text-align: center;
 }
 
 input {
@@ -908,6 +907,7 @@ div.letter_types {
 
 #some-textarea {
   width: 750px;
+  
 }
 
 #personal_row {
@@ -936,7 +936,11 @@ div.letter_types {
 #custom-form-container {
   background-color: rgba(36,255,203,0.8);
   margin-top: 20px; 
-  box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.form-body {
+  margin-top: 20px; 
+
 }
 
 

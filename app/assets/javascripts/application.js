@@ -92,7 +92,9 @@ $('span.next, span.prev').click(function(e){
   });
 
 
-  $('#some-textarea').wysihtml5();
+  $('#some-textarea').wysihtml5(){
+    "stylesheets": ["/ghostwrites.css.scss"];
+  });
 
 
 
