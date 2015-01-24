@@ -78,6 +78,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     excon (0.42.1)
@@ -90,6 +93,9 @@ GEM
     hstore_accessor (0.6.1)
       activesupport (>= 3.2.0)
     i18n (0.6.11)
+    indeed-ruby (0.0.1)
+      json (>= 1.7.5)
+      rest-client (>= 1.6.7)
     jbuilder (2.2.5)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -145,7 +151,7 @@ GEM
     paypal-sdk-rest (0.10.0)
       paypal-sdk-core (~> 0.3.1)
       uuidtools (~> 2.1)
-    pg (0.17.1)
+    pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -246,10 +252,12 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.0.0)
   devise
+  dotenv-rails
   dynamic_sitemaps
   figaro
   font-awesome-sass
   hstore_accessor
+  indeed-ruby
   jbuilder (~> 2.0)
   jquery-easing-rails
   jquery-rails

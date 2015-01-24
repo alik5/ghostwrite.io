@@ -31,28 +31,28 @@
 $(document).ready(function(){
 
 $(".element").typed({
-        strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
-        typeSpeed: 100
-      });
+				strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
+				typeSpeed: 100
+			});
 
  
-      console.log('hi');
+			console.log('hi');
 
  $( "#business" ).hover(function() {
-    console.log('bitch, please');
-   $('#business_description').fadeIn( "slow" );
-  });
+		console.log('bitch, please');
+	 $('#business_description').fadeIn( "slow" );
+	});
 
-  $( "#personal" ).hover(function() {
-    $( "#personal_description" ).fadeIn( "slow" );
-  });
+	$( "#personal" ).hover(function() {
+		$( "#personal_description" ).fadeIn( "slow" );
+	});
 
-  $( "#custom" ).hover(function() {
-    $( "#custom_description" ).fadeIn( "slow" );
-  });
+	$( "#custom" ).hover(function() {
+		$( "#custom_description" ).fadeIn( "slow" );
+	});
 
-  $('.questions').find('fieldset').each(function (i) {
-    $(this).attr('id', + i);
+	$('.questions').find('fieldset').each(function (i) {
+		$(this).attr('id', + i);
 });
 
 ///form///
@@ -61,6 +61,7 @@ $(".element").typed({
 
 var $allSlides = $('div.questions fieldset'), traverseDefault = "last", actionDefault ="prev";
 $('span.next, span.prev').click(function(e){
+
 
     var traverse = traverseDefault,
         action = actionDefault;
@@ -89,6 +90,7 @@ $('span.next, span.prev').click(function(e){
     if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
   });
+
 
 
 
