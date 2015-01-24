@@ -55,8 +55,6 @@ GEM
     bcrypt (3.1.9)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
-    bootstrap-wysihtml5-rails (0.3.3.1)
-      railties (>= 3.0)
     builder (3.2.2)
     ckeditor (4.0.11)
       mime-types
@@ -245,7 +243,7 @@ DEPENDENCIES
   aws-s3
   aws-sdk
   bootstrap-sass (~> 3.3.1)
-  bootstrap-wysihtml5-rails
+  ckeditor
   coffee-rails (~> 4.0.0)
   devise
   dynamic_sitemaps

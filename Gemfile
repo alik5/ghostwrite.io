@@ -27,8 +27,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
 gem "animate-rails"
-gem 'bootstrap-wysihtml5-rails'
-
+gem 'ckeditor'
 gem 'jquery-easing-rails'
 gem 'nprogress-rails'
 gem 'wow-rails'
