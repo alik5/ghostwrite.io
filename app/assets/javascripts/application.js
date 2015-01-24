@@ -32,28 +32,28 @@
 $(document).ready(function(){
 
 $(".element").typed({
-        strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
-        typeSpeed: 100
-      });
+				strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
+				typeSpeed: 100
+			});
 
  
-      console.log('hi');
+			console.log('hi');
 
  $( "#business" ).hover(function() {
-    console.log('bitch, please');
-   $('#business_description').fadeIn( "slow" );
-  });
+		console.log('bitch, please');
+	 $('#business_description').fadeIn( "slow" );
+	});
 
-  $( "#personal" ).hover(function() {
-    $( "#personal_description" ).fadeIn( "slow" );
-  });
+	$( "#personal" ).hover(function() {
+		$( "#personal_description" ).fadeIn( "slow" );
+	});
 
-  $( "#custom" ).hover(function() {
-    $( "#custom_description" ).fadeIn( "slow" );
-  });
+	$( "#custom" ).hover(function() {
+		$( "#custom_description" ).fadeIn( "slow" );
+	});
 
-  $('.questions').find('fieldset').each(function (i) {
-    $(this).attr('id', + i);
+	$('.questions').find('fieldset').each(function (i) {
+		$(this).attr('id', + i);
 });
 
 ///form///
@@ -63,40 +63,37 @@ $(".element").typed({
 var $allSlides = $('div.questions fieldset'), traverseDefault = "last", actionDefault ="prev";
 $('span.next, span.prev').click(function(e){
 
-    var traverse = traverseDefault,
-        action = actionDefault;
-    
-    if($(this).is('.next')){
-        traverse = "first";
-        action = "next";
-    }
-    
-    var $curr = $allSlides.filter(':visible'), 
-        $nxtTarget =  $curr[action]("fieldset");
-    
-    $curr.stop(true, true).fadeIn(1000).hide();
-    if (!$nxtTarget.length){
-        $nxtTarget = $allSlides[traverse]();
-    }
-    $nxtTarget.stop(true, true).fadeIn(1000);
+		var traverse = traverseDefault,
+				action = actionDefault;
+		
+		if($(this).is('.next')){
+				traverse = "first";
+				action = "next";
+		}
+		
+		var $curr = $allSlides.filter(':visible'), 
+				$nxtTarget =  $curr[action]("fieldset");
+		
+		$curr.stop(true, true).fadeIn(1000).hide();
+		if (!$nxtTarget.length){
+				$nxtTarget = $allSlides[traverse]();
+		}
+		$nxtTarget.stop(true, true).fadeIn(1000);
 
-    var numberOfFields = $('fieldset').length;
-    var thisFieldId = $('fieldset').not(':hidden')[0].id;
+		var numberOfFields = $('fieldset').length;
+		var thisFieldId = $('fieldset').not(':hidden')[0].id;
 
-    if (parseInt(thisFieldId) < numberOfFields - 1) $('.next').parent().show();
-    if (parseInt(thisFieldId) === 0 ) $('.prev').parent().hide();
+		if (parseInt(thisFieldId) < numberOfFields - 1) $('.next').parent().show();
+		if (parseInt(thisFieldId) === 0 ) $('.prev').parent().hide();
 
-    if (parseInt(thisFieldId) > 0) $('.prev').parent().show();
-    if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
+		if (parseInt(thisFieldId) > 0) $('.prev').parent().show();
+		if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
-  });
+	});
 
-
-  $('#some-textarea').wysihtml5(){
-    "stylesheets": ["/ghostwrites.css.scss"];
-  });
-
-
+	$('#some-textarea').wysihtml5({
+		"stylesheets": ["/ghostwrites.css.scss"]
+	});
 
 
 });

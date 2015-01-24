@@ -17,6 +17,11 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'font-awesome-sass'
 gem 'scrollmagicjs-rails'
 
+# Use the Indeed API to search job listings
+gem 'indeed-ruby'
+
+# Shim to load environment variables from .env into ENV in development
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
