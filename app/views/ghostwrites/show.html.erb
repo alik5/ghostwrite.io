@@ -2,9 +2,9 @@
   <div class="row">
   	 
    <div class="col-md-9 col-md-push-3">
-		<p> Confirmation </p>
+		<h1> Confirmation </h1>
 
-		<div class="about">
+		<div> 
 
 		<h2><%= @ghostwrite.title %></h2>
 
@@ -23,12 +23,11 @@
 
 		<%= render 'charges/form' %>
 
-		<div>
 
 		<div class = "bottom">
 		<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
 		<%= link_to 'Back', ghostwrites_path %>
-	</div>
-
+	
+		</div>
 	</div>
 </div>
