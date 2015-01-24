@@ -28,7 +28,7 @@
     <div class="form-body">
       
     <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
-    <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+    <%= f.input :text_box, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
     <p> Attach Resume/Application/Drafts here: </p>
     <%= f.file_field :photo %>
    <br> 
