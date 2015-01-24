@@ -1,32 +1,36 @@
 <div class="container-fluid">
   <div class="row">
   	 
-   <div class="col-md-9 col-md-push-3">
-		<h1> Confirmation </h1>
+	   <div class="col-md-9 col-md-push-3">
+			<h1> CONFIRMATION </h1>
 
-		<div> 
+			<div> 
 
-		<h2><%= @ghostwrite.title %></h2>
+			<h2><%= @ghostwrite.title %></h2>
 
-		<p><%= @ghostwrite.text_box %></p>
+			<h3><%=@ghostwrite.string %></h3>
 
+			<p><%= @ghostwrite.text_box %></p>
+
+			</div>
+
+
+			<div>
+			   
+			    <%= link_to "My Attachment", @ghostwrite.photo.url %>
+
+			</div>
+
+			<div class="payment">
+
+			<%= render 'charges/form' %>
+
+			</div>
+			
+			<div class = "bottom">
+			<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
+			<%= link_to 'Back', ghostwrites_path %>
 		</div>
-
-
-		<div>
-		   
-		    <%= link_to "My Attachment", @ghostwrite.photo.url %>
-
-		</div>
-
-		<div class="payment">
-
-		<%= render 'charges/form' %>
-
-
-		<div class = "bottom">
-		<%= link_to 'Edit', edit_ghostwrite_path(@ghostwrite) %> |
-		<%= link_to 'Back', ghostwrites_path %>
 	
 		</div>
 	</div>

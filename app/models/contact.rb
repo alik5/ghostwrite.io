@@ -1,18 +1,33 @@
-class ContactForm < MailForm::Base
-  
+class InvitationMailer < MandrillMailer::TemplateMailer
+  default from: 'admin@ghostwrite.io'
 
-  attribute :name,      :validate => true
-  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :message
-  attribute :nickname,  :captcha  => true
+  def invite(invitation)
+    # in this example `invitation.invitees` is an Array
+    invitees = invitation.invitees.map { |invitee| { email: invitee.email, name: invitee.name } }
 
-  # Declare the e-mail headers. It accepts anything the mail method
-  # in ActionMailer accepts.
-  def headers
-    {
-      :subject => "My Contact Form",
-      :to => "alikfitz@gmail.com",
-      :from => %("#{name}" <#{email}>)
-    }
+    mandrill_mail(
+      template: 'group-invite',
+      subject: I18n.t('invitation_mailer.invite.subject'),
+      to: invitees,
+        # to: invitation.email,
+        # to: { email: invitation.email, name: 'Honored Guest' },
+      vars: {
+        'OWNER_NAME' => invitation.owner_name,
+        'PROJECT_NAME' => invitation.project_name
+      },
+      important: true,
+      inline_css: true,
+      recipient_vars: invitation.invitees.map do |invitee|
+        { invitee.email =>
+          {
+            'INVITEE_NAME' => invitee.name,
+            'INVITATION_URL' => new_invitation_url(
+              invitee.email,
+              secret: invitee.secret_code
+            )
+          }
+        }
+      end
+     )
   end
 end
