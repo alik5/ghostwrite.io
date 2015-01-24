@@ -22,8 +22,7 @@
 //= require nprogress-ajax
 //= require letters
 //= require wow
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales
+//= require ckeditor/init
 //= require sweet-alert
 //= require_tree .
 
@@ -92,9 +91,7 @@ $('span.next, span.prev').click(function(e){
   });
 
 
-  $('#some-textarea').wysihtml5(){
-    "stylesheets": ["/ghostwrites.css.scss"];
-  });
+
 
 
 
