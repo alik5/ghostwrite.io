@@ -23,6 +23,9 @@ gem 'indeed-ruby'
 # Shim to load environment variables from .env into ENV in development
 gem 'dotenv-rails', :groups => [:development, :test]
 
+# Use geocoder to get user's location from their IP 
+gem 'geocoder'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record

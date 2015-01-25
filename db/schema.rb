@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114180439) do
+ActiveRecord::Schema.define(version: 20150125204335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,10 @@ ActiveRecord::Schema.define(version: 20150114180439) do
     t.hstore   "properties"
     t.integer  "letter_type_id"
     t.string   "category"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "client_ip"
+    t.string   "zipcode"
   end
 
   add_index "letters", ["properties"], name: "letters_properties", using: :gin
