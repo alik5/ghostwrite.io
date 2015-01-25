@@ -376,12 +376,6 @@ span.add-on {
 	
 }
 
-.select-tag #letter_type_id {
-  font-size: 1.5em;
-}
-
-
-
 
  .logo-img-all {
  	width: 45%;
@@ -631,11 +625,10 @@ div.modal-body  {
 }
 
 .select-tag select  {
-    width: 200px;
-    height: 50px;
-    font-size: 1.5em;
+    width: 300px;
+    height: 100px;
+    font-size: 2em;
     padding-bottom: 25px;
-    font-weight: bold;
     color: #9B2600;
     margin-bottom: 30px;
     
@@ -897,7 +890,6 @@ div.letter_types {
 .example {
   margin-top: 40px; 
   width: 100%; 
-  padding: 10px; 
 }
 
 .wisi {
@@ -941,6 +933,11 @@ div.letter_types {
 .form-body {
   margin-top: 20px; 
 
+}
+
+#how-to-container {
+  background-color: white; 
+  margin-top: 20px; 
 }
 
 
