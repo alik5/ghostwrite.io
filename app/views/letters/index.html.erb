@@ -17,8 +17,9 @@
 				  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 1), :id, :name), { :class => "select-control" } %>
 				  <br>
 				</div>
-					
+					<div class="span-adjustment">
 					<span id="element" class="element1"></span>
+					</div>
 					<br>
 					<div class="business-submit-div">
 			  		<%= submit_tag "Let's go!", :class => "business-submit" %>
