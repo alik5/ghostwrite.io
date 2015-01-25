@@ -100,7 +100,7 @@ class LettersController < ApplicationController
 			query ||= letter['properties']['background']
 
 			@jobs = {}
-			unless query.nil?
+			unless query.nil? && letter.client_ip.nil?
 				client = Indeed::Client.new ENV['INDEED_PUBLISHER_KEY']
 				search_params = {
 						:q => query,
