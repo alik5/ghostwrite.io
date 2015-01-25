@@ -124,6 +124,8 @@ ActiveRecord::Schema.define(version: 20150125204335) do
     t.hstore   "properties"
     t.integer  "letter_type_id"
     t.string   "category"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "client_ip"
     t.string   "zipcode"
   end

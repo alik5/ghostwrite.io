@@ -1,6 +1,8 @@
 <div class="col-md-4">
 	<% unless @jobs.empty? %>
-		<h3>Jobs Near <%= @jobs['results'].first['formattedLocation']%></h3>
+		<% unless @jobs['results'].empty? %>
+			<h3>Jobs Near <%= @jobs['results'].first['formattedLocation']%></h3>
+		<% end %>
 		<% @jobs['results'].each do |job| %>
 			<div class="col-md-12">
 				<p><a href="<%= job['url'] %>"><%= job['jobtitle'] %> : <%= job['company'] %></a></p>
