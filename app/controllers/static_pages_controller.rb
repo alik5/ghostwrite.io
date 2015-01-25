@@ -12,6 +12,8 @@ class StaticPagesController < ApplicationController
   end
 
   def search 
+   @letter_types = LetterType.all
+    respond_with(@letter_types)
   end
 
   def examples

@@ -30,8 +30,13 @@
 
 $(document).ready(function(){
 
-$(".element").typed({
-				strings: ["Go on then, pick a category.", "It's not hard...", "What are you writing for?"],
+$(".element1").typed({
+				strings: ["All applications need a cover letter.", "Are you going back to school?", "Are you looking for a job?"],
+				typeSpeed: 100
+			});
+
+$(".element2").typed({
+				strings: ["Writing to people you know can be hard.", "But not for me.", "Ghosts don't feel social pressure."],
 				typeSpeed: 100
 			});
 
