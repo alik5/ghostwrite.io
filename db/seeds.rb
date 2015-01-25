@@ -9,8 +9,8 @@
 puts "Seed data here"
 
 letter_type = LetterType.create({ name: 'Cover Letter', category: 1 })
-letter_field1 = LetterField.create({name: 'How old are you?', letter_type_id: letter_type.id, field_type: 'question_field', short_name: 'age'})
-letter_field2 = LetterField.create({name: 'What is your favorite color?', letter_type_id: letter_type.id, field_type: 'check_box', short_name: 'color'})
+letter_field1 = LetterField.create({name: 'What is one skill?', letter_type_id: letter_type.id, field_type: 'question_field', short_name: 'skill1'})
+letter_field2 = LetterField.create({name: 'What is your background?', letter_type_id: letter_type.id, field_type: 'check_box', short_name: 'background'})
 
 # Mayor.create(name: 'Emanuel', city: cities.first)
 

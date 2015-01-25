@@ -1,5 +1,6 @@
 class LettersController < ApplicationController
 	before_action :set_letter, only: [:show, :edit, :update, :destroy]
+	before_action :search_indeed, only: [:show]
 	respond_to :html
 	layout 'application'
 
@@ -35,7 +36,9 @@ class LettersController < ApplicationController
 		if current_user
 			@letter = current_user.letters.create(letter_params)
 			@letter.user_id = current_user.id
-		end
+		end 
+		@letter.client_ip = request.remote_ip
+
 		respond_to do |format|
 			if @letter.save
 				format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
@@ -69,15 +72,7 @@ class LettersController < ApplicationController
 	
 	# GET
 	def show
-		client = Indeed::Client.new ENV['INDEED_PUBLISHER_KEY']
-		search_params = {
-				:q => 'ruby',
-				:l => 'boston',
-				:limit => 2,
-				:userip => '1.2.3.4',
-				:useragent => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)'
-		}
-		@jobs = client.search(search_params)
+
 	end
 
 	#  TransactionMailer.welcome(@letter).deliver
@@ -91,12 +86,36 @@ class LettersController < ApplicationController
 		end
 
 		def set_letter
+			# binding.pry
 			@letter = Letter.find(params[:id])
+		end
+
+		def search_indeed
+			letter = Letter.find(params[:id])
+
+			# Check if the letter has any of these fields, use the first one it finds
+			query ||= letter['properties']['skill1']
+			query ||= letter['properties']['skill2']
+			query ||= letter['properties']['one_word']
+			query ||= letter['properties']['background']
+
+			@jobs = {}
+			unless query.nil?
+				client = Indeed::Client.new ENV['INDEED_PUBLISHER_KEY']
+				search_params = {
+						:q => query,
+						:l => letter['zipcode'],
+						:limit => 5,
+						:userip => letter.client_ip,
+						:useragent => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)'
+				}
+				@jobs = client.search(search_params)
+			end
 		end
 
 		# Never trust parameters from the scary internet, only allow the white list through.
 		def letter_params
-			params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :letter_type_id, :letter_types_attributes => [ :id, :name, :category]).tap do |whitelisted|
+			params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :client_ip, :letter_type_id, :letter_types_attributes => [ :id, :name, :category]).tap do |whitelisted|
 		whitelisted[:properties] = params[:letter][:properties]
 	end
 end

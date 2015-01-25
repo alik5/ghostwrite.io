@@ -89,6 +89,7 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
+    geocoder (1.2.7)
     hike (1.2.3)
     hstore_accessor (0.6.1)
       activesupport (>= 3.2.0)
@@ -256,6 +257,7 @@ DEPENDENCIES
   dynamic_sitemaps
   figaro
   font-awesome-sass
+  geocoder
   hstore_accessor
   indeed-ruby
   jbuilder (~> 2.0)

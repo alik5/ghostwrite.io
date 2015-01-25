@@ -1,5 +1,10 @@
 <div class="col-md-4">
-	<%# @jobs.each do |job| %>
-		hi
-	<%# end %>
+	<% unless @jobs.empty? %>
+		<h3>Jobs Near <%= @jobs['results'].first['formattedLocation']%></h3>
+		<% @jobs['results'].each do |job| %>
+			<div class="col-md-12">
+				<p><a href="<%= job['url'] %>"><%= job['jobtitle'] %> : <%= job['company'] %></a></p>
+			</div>
+		<% end %>
+	<% end %>
 </div>
