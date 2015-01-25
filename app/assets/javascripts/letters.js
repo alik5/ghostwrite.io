@@ -1,7 +1,11 @@
   //cover letter//
 $(document).ready(function(){
 
-  $('.next').on('click', function(){
+  $('one_word').on('focus', function(){
+  $('#originHint').show();
+  });
+
+   $('one_word').on('blur', function(){
   $('#originHint').hide();
   });
 
