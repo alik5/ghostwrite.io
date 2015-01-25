@@ -24,8 +24,11 @@ class Letter < ActiveRecord::Base
 
 	# Get zipcode from IP address
 	def get_zipcode
-		address = Geocoder.search(self.client_ip)
-		self.zipcode = address.first.data["zip_code"]
+		unless self.client_ip.nil?
+			address = Geocoder.search(self.client_ip)
+			# binding.pry
+			self.zipcode = address.first.data["zip_code"]
+		end
 	end
 
 	

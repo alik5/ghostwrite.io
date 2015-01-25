@@ -110,6 +110,7 @@ class LettersController < ApplicationController
 						:useragent => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)'
 				}
 				@jobs = client.search(search_params)
+				
 			end
 		end
 
