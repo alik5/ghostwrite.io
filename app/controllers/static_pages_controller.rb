@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def contact 
   end
 
+  def search 
+  end
+
   def examples
       @letter = Letter.new(letter_type_id: params[:letter_type_id])
     

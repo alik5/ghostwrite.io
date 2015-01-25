@@ -22,8 +22,7 @@
 //= require nprogress-ajax
 //= require letters
 //= require wow
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales
+//= require ckeditor/init
 //= require sweet-alert
 //= require_tree .
 
@@ -63,37 +62,40 @@ $(".element").typed({
 var $allSlides = $('div.questions fieldset'), traverseDefault = "last", actionDefault ="prev";
 $('span.next, span.prev').click(function(e){
 
-		var traverse = traverseDefault,
-				action = actionDefault;
-		
-		if($(this).is('.next')){
-				traverse = "first";
-				action = "next";
-		}
-		
-		var $curr = $allSlides.filter(':visible'), 
-				$nxtTarget =  $curr[action]("fieldset");
-		
-		$curr.stop(true, true).fadeIn(1000).hide();
-		if (!$nxtTarget.length){
-				$nxtTarget = $allSlides[traverse]();
-		}
-		$nxtTarget.stop(true, true).fadeIn(1000);
 
-		var numberOfFields = $('fieldset').length;
-		var thisFieldId = $('fieldset').not(':hidden')[0].id;
+    var traverse = traverseDefault,
+        action = actionDefault;
+    
+    if($(this).is('.next')){
+        traverse = "first";
+        action = "next";
+    }
+    
+    var $curr = $allSlides.filter(':visible'), 
+        $nxtTarget =  $curr[action]("fieldset");
+    
+    $curr.stop(true, true).fadeIn(1000).hide();
+    if (!$nxtTarget.length){
+        $nxtTarget = $allSlides[traverse]();
+    }
+    $nxtTarget.stop(true, true).fadeIn(1000);
 
-		if (parseInt(thisFieldId) < numberOfFields - 1) $('.next').parent().show();
-		if (parseInt(thisFieldId) === 0 ) $('.prev').parent().hide();
+    var numberOfFields = $('fieldset').length;
+    var thisFieldId = $('fieldset').not(':hidden')[0].id;
 
-		if (parseInt(thisFieldId) > 0) $('.prev').parent().show();
-		if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
+    if (parseInt(thisFieldId) < numberOfFields - 1) $('.next').parent().show();
+    if (parseInt(thisFieldId) === 0 ) $('.prev').parent().hide();
 
-	});
+    if (parseInt(thisFieldId) > 0) $('.prev').parent().show();
+    if (parseInt(thisFieldId) === numberOfFields - 1) $('.next').parent().hide();
 
-	$('#some-textarea').wysihtml5({
-		"stylesheets": ["/ghostwrites.css.scss"]
-	});
+  });
+
+
+
+
+
+
 
 
 });

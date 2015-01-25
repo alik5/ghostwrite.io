@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
       
  
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
   resources :letter_types
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about', as: :about
   get 'examples', to: 'static_pages#examples', as: :examples
   get 'contact', to: 'static_pages#contact', as: :contact
+  get 'search', to: 'static_pages#search', as: :search
 
 
  
