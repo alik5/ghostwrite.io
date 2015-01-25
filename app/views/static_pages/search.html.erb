@@ -1,5 +1,14 @@
 <div class="container">
-	<h1>Search</h1>
+	<h1>Search All Letters</h1>
+
+	<% @letter_types.each do |letter| %>
+	<%= letter.name %>
+
+		<div class= "letter">
+					
+		</div>
+		<% end %>
+
 	  <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
