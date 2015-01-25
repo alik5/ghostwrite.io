@@ -1,34 +1,30 @@
 <div class="container">
-	<div class="row" "personal_row">
-		
-  		<div class="col-xs-8">
-  			
-  			  <div class="inner-logo-column">
-  				<%= image_tag "greengirl.jpg", class: "logo-img-all"%>
-  			<span id="element"class="element"></span>
-  			</div>
-  		</div>
-  			<div class="col-xs-4">
-  				<div class="inner-button-column">
-  		
+	<div class="row" id="personal_row">
+		<div class="col-xs-10">
+			<div class="title-here">
+				<h3> Pick what type of message you want to send.</h3>
+			</div>
+				<div class="inner-logo-column">
 				<% @letter.each do |letter| %>
 
 				<div class= "letter">
 					
 				</div>
 				<% end %>
-
-			<%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
-
-
-			  <div class="select-tag">
-			  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 2), :id, :name) %>
-			  <br>
-			</div>
-			  <%= submit_tag "Let's go!", :class => "business-submit" %>
-			<% end %>
+				<%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
+  				<div class="select-tag">
+				  <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.where(category: 2), :id, :name), { :class => "select-control" } %>
+				  <br>
+				</div>
+					
+					<span id="element" class="element"></span>
+					<br>
+					<div class="business-submit-div">
+			  		<%= submit_tag "Let's go!", :class => "business-submit" %>
+			  		</div>
+					<% end %>
+				</div>	
 			</div>
 		</div>
-	</div>
-   </div>
+    </div>
 </div>
