@@ -60,7 +60,11 @@ $(document).ready(function(){
 
   //networking//
 
-  $('.next').on('click', function(){
+  $('input#common_ground').on('focus', function(){
+  $('#commonGroundHint').show();
+  
+
+  $('input#common_ground').on('blur', function(){
   $('#commonGroundHint').hide();
   });
 
@@ -92,8 +96,8 @@ $(document).ready(function(){
   $("#backgroundHint").hide();
   });
 
-  $('#their_name').on('keyup', function(){
-  $('#inputDiv').html($('#their_name').val()).prepend("OH HEY, ");
+  $('#name').on('keyup', function(){
+  $('#inputDiv').html($('#name').val()).prepend("OH HEY, ");
   });
 
 
