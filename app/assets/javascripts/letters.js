@@ -54,6 +54,10 @@ $(document).ready(function(){
   $('#inputDiv').html($('#company').val()).append(" would be lucky to have you!");
   });
 
+  $('#company').on('blur', function(){
+  $('#inputDiv').hide(); 
+  });
+
   //networking//
 
   $('.next').on('click', function(){
