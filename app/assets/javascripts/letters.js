@@ -62,6 +62,7 @@ $(document).ready(function(){
 
   $('input#common_ground').on('focus', function(){
   $('#commonGroundHint').show();
+  });
   
 
   $('input#common_ground').on('blur', function(){
