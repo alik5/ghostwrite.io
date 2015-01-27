@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact', as: :contact
   get 'search', to: 'static_pages#search', as: :search
   get '/sitemap.xml', to: 'welcome#sitemap', as: :sitemap
+  get 'index', to: 'welcome#index', as: :index
 
  
  resources :ghostwrites
