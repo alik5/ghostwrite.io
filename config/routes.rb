@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'examples', to: 'static_pages#examples', as: :examples
   get 'contact', to: 'static_pages#contact', as: :contact
   get 'search', to: 'static_pages#search', as: :search
- 
+  get '/sitemap.xml', to: 'sitemap#index', as: :sitemap
 
  
  resources :ghostwrites
@@ -36,7 +36,6 @@ Rails.application.routes.draw do
 
    mount Monologue::Engine, at: '/blog' # or whatever path, be it "/blog" or "/monologue"
 
-   map.sitemap '/sitemap.xml', :controller => 'sitemap'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
