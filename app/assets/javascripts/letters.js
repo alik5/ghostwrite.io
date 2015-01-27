@@ -46,6 +46,15 @@ $(document).ready(function(){
   $("#skillHint").show();
   });
 
+  $('input#skill1').on('blur', function(){
+  $("#skillHint").hide();
+  });
+
+
+  $('input#skill2').on('focus', function(){
+  $("#skillHint").show();
+  });
+
   $('input#skill2').on('blur', function(){
   $("#skillHint").hide();
   });
@@ -69,9 +78,6 @@ $(document).ready(function(){
   $('#commonGroundHint').hide();
   });
 
-  $('input#common_ground').on('focus', function(){
-  $('#commonGroundHint').show(); 
-  });
 
   $('input#reason').on('focus', function(){
   $("#reasonHint").show();
@@ -101,6 +107,11 @@ $(document).ready(function(){
   $('#inputDiv').html($('#name').val()).prepend("OH HEY, ");
   });
 
+  $('#name').on('blur', function(){
+  $('#inputDiv').hide();
+  });
+
+  console.log('read');
 
  });
 
