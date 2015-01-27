@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'examples', to: 'static_pages#examples', as: :examples
   get 'contact', to: 'static_pages#contact', as: :contact
   get 'search', to: 'static_pages#search', as: :search
-  get '/sitemap.xml', to: 'sitemap#index', as: :sitemap
+  get '/sitemap.xml', to: 'welcome#sitemap', as: :sitemap
 
  
  resources :ghostwrites
