@@ -81,7 +81,6 @@ GEM
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
-    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     excon (0.42.1)
     execjs (2.2.2)
@@ -255,7 +254,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails
-  dynamic_sitemaps
   figaro
   font-awesome-sass
   geocoder

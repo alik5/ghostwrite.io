@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'examples', to: 'static_pages#examples', as: :examples
   get 'contact', to: 'static_pages#contact', as: :contact
   get 'search', to: 'static_pages#search', as: :search
-
+ 
 
  
  resources :ghostwrites
@@ -27,17 +27,16 @@ Rails.application.routes.draw do
 
  # get 'user/index'
 
-    devise_for :users
+   devise_for :users
  
-  get "sitemap.xml" => "home#sitemap", format: :xml, as: :sitemap
-  get "robots.txt" => "home#robots", format: :text, as: :robots
+  
    
    resources :forms 
    resources "contacts", only: [:new, :create]
 
    mount Monologue::Engine, at: '/blog' # or whatever path, be it "/blog" or "/monologue"
 
-   
+   map.sitemap '/sitemap.xml', :controller => 'sitemap'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
