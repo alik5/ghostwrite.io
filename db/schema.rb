@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125204335) do
+ActiveRecord::Schema.define(version: 20150128213406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20150125204335) do
     t.datetime "updated_at"
     t.string   "short_name"
     t.boolean  "if_business"
+    t.text     "hint"
   end
 
   add_index "letter_fields", ["letter_type_id"], name: "index_letter_fields_on_letter_type_id", using: :btree

@@ -96,11 +96,7 @@ $('span.next, span.prev').click(function(e){
 
   });
 
-
-
-
-
-
+// hint-field.focus this div show
 
 
 });

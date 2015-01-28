@@ -4,7 +4,7 @@
   
 
   <%= f.fields_for :letter_fields do |builder| %>
-   <%= f.input :name %>
+   <%= f.input :name, placeholder:"Letter Name" %>
    <%= f.input :category, collection: [ 1, 2] %>
     <%= render 'letter_field_fields', f: builder %>
 	<% end %>
