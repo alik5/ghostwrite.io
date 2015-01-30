@@ -1,23 +1,23 @@
 
 <div class="col-md-8">
 	<div class="letter-output">
-		Dear <%= @letter.properties["company"] %> Team,
-		<br>
-		<br>
-		<br>
-		I am interested in being considered for the <%= @letter.properties["position"] %> position. I became aware of the position <%= @letter.properties["origin"] %> and think you'll find that my background as <%= @letter.properties["last_job"] %> and the skills I've acquired in <%= @letter.properties["education"] %> make me an excellent candidate.
-		<br>
-		<br>
-		I have <%= @letter.properties["skill1"] %> and <%= @letter.properties["skill2"] %> skills that you are seeking and have a lot of interest in <%= @letter.properties["interest"] %>. 
+		Dear <%=@letter.properties["company"] %> Team, 
 
-		I am <%= @letter.properties["one_word"] %>, and very excited about<%= @letter.properties["company"] %>and what I can contribute as <%= @letter.properties["position"] %>.  
+
+		<p>I am interested in being considered for the <%=@letter.properties["position"] %> position. My previous experience as a <%=@letter properties["background"] %> make me an excellent candidate. I am <%=@letter.properties["one_word"] %>, and have so much to offer <%=@letter.properties[“company”] %>. <p>
+
+		<br>
+		<p>My skills include <%=@letter.properties["skill1"] %>. <%=@letter.properties["education"] %>.
+		 <%=@letter.properties["interest"] %>. I am excited about <%=@letter.properties["company"] %> and what I can contribute to a <%=@letter.properties["companydoes"] %>.</p> 
+
+
+		 <br>
+		<p>I look forward to learning more about the position. Please contact me with any questions you may have, or to arrange an interview. I would be grateful for the opportunity to speak with you.</p>
 		<br>
 		<br>
 
-		I look forward to learning more about the position, and will follow up next week to confirm you've received my application. Please contact me with any questions you may have, or to arrange an interview. I would be so grateful for the opportunity to speak with you.  
-		<br>
-		<br>
-		Thank you for your consideration,
+		<p>Thank you,</p> 
+
 		<br>
 		<br>
 		<% if user_signed_in? %> 

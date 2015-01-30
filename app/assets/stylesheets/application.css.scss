@@ -963,15 +963,16 @@ div.letter_types {
 }
 
 .hint p {
-  margin-top: -30px; 
+  margin-top: -25px; 
 }
 
 #tip {
-  float: right; 
-  position: relative; 
-  margin-right: 30%; 
-  margin-top: -80px; 
-  margin-bottom: 0px; 
+  float: left; 
+  position: absolute; 
+  margin-left: 750px;
+  margin-top: 48px;
+  margin-right: 100px;
+
 }
 
 

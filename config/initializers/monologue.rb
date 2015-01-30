@@ -1,7 +1,7 @@
 Monologue.config do |config|
-  config.site_name = "Ghostwrite.io"
+  config.site_name = "Ghostwrite.io Blog"
   config.site_subtitle = "Write Well, Easier."
-  config.site_url = "http://www.ghostwrite.io"
+  config.site_url = "https://www.ghostwrite.io/blog"
 
   config.meta_description = "Learn how to write a cover letter, networking email, or get a date online with current, credible, and playful 'how to' posts."
   config.meta_keyword = "cover letter, startup, ruby, tech"
@@ -16,7 +16,7 @@ Monologue.config do |config|
   config.facebook_like_locale = "en_US" # "fr_CA"
   config.google_plusone_locale = "en"
 
-  # config.layout               = "layouts/application"
+   config.layout               = "layouts/home"
 
   # ANALYTICS
   # config.gauge_analytics_site_id = "YOUR COGE FROM GAUG.ES"

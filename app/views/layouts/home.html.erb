@@ -16,54 +16,9 @@
 <body>
 
 
-  <div class="wrapper">
-        <header class="header">
-            <div class="menu-wrapper">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-menu-3"></span>
-                            </button>
-                            <%= link_to 'Ghostwrite.io', root_path, :class => "navbar-brand" %> 
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><%= link_to 'Home', root_path %> </li>
-                                <li><%= link_to 'About', "/about" %></li>
-                                      <ul class="dropdown-menu" role="menu">
-                                       <%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
-                                      <li class="navbar-text pull-left">
-                                      <%= link_to 'About', about_path, :class => 'navbar-link' %>       
-                        
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                           <ul class="nav navbar-nav navbar-right">
-                              <% if user_signed_in? %>
-                            <li><strong><%= current_user.full_name %></strong></li> 
-                            <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
-                            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            
-                              <% else %>
-                            <li><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", method: 'get' %></li>
-                            <li><%= link_to "Log In", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", method: 'get' %></li>
-                              <% end %>
-                        
-                            </li>
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
-                </nav>
-            </div><!-- end menu-wrapper -->
-        </header><!-- end header -->
   
    <div class= 'ghostwrite_body'>
-      <div class = "instructions">
-        <li><%= image_tag "logo2.png", class: "logo-img-all"%></li>
-        <span class = "element"></span>
+     <%= image_tag "trees-words.jpg", :class => 'trees' %>
       </div>
 
       <div class = "container">
