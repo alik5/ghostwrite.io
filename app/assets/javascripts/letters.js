@@ -8,13 +8,15 @@ $(document).ready(function() {
 
  
 
-$("input").on('focus', function() {
+$(".controls textarea").on('focus', function() {
   $(".hint").show(); 
 }); 
 
-$("input").on('blur', function() {
+$(".controls textarea").on('blur', function() {
   $(".hint").hide(); 
 }); 
+
+console.log('imeanit');
 
 
 

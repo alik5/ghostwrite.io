@@ -1,14 +1,14 @@
 
 <div class="col-md-8">
 	<div class="letter-output">
-		Dear <%=@letter.properties["company"] %> Team, 
+		Dear <%= @letter.properties["company"] %> Team, 
 
 
-		<p>I am interested in being considered for the <%=@letter.properties["position"] %> position. My previous experience as a <%=@letter properties["background"] %> make me an excellent candidate. I am <%=@letter.properties["one_word"] %>, and have so much to offer <%=@letter.properties[“company”] %>. <p>
+		<p>I am interested in being considered for the <%= @letter.properties["position"] %> position. My previous experience as a <%= @letter.properties["background"] %> make me an excellent candidate. I am <%=@letter.properties["one_word"] %>, and have so much to offer <%=@letter.properties["company"] %>. <p>
 
 		<br>
-		<p>My skills include <%=@letter.properties["skill1"] %>. <%=@letter.properties["education"] %>.
-		 <%=@letter.properties["interest"] %>. I am excited about <%=@letter.properties["company"] %> and what I can contribute to a <%=@letter.properties["companydoes"] %>.</p> 
+		<p>My skills include <%=@letter.properties["skill1"] %>. <%= @letter.properties["education"] %>.
+		 <%=@letter.properties["interest"] %>. I am excited about <%= @letter.properties["last_job"] %> and what I can contribute to a <%=@letter.properties["companydoes"] %>.</p> 
 
 
 		 <br>
