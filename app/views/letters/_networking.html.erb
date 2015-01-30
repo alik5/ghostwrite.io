@@ -1,20 +1,27 @@
 <div class="col-md-8">
 	<div class="letter-output">
-		<%= @letter.properties["their_name"] %>,
-		<br>
-		<br>
-		 I am reaching out to you because <%= @letter.properties["reason"] %>. We both <%= @letter.properties["common_ground"] %>. I am <%= @letter.properties["background"] %>. In the hopes of
-		<%= @letter.properties["achieve"] %> . 
+	<p>Hi <%= @letter.properties["their_name"] %>,</p>
+	<br>
 
-		I realize that you are on a tight schedule and I would greatly appreciate any time that you could spare to speak with me. I really admire <%= @letter.properties["admire"] %>, and would love the opportunity to learn from you. Thank you in advance for your help.
+ 	<p><%= @letter.properties["reason"] %> I really admire <%= @letter.properties["admire"] %>. We both <%= @letter.properties["common_ground"] %>. I am <%= @letter.properties["background"] %>. In the hopes of<%= @letter.properties["achieve"] %> . </p>
 
-		<br>
-		<br>
-		Thank you, 
 
-		<br>
-		<% if user_signed_in? %> 
-		<%= current_user.full_name %>
+
+	<p>I realize that you are on a tight schedule and I would greatly appreciate any time that you could spare to speak with me. I would love the opportunity to connect with you.</p>
+
+	<br>
+
+	<p>I look forward to hearing from you,<p>
+
+
+	<br>
+
+	<% if user_signed_in? %> 
+	<%= current_user.full_name %>
+
+	<% else %>
+	<li><%= link_to "Get Signature", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></li> 
+
 
 
 		<% end %>
