@@ -1,4 +1,5 @@
-<div class="col-md-4">
+<div class="col-md-4 jobs-results">
+	<div class="jobs-results">
 	<% unless @jobs.empty? %>
 		<% unless @jobs['results'].empty? %>
 			<h3>Jobs Near <%= @jobs['results'].first['formattedLocation']%></h3>
@@ -9,4 +10,5 @@
 			</div>
 		<% end %>
 	<% end %>
+	</div>
 </div>
