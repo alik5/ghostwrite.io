@@ -86,7 +86,7 @@ h5 {
 p {
     color: #686868;
     line-height: 25px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 li {
@@ -483,18 +483,15 @@ i {
 	line-height: 1.2em; 
 	color: black;
 	text-align: left; 
-	font-family: 'Merriweather', serif;
-	font-size: 1em;
-	margin-left: 15%;
-	margin-right: 15%;
 	margin-top: 20px; 
 	background-color: white; 
-	padding: 30px;
-	margin-left: 100px; 
-	margin-right: 100px; 
-	margin-bottom: 10%;
-  line-height: .8em; 
+	padding: 30px; 
 }
+
+.about p {
+  font-size: 1.5em;
+}
+
 
 
 .payment {
@@ -993,6 +990,19 @@ section .post-header {
 
 .jobs-results {
   color: #039B6F;
+}
+
+.about-ghost {
+  width: 50%;
+}
+
+.ghost-list {
+  list-style: none;
+  margin-top: 100px;
+}
+
+.ghost-list li {
+  padding: 20px;
 }
 
 
