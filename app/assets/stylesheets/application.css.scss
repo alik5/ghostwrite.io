@@ -954,8 +954,8 @@ div.letter_types {
 }
 
 .hint {
-  display: none; 
-  margin-left: 71%;  
+  /*display: none;*/
+  margin-left: 65%;  
   position: absolute; 
   margin-top: -10px; 
   padding-bottom: 50px; 
@@ -963,7 +963,7 @@ div.letter_types {
 }
 
 .hint p {
-  margin-top: -25px; 
+  margin-top: -45px; 
 }
 
 #tip {
