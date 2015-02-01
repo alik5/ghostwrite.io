@@ -8,3 +8,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( search.js bootstrap.js static_pages.js button.css.scss static_pages.css.scss )
 
 Paperclip.options[:image_magick_path] = "/opt/local/bin"
+
+Rails.application.config.assets.precompile += %w( ckeditor/* )

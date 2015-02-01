@@ -1,6 +1,6 @@
 class GhostwritesController < ApplicationController
 	layout 'application'
-  respond_to :html
+  respond_to :json
 
 
 

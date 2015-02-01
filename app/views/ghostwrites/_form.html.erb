@@ -1,9 +1,8 @@
 
-<%= simple_form_for @ghostwrite  do |f| %>
+<%= simple_form_for @ghostwrite, input_html: {class: 'span3'}, wrapper_html: {class: 'controls controls-row'} do |f| %>
   <% if @ghostwrite.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ghostwrite.errors.count, "error") %> prohibited this ghostwrite from being saved:</h2>
-
       <ul>
       <% @ghostwrite.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,38 +10,45 @@
       </ul>
     </div>
   <% end %>
-  <fieldset>
-    <h1>Custom Letter</h1>
- <div class="row">
-  <div class="form-header">
-    <div class=".col-md-6 .col-md-offset-3">
-      
-        <%= f.input :title, placeholder: "Your Name" %>
-        <%= f.input :string, placeholder: "Your Email" %>
-      
+    <div class="container">
+     <div class="row">
+      <%= image_tag "Custom-Type.png", :class => "header-logo" %>
+        <div class="col-xs-6">
+          <ul class="ghostwrite-input-list">
+            <li><%= f.input :title, placeholder: "name" %></li>
+            <li><%= f.input :string, placeholder: "email" %></li>
+            <li><%= f.input :content, placeholder: "due date" %> </li>
+          </ul>
+          </div>
+          <% end %>
+        <div class="col-xs-6">
+          <div class="hint-box">
+            <h2>Describe what you want to be written or attach it below the text editor.</h2><br>
+          </div>
+        </div>
     </div>
-  </div>
-</div>
+     
   
   <div class="row">
     <div class="form-body">
-      
-    <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
-    <%= f.input :text_box, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
-    <p> Attach Resume/Application/Drafts here: </p>
-    <%= f.file_field :photo %>
-   <br> 
-   <br>  
-   <%= f.submit "Create Message" %>
-   
+      <%= simple_form_for @ghostwrite  do |f| %>
+      <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
+      <%= f.input :text_box, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+      <p> Attach Resume/Application/Drafts here: </p>
+      <%= f.file_field :photo %>
+     <br> 
+     <br>  
+          <div class="green">
+            <%= f.submit %>
+          </div>  
+      <% end %>
     </div>
   </div>
+  
 
     
- 
 
-</fieldset>
-<% end %>
+
 
 
 
