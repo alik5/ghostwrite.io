@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Merriweather', :media => "all" %>
   <%= stylesheet_link_tag 'application', "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_tag "window.locale = #{I18n.locale.to_s.inspect};" %>
   <meta name="google-site-verification" content="BIiuu5sNm_ffncymTGcAzGKR_t-kOo3U4jN8sgwDk9U" />
 
   

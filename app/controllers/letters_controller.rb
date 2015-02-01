@@ -116,7 +116,7 @@ class LettersController < ApplicationController
 
 		# Never trust parameters from the scary internet, only allow the white list through.
 		def letter_params
-			params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :client_ip, :letter_type_id, :letter_types_attributes => [ :id, :name, :category]).tap do |whitelisted|
+			params.require(:letter).permit(:letter_type, :user_id, :photo, :photo_file_name, :photo_content_type, :category, :client_ip, :letter_type_id, :bootsy_image_gallery_id, :letter_types_attributes => [ :id, :name, :category]).tap do |whitelisted|
 		whitelisted[:properties] = params[:letter][:properties]
 	end
 end

@@ -1,5 +1,6 @@
 class Letter < ActiveRecord::Base
 	include Geocoder
+	include Bootsy::Container
 
 	belongs_to :user
 	belongs_to :letter_type

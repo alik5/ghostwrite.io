@@ -15,6 +15,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootsy/wysihtml5
+//= require bootsy/bootstrap-wysihtml5
+//= require bootsy/bootsy
+//= require bootsy/bootstrap.file-input.js
+//= require bootsy/init
 //= require bootstrap-sprockets
 //= require jquery.turbolinks
 //= require nprogress
@@ -22,7 +27,6 @@
 //= require nprogress-ajax
 //= require letters
 //= require wow
-//= require ckeditor/init
 //= require sweet-alert
 //= require_tree .
 
@@ -96,7 +100,6 @@ $('span.next, span.prev').click(function(e){
 
   });
 
-// hint-field.focus this div show
 
 
 });

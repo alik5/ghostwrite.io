@@ -353,6 +353,7 @@ body.onepage .menu-wrapper.affix {
   padding-top: 10px; 
 }*/
 
+
 input {
 	font-family: 'Raleway'; 
 	font-size: 1em; 
@@ -368,8 +369,9 @@ input {
 
 .simple_form div.controls input {
   height: auto;
-  width: 70%;
+  width: 80%;
   margin-top: 10px; 
+  border-radius: 5px; 
 }
 
 
@@ -920,9 +922,9 @@ div.letter_types {
 }
 
 .form-body {
-  margin-top: 20px; 
-
+  margin-left: 25%; 
 }
+
 
 #how-to-container {
   background-color: white; 
@@ -1008,9 +1010,11 @@ section .post-header {
 
 .hint-box {
   text-align: center; 
-  background-color: rgba(36,255,191,0.6);
+  background-color: rgba(36,255,191,0.4);
   padding: 10px; 
-  margin-top: 20px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: #FFF;
 }
 
 .header-logo {
@@ -1020,7 +1024,21 @@ section .post-header {
   margin-top: 20px; 
 }
 
+div.form-body textarea {
+  width: 65%;
+  height: 250px;
+  padding: 10px; 
+  margin: 10px 0 50px 0; 
+}
 
+.paperclip {
+  margin: 20px; 
+  text-align: center; 
+}
+
+#ghostwrite_photo {
+  margin-left: 100px; 
+}
 
 
 

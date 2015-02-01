@@ -1,4 +1,5 @@
 class Ghostwrite < ActiveRecord::Base
+	include Bootsy::Container
 	belongs_to :letter
 	has_many :contacts
 

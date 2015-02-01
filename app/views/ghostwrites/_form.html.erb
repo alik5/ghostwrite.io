@@ -20,28 +20,33 @@
             <li><%= f.input :content, placeholder: "due date" %> </li>
           </ul>
           </div>
-          <% end %>
+            
+          
         <div class="col-xs-6">
           <div class="hint-box">
-            <h2>Describe what you want to be written or attach it below the text editor.</h2><br>
+            <h3>Describe what you want to be written or attach it below.</h3><br>
+            <span><i class="fa fa-arrow-circle-o-down fa-3x"></i></span>
+          </div>
+          <div class="paperclip">
+            <p> Attach Resume/Application/Drafts here: </p>
+               <%= f.file_field :photo %>
           </div>
         </div>
     </div>
+    <% end %>
      
   
   <div class="row">
-    <div class="form-body">
-      <%= simple_form_for @ghostwrite  do |f| %>
-      <%#= f.input :text_box, label: false, placeholder: "DESCRIBE OR PASTE WHAT YOU WOULD LIKE HERE..." %> 
-      <%= f.input :text_box, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
-      <p> Attach Resume/Application/Drafts here: </p>
-      <%= f.file_field :photo %>
-     <br> 
-     <br>  
+    <div class="col-xs-12">
+      <div class="form-body">
+        <%= form_for @ghostwrite do |f| %>
+          <%= f.bootsy_area :content %>
+      </div>
+      
           <div class="green">
-            <%= f.submit %>
+            <%= f.submit "Create" %>
           </div>  
-      <% end %>
+          <% end %>  
     </div>
   </div>
   
