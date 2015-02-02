@@ -1,1 +1,11 @@
-<p>I thought of you when <%= @letter.properties["origin"] %>. It's been a while and I'd love to catch up! We should <%= @letter.properties["acheive"] %>. </p>
+<div class="col-md-8">
+	<div class="letter-output">
+		<p>I thought of you when <%= @letter.properties["origin"] %>. It's been a while and I'd love to catch up! We should <%= @letter.properties["acheive"] %>. </p>
+		<p>
+		<% if user_signed_in? %> 
+		<%= current_user.first_name %>
+
+		<% end %>
+	</p>
+	</div>
+</div>
