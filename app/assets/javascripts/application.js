@@ -47,18 +47,9 @@ $(".element2").typed({
  
 			console.log('hi');
 
- $( "#business" ).hover(function() {
-		console.log('bitch, please');
-	 $('#business_description').fadeIn( "slow" );
-	});
-
-	$( "#personal" ).hover(function() {
-		$( "#personal_description" ).fadeIn( "slow" );
-	});
-
-	$( "#custom" ).hover(function() {
-		$( "#custom_description" ).fadeIn( "slow" );
-	});
+    
+       
+  
 
 	$('.questions').find('fieldset').each(function (i) {
 		$(this).attr('id', + i);
