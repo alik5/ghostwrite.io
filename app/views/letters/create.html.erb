@@ -1,31 +1,44 @@
-<div>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
 
 <% if @letter.letter_type.name.to_s == "Cover Letter"  %>
    
-  <%= render 'cover_letter' %>
+  <%= render 'letters/templates/cover_letter' %>
 
  <% elsif @letter.letter_type.name.to_s == "Networking"  %>
 
-  <%= render 'networking' %>
+  <%= render 'letters/templates/networking' %>
 
-<% elsif @letter.letter_type_id == 12 %>
+ <% elsif @letter.letter_type_id.to_s == "Thank You Note" %>
 
-  <%= render 'thank_you' %>
+  <%= render 'letters/templates/thank_you' %>
 
-  <% elsif @letter.letter_type_id == 9 %>
+ <% elsif @letter.letter_type_id.to_s == "Dating" %>
 
-  	<%= render 'feedback' %>
+  <%= render 'letters/templates/dating' %>
 
-  	 <% else %>
+ <% elsif @letter.letter_type_id.to_s == "Get Back in Touch" %>
 
-  	 <%= render 'progress' %>
+ <%= render 'letters/templates/back_in_touch' %>
+
+ <% elsif @letter.letter_type_id == 9 %>
+
+  	<%= render 'letters/templates/feedback' %>
+
+ <% else %>
+
+  	 <%= render 'letters/templates/progress' %>
 
  <% end %>
 
 
   <%= render 'job_listings' %>
 
-   
- 
+</div>
+
+<div class="row col-md-12">
+	<%= link_to 'Edit', edit_letter_path(@letter) %> |
+	<%= link_to 'Back', letter_path %>
 </div>
 

@@ -335,7 +335,7 @@ body.onepage .menu-wrapper.affix {
 
 .blog {
   width: 100%; 
-  height: 50%;
+  height: auto;
 }
 
 .carousel-control.left, 
@@ -1043,6 +1043,10 @@ div.form-body textarea {
 
 #ghostwrite_photo {
   margin-left: 100px; 
+}
+
+.ghostwrite_body {
+  height: 50%;
 }
 
 
