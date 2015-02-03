@@ -29,6 +29,7 @@ Rails.application.routes.draw do
  # get 'user/index'
 
    devise_for :users
+   match 'users/sign_out' => "devise/sessions#destroy"
  
   
    
