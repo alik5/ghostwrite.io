@@ -34,7 +34,7 @@ class GhostwritesController < ApplicationController
       format.html
       format.pdf { render pdf: generate_pdf(@ghostwrite) }
       if @ghostwrite.save
-        CustomMailer.mail_letter(@ghostwrite).deliver
+        #CustomMailer.mail_letter(@ghostwrite).deliver
       end
     end
   end

@@ -11,7 +11,6 @@ class UserController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
-        CustomMailer.mail_letter(@ghostwrite).deliver
 
       else
         format.html { render :new }
