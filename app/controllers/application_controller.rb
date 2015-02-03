@@ -18,9 +18,9 @@ require 'mandrill'
 	:subject=> "Welcome To Ghostwrite.io", 
 	:from_name=> "Ali FitzGerald",
 	:from_email=>"admin@ghostwrite.io",
-	:to=>User.to_mandrill_to(User.new), 
+	:to=>User.new, 
 	:html=>render_to_string('custom_mailer/mail_letter', :layout => false), 
-	:merge_vars => User.to_mandrill_merge_vars(User.new),
+	:merge_vars => User.new,
 	:preserve_recipients => false
 	} 
 	sending = m.messages.send message
