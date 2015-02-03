@@ -364,8 +364,12 @@ body.onepage .menu-wrapper.affix {
 .simple_form div.controls input {
   height: auto;
   width: 80%;
-  margin-top: 10px; 
+  margin: 15px; 
   border-radius: 5px; 
+}
+
+label {
+  display: none;
 }
 
 
@@ -373,7 +377,8 @@ body.onepage .menu-wrapper.affix {
  div.boolean, .simple_form input {
   border: none;
   color: black;
-  border-radius: 3px;
+  border-radius: 5px;
+  padding: 5px; 
 
 }
 
@@ -1036,6 +1041,14 @@ div.form-body textarea {
 
 .ghostwrite_body {
   height: 50%;
+}
+
+.confirmation-list {
+  list-style: none; 
+}
+
+.col-md-4 {
+  text-align: center; 
 }
 
 

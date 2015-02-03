@@ -24,3 +24,4 @@
 /www_ghostwrite_io.pem
 /server.crt
 /server.key
+/config/initializers/stripe.rb
