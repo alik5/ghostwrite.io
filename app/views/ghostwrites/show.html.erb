@@ -10,13 +10,14 @@
 					<li><h3><%= @ghostwrite.string.upcase %> --> your email</h3></li>
 
 					<li><h3><%= @ghostwrite.content.upcase %> --> when you need it by</h3></li>
+					<li><h3><%= link_to "My Attachment", @ghostwrite.photo.url %></h3></li>
 
 				</ul>
 			</div>
-			
-			<div class="col-md-5" id="preview-box">
+			<div class="col-md-1"></div>
+			<div class="col-md-5 hint-box">
 				   	<p class="wisi-box-prev"><%= @ghostwrite.wisi_box %></p>
-				   	<h3><%= link_to "My Attachment", @ghostwrite.photo.url %></h3>
+				   	
 			</div>
 
 
