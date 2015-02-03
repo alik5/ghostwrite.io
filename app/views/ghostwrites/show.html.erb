@@ -2,32 +2,42 @@
   <div class="row">
   	 <h1> CONFIRMATION </h1>
 	   <div class="col-md-12">
-	   		<div class="col-md-6">
+	   		<div class="col-md-5" id="confirmation-box">
 				<ul class="confirmation-list">
 
-					<li><h2><%= @ghostwrite.title %></h2></li>
+					<li><h3><%= @ghostwrite.title.upcase %> --> your name</h3></li>
 
-					<li><h3><%= @ghostwrite.string %></h3></li>
+					<li><h3><%= @ghostwrite.string.upcase %> --> your email</h3></li>
 
-					<li><h3><%= @ghostwrite.content %></h3></li>
+					<li><h3><%= @ghostwrite.content.upcase %> --> when you need it by</h3></li>
 
 				</ul>
 			</div>
-			<div class="col-md-6">
-				    <%= link_to "My Attachment", @ghostwrite.photo.url %>
-				   	<p><%= @ghostwrite.wisi_box %></p>
+			
+			<div class="col-md-5" id="preview-box">
+				   	<p class="wisi-box-prev"><%= @ghostwrite.wisi_box %></p>
+				   	<h3><%= link_to "My Attachment", @ghostwrite.photo.url %></h3>
 			</div>
 
-		</div>
 
-		<div class="col-md-4">
-			<%= render "charges/form" %>
 		</div>
-		<div class="col-md-4">
-			<%= render "charges/form" %>
-		</div>
-		<div class="col-md-4">
-			<%= render "charges/form" %>
+		
+		  <div class="col-md-12">
+		  	<div class="pay-buttons">
+				<div class="col-md-3" id="col-3">
+					<h3>  500 words or less <h3>
+					<%= render "charges/form1" %>
+				</div>
+				<div class="col-md-3" id="col-3">
+					<h3>  500 words - 1000 words <h3>
+					<%= render "charges/form2" %>
+				</div>
+				<div class="col-md-3" id="col-3">
+					<h3>  1000+ words <h3>
+					<%= render "charges/form3" %>
+				</div>
+					
+			</div>
 		</div>
 	</div>
 </div>

@@ -1047,9 +1047,29 @@ div.form-body textarea {
   list-style: none; 
 }
 
-.col-md-4 {
-  text-align: center; 
+#col-3 {
+  text-align: center;
+  padding: 40px 5px 5px 5px; 
+  background-color: white; 
+  margin: 30px;
 }
+
+#confirmation-box {
+  background-color: white; 
+}
+
+#preview-box {
+  border: solid;
+  border-color:rgba(36,255,191,0.4);
+  text-align: center; 
+  margin: 0 0 0 50px; 
+  padding: 30px; 
+}
+
+.pay-buttons {
+  margin-top: 50px; 
+}
+
 
 
 
