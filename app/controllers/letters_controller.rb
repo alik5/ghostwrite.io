@@ -94,8 +94,8 @@ class LettersController < ApplicationController
 			letter = Letter.find(params[:id])
 
 			# Check if the letter has any of these fields, use the first one it finds
+			query ||= letter['properties']['position']
 			query ||= letter['properties']['skill1']
-			query ||= letter['properties']['skill2']
 			query ||= letter['properties']['one_word']
 			query ||= letter['properties']['background']
 
