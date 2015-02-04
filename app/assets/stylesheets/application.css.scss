@@ -1007,6 +1007,10 @@ section .post-header {
   list-style: none;
  }
 
+ .ghostwrite_body {
+  margin-bottom: -15px; 
+ }
+
 .hint-box {
   text-align: center; 
   background-color: rgba(36,255,191,0.4);
@@ -1074,6 +1078,10 @@ div.form-body textarea {
   padding: 20px; 
 }
 
+span#down  {
+  color: white; 
+  text-align: center; 
+}
 
 
 
