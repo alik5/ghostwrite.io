@@ -20,6 +20,7 @@ gem 'redis'
 # Use the Indeed API to search job listings
 gem 'indeed-ruby'
 gem 'bootsy'
+gem 'jquery-cookie-rails'
 # Shim to load environment variables from .env into ENV in development
 gem 'dotenv-rails', :groups => [:development, :test]
 

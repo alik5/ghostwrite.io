@@ -26,6 +26,7 @@
 //= require nprogress-turbolinks
 //= require nprogress-ajax
 //= require letters
+//= require jquery.cookie
 //= require wow
 //= require sweet-alert
 //= require_tree .
@@ -91,9 +92,14 @@ $('span.next, span.prev').click(function(e){
 
   });
 
+  if ($.cookie('pop') == null) {
+                     $('#dialog').modal('show');
+                     $.cookie('pop', '7');
+                 }
+             });
 
 
-});
+
 
 
 
