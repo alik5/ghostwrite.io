@@ -27,7 +27,6 @@
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-menu-3"></span>
                             </button>
-                            <%= image_tag "ghostgirl-logo.png", :class => "navbar-brand", :id => "smLogo" %>
                             <%= link_to 'Ghostwrite.io', root_path, :class => "navbar-brand" %>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
@@ -44,8 +43,7 @@
                                 </li>
                                 <li><%= link_to 'Blog', "/blog" %> </li>
                                 <li><%= link_to 'How To', "/examples" %> </li>
-                                <li><%= link_to 'Contact', "/contact" %> </li>
-                                <li><%= link_to 'Search Letters', "/search" %> </li>
+                                <li><%= link_to 'Examples', "/search" %> </li>
                             </ul>
                            <ul class="nav navbar-nav navbar-right">
                               <% if user_signed_in? %>

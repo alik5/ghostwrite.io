@@ -13,7 +13,6 @@ class Letter < ActiveRecord::Base
 
 	before_save :get_zipcode
 
-
 	 def full_name
   	"#{self.first_name} #{self.last_name}"
 	end
@@ -22,11 +21,7 @@ class Letter < ActiveRecord::Base
 	def kind_of_letter
 		"#{letter_type}"
 	end
-
-	def read_attribute_for_validation(attr_name)
-  	@letter[attr_name.to_s]
-	end
-
+      
 	# Get zipcode from IP address
 	def get_zipcode
 		unless self.client_ip.nil?
@@ -35,19 +30,4 @@ class Letter < ActiveRecord::Base
 			self.zipcode = address.first.data["zip_code"]
 		end
 	end
-
-	
-    
-
-
-
-
-	
-  
-
-
-	
-
-  
-
 end

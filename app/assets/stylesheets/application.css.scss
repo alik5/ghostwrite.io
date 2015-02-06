@@ -46,6 +46,7 @@ body {
 ------------------------------------------------------- */
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300,800,900);
+@import url(https://fonts.googleapis.com/css?family=Coming+Soon);
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
@@ -1114,11 +1115,20 @@ span#down  {
   border-bottom: none; 
 }
 
-#smLogo {
-  border: none;
-  width: 18%;
-  margin-top: -5px; 
+.grey-wrapper {
+  position: relative;
+  display: block;
+  z-index:1000;
+  padding:80px 0;
+  margin: 0 auto;
+  background: #F5F5F5;
 }
+
+.handwriting {
+  font-family: 'Coming Soon', cursive;
+}
+
+
 
 
 
