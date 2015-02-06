@@ -7,10 +7,10 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-         <%= image_tag "trees-words.jpg", :class => 'trees' %>
+         <%= image_tag "mainy.jpg", :class => 'blog' %>
           <div class="container">
             <div class="carousel-caption">
-              <a href="#buttonsSection"><h3>Create Message</h3>
+              <a href="#buttonsSection"><h3>create message</h3>
                 <i class="fa fa-angle-down fa-3x"></i>
               </a>
 
@@ -18,18 +18,18 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag "words-blue-smaller.jpg", :class => 'trees' %>
+          <%= image_tag "personal-img.jpg", :class => 'blog' %>
           <div class="container">
             <div class="carousel-caption">
-             <h3><%= link_to "Get Started", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></h3>
+             <h3><%= link_to "create personal message", "/personal" %></h3>
             </div>
           </div>
         </div>
         <div class="item">
-          <%= image_tag "words2.jpg", :class => 'trees' %>
+          <%= image_tag "business-img.jpg", :class => 'blog' %>
           <div class="container">
             <div class="carousel-caption">
-                <h3><%= link_to "Sign Up Now", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></h3>
+                <h3><%= link_to "create business email", '/business' %></h3>
             </div>
           </div>
         </div>
