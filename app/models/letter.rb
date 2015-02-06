@@ -23,6 +23,10 @@ class Letter < ActiveRecord::Base
 		"#{letter_type}"
 	end
 
+	def read_attribute_for_validation(attr_name)
+  	@letter[attr_name.to_s]
+	end
+
 	# Get zipcode from IP address
 	def get_zipcode
 		unless self.client_ip.nil?
