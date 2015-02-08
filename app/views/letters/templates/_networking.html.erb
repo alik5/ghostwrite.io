@@ -1,30 +1,30 @@
-<div class="col-md-8">
-	<div class="letter-output">
-	<p>Hi <%= @letter.properties["their_name"] %>,</p>
-	<br>
+<!--Upload this file to your server-->
 
- 	<p><%= @letter.properties["reason"] %> I really admire <%= @letter.properties["admire"] %>. We both <%= @letter.properties["common_ground"] %>. I am <%= @letter.properties["background"] %>. In the hopes of<%= @letter.properties["achieve"] %> . </p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!--Add the title of your typeform below-->
+	<title>Networking</title>
 
-
-
-	<p>I realize that you are on a tight schedule and I would greatly appreciate any time that you could spare to speak with me. I would love the opportunity to connect with you.</p>
-
-	<br>
-
-	<p>I look forward to hearing from you,<p>
-
-
-	<br>
-
-	<% if user_signed_in? %> 
-	<%= current_user.full_name %>
-
-	<% else %>
-	<li><%= link_to "Get Signature", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></li> 
-
-
-
-		<% end %>
-
-	</div>
-</div>	
+	<!--CSS styles that ensure your typeform takes up all the available screen space (DO NOT EDIT!)-->
+<style type="text/css">
+		html{
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		iframe{
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top: 115px;
+			border:0;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://ghostwriteio.typeform.com/to/k5h9z9?name=xxxxx&amp;embed=full"></iframe>
+	<script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+</body>
+</html>

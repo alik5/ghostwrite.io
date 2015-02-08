@@ -1,15 +1,24 @@
 
 
 
-<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
-<h2 class= "header_text"></h2>
-  <div class="fieldset">
-  	<div class="container" id="form-container">
-		<div class="row"> 	
-			<div class="col-md-11">
+
+
+				<% if @letter.letter_type.name.to_s == "Networking"  %>
+   
+  				<%= render 'letters/templates/networking' %>
+
+ 				<% else %>
+ 				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
+					<h2 class= "header_text"></h2>
+  						<div class="fieldset">
+  							<div class="container" id="form-container">
+								<div class="row"> 	
+									<div class="col-md-11">
   
-				<%= render 'form' %>
-			</div>
+										<%= render 'form' %>
+
+											<% end %>
+										</div>
 
 			
 				<div class="wisi">
