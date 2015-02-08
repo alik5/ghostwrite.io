@@ -1,17 +1,31 @@
+<!--Upload this file to your server-->
 
-<div class="col-md-8">
-	<div class="letter-output">
-		<p>I noticed that you <%= @letter.properties["origin"] %>. I think that’s really cool. I <%= @letter.properties["common_ground"] %> .  It seems like we could have a lot to talk about.</p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!--Add the title of your typeform below-->
+	<title>Dating</title>
 
-		<p>What do you think about <%= @letter.properties["interest"] %> ?</p>
+	<!--CSS styles that ensure your typeform takes up all the available screen space (DO NOT EDIT!)-->
+<style type="text/css">
+		html{
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		iframe{
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top:100px;
+			border:0;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://ghostwriteio.typeform.com/to/uySx5u"></iframe>
+	<script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+</body>
+</html>
 
-		<p><% if user_signed_in? %> 
-		<%= current_user.first_name %>
-
-		<% else %>
-		<li><%= link_to "Get Signature", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></li> 
-
-		<% end %>
-		</p>
-	</div>
-</div>

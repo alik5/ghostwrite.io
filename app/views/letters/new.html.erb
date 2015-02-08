@@ -7,6 +7,10 @@
    
   				<%= render 'letters/templates/networking' %>
 
+  				<% elsif @letter.letter_type.name.to_s == "Dating"  %>
+   
+  				<%= render 'letters/templates/dating' %>
+
  				<% else %>
  				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 					<h2 class= "header_text"></h2>
