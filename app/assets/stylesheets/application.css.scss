@@ -1127,6 +1127,15 @@ span#down  {
   font-family: 'Calligraffitti', cursive;
 }
 
+#first {
+  position: absolute; 
+  z-index: 1000; 
+  color: white;
+}
+
+#first:hover {
+  color: rgba(10,232,167,0.9);
+}
 
 
 

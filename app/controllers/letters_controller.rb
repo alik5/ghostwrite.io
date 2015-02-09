@@ -3,6 +3,7 @@ class LettersController < ApplicationController
 	before_action :search_indeed, only: [:show]
 	respond_to :html
 	layout 'application'
+	layout "forms", :only => :new
 
  def index
 		@letter= Letter.all
