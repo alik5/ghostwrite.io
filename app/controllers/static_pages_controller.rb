@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   respond_to :html
   layout 'application'
+  layout "forms", :only => :examples
 
 
   
