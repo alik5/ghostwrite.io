@@ -259,6 +259,14 @@ small, .small {
   position: relative; 
 }
 
+.cover-stock {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0;
+
+}
+
 .get-started {
   float: left;
   width: 35%; 
@@ -411,10 +419,9 @@ i {
 .about {
 	float: left; 
 	line-height: 1.2em; 
-	color: black;
+	color: #32b7a4;
 	text-align: left; 
-	margin-top: 20px; 
-	background-color: white; 
+	background-color: #fff; 
 	padding: 30px; 
 }
 
@@ -488,6 +495,14 @@ div.modal-body  {
   background: #fff;
 }
 
+.white-wrapper2 {
+  position: relative;
+  display: block;
+  z-index:1000;
+  margin: 0 auto;
+  background: transparent;
+}
+
 
 .btn-xlarge {
     padding: 18px 28px;
@@ -521,9 +536,10 @@ div.modal-body  {
 
   .business-submit {
     background-color: #24FFCB;
-    color: gray;
-    width: 125px;
+    width: 150px;
+    height: 55px;
     font-size: 1.5em; 
+    border-radius: 1px; 
   }
 
   .business-submit:hover {
