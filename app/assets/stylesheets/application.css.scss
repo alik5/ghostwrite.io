@@ -49,7 +49,7 @@ body {
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
-    background: #24FFCB;
+    background: #32b7a4;
     color:#494c50;
     font-size: 12px;
     font-weight: 300;
@@ -252,8 +252,11 @@ small, .small {
 }
 
 .cover {
-  width: 50%;
+  width: 100%;
+  height: auto;
   float: right;
+  margin-top: -200px; 
+  position: relative; 
 }
 
 .get-started {
@@ -261,6 +264,7 @@ small, .small {
   width: 35%; 
   margin-top: 10%;
   margin-left: 20px;  
+  position: absolute;
 }
 
 
@@ -1065,6 +1069,22 @@ span#down  {
 
 .middle-cover li {
   padding: 10px; 
+}
+ .justify {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 500px;
+    width: 100%
+ }
+
+.justify span {
+  color: #fff; 
+}
+
+.justify h2 {
+  text-align: center; 
+  color: #000;
 }
 
 
