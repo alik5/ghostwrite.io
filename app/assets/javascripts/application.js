@@ -28,6 +28,8 @@
 //= require letters
 //= require jquery.cookie
 //= require wow
+//= require greensock/TweenMax.min
+//= require jquery.scrollmagic
 //= require sweet-alert
 //= require_tree .
 
@@ -98,7 +100,23 @@ $('span.next, span.prev').click(function(e){
                  }
              });
 
+var controller;
+      $(document).ready(function($) {
+        // init controller
+        controller = new ScrollMagic();
+      });
 
+      $(document).ready(function($) {
+        // build tween
+        var tween = TweenMax.to("#animate1", 0.5, {backgroundColor: "#32b7a4", scale: 2.5});
+
+        // build scene
+        var scene = new ScrollScene({triggerElement: "#trigger1"})
+                .setTween(tween)
+                .addTo(controller);
+
+      
+      });
 
 
 
