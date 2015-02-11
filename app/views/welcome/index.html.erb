@@ -1,58 +1,18 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-         <%= image_tag "wordslogo.png", :class => 'blog' %>
-          <div class="container">
-            <div class="carousel-caption">
-              <a href="#buttonsSection"><h3>create message</h3>
-                <i class="fa fa-angle-down fa-3x"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag "personal-img.jpg", :class => 'blog' %>
-          <div class="container">
-            <div class="carousel-caption">
-             <h3><%= link_to "create message", "/personal" %></h3>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag "business-img.jpg", :class => 'blog' %>
-          <div class="container">
-            <div class="carousel-caption">
-                <h3><%= link_to "create email", '/business' %></h3>
-            </div>
+  <div class="cover-image">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12"> 
+           <%=image_tag 'demo-ghost2.png', :class => "cover" %>
+           <%=image_tag 'button.png', :class => "get-started" %>
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-        <section class="slider-wrapper">
-            <article class="boxedcontainer container">
-                <div class="tp-banner-container">
-                    <div class="tp-banner ">
-                        
-                        
-                    </div>
-                </div>  
-            </article>
-        </section><!-- end section -->
+
+
+       
+      
+  
 
         <a name="buttonsSection"></a>
         <section class="white-wrapper">
@@ -68,9 +28,7 @@
 			    <a href="business"><button type="button" class="btn btn-default btn-xlarge"><span class="tie-png"><i class="fa fa-briefcase fa-3x"></i></span><span id="business_description"> Business</span></button></a>
 				  </div>
           
-				  <div class="btn-group" role="group" id="personal">
-				    <a href="personal"><button type="button" class="btn btn-default btn-xlarge"><span class="heart-png"><i class="fa fa-heart fa-3x"></i></span><span id="personal_description">Personal</span></button></a>         
-				  </div>
+				
 				  <div class="btn-group" role="group">
 				    <a href="custom"><button type="button" class="btn btn-default btn-xlarge"><span class="ghost-png"><i class="fa fa-bolt fa-3x"></i></span><span id="Custom_description">Custom</span></button></a>
 				</div>
@@ -107,6 +65,8 @@
                  </div>           
             </div><!-- end container -->
         </section><!-- end white -->
+
+    </div>
 
         <footer class="footer clearfix">
             <div class="container">

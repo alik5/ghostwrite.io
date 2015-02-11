@@ -49,9 +49,8 @@ body {
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
-    background: #fff;
+    background: #24FFCB;
     color:#494c50;
-    background: #fff;
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 0.1em;
@@ -102,7 +101,7 @@ li {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 a {
-color:#24FFCB;
+color:#494c50;
 text-decoration:none;
 -webkit-transition:background-color .2s linear, color .2s linear;
 -moz-transition:background-color .2s linear, color .2s linear;
@@ -205,65 +204,6 @@ small, .small {
   HEADER
 ------------------------------------------------------- */
 
-.wrapper {
-  padding:20px;
-  background: #f5f5f5;
-}
-.header {
-  background: #fff;
-  padding: 40px 0;
-  position: relative;
-  z-index: 1000;
-}
-
-body.onepage .header {
-  position: absolute;
-  top:0;
-  background:rgba(255,255,255,0);
-  background:transparent;
-  left: 0;
-  width: 100%;
-}
-body.onepage .wrapper {
-  padding: 0;
-}
-body.onepage .menu-wrapper {
-  background:rgba(255,255,255,0);
-  background:transparent;
-}
-body.onepage .menu-wrapper.affix {
-  background:rgba(255,255,255,0.8) !important;
-}
-.menu-wrapper {
-  height: auto;
-  position: relative;
-  width: 100%;
-  margin:0;
-  background:rgba(255,255,255,0.8);
-  -webkit-transition: background 0.1s linear, height 0.1s linear;
-  -webkit-transition-delay: 0s, 0s;
-  -moz-transition: background 0.1s linear 0s, height 0.1s linear 0s;
-  -o-transition: background 0.1s linear 0s, height 0.1s linear 0s;
-  transition: background 0.1s linear 0s, height 0.1s linear 0s;
-}
-.dropdown-menu,
-.menu-wrapper.affix  .dropdown-menu {
-  margin-top:8px;
-}
-.menu-wrapper.affix {
-  width:100%;
-  top:0;
-  background:rgba(255,255,255,0.9);
-  right:0;
-  padding: 8px 0;
-  margin-top:0;
-  margin:0 !important;
-  position: fixed;
-  z-index: 9999;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  transition: all 0.8s;
-}
 .navbar,
 .navbar-default {
   background: rgba(255, 255, 255, 0);
@@ -283,37 +223,9 @@ body.onepage .menu-wrapper.affix {
   color:rgb(64,67,71);
   background: rgba(255, 255, 255, 0);
 }
-.dropdown-menu {
-  background: #434b55;
-  box-shadow:none;
-  padding:10px;
-  border:0;
-  border-color:#f3f3ef;
-  border-radius:0 !important;
-}
-.dropdown-menu > li > a {
-  clear: both;
-  color: #fff;
-  display: block;
-  font-weight: 400;
-  line-height: 1.42857;
-  padding: 8px 20px 8px 10px;
-  white-space: nowrap;
-  font-size: 12px;
-  letter-spacing: 0;
-  text-transform: capitalize;
-}
-.navbar-nav {
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.navbar-default .navbar-nav > li > a {
-  padding:15px 10px;
-}
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-  margin-left: 0;
-}
+
+
+
 .navbar-brand {
   float: left;
   font-size: 18px;
@@ -321,28 +233,37 @@ body.onepage .menu-wrapper.affix {
   text-align: center;
   margin: 8px 10px 6px 0px;
   text-transform: uppercase;
-  color:rgb(64,67,71);
+  color: #494c50;
   line-height: 1;
   padding: 7px 20px;
-  border:1px solid rgb(64,67,71);
+  border:1px solid #494c50;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 /*******Carousel*******************/
-.trees {
-  width: 100%; 
+
+
+.cover-image {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      text-align: center; 
 }
 
-.blog {
-  width: 100%; 
-  height: auto;
+.cover {
+  width: 50%;
+  float: right;
 }
 
-.carousel-control.left, 
-.carousel-control.right {
-    background-image: none
+.get-started {
+  float: left;
+  width: 35%; 
+  margin-top: 10%;
+  margin-left: 20px;  
 }
+
+
 
 /******* simple form styles *******/
 
@@ -1135,6 +1056,15 @@ span#down  {
 
 #first:hover {
   color: rgba(10,232,167,0.9);
+}
+
+.middle-cover {
+  list-style: none; 
+  margin-top: 35%; 
+}
+
+.middle-cover li {
+  padding: 10px; 
 }
 
 

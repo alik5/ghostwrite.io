@@ -18,55 +18,37 @@
   <%= csrf_meta_tags %>
 </head>
  <body>
-  <div class="wrapper">
-        <header class="header">
+  <div class="site-wrapper">
+        <div class="site-wrapper-inner">
             <div class="menu-wrapper">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-menu-3"></span>
-                            </button>
-                            <%= link_to 'Ghostwrite.io', root_path, :class => "navbar-brand" %>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><%= link_to 'Home', root_path %></li>
-                                <li><%= link_to 'About', "/about" %></li>
-                                <li class="dropdown">
-                                        <ul class="dropdown-menu" role="menu">
-                                       <%= link_to 'Ghostwrite', root_path, :class => 'brand' %> 
-                 				 <li class="navbar-text pull-left">
-                 				 <%= link_to 'About', about_path, :class => 'navbar-link' %>       
-                        
-                                    </ul>
-                                </li>
-                                <li><%= link_to 'Blog', "/blog" %> </li>
-                                <li><%= link_to 'Just to be Social', "/which-patriot-are-you" %> </li>
-                            </ul>
-                           <ul class="nav navbar-nav navbar-right">
-                              <% if user_signed_in? %>
-                            <li><strong><%= current_user.full_name %></strong></li> 
-              				<li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
-              				<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-            				 <% else %>
-               				<li><%= link_to "Sign Up", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></li>
-             			     <li><%= link_to "Log In", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", 'data-type' => "html" %></li>
+                <div class="container">
+                  <nav>
+                    <div class="masthead-clearfix">
+                        <div class="inner">    
+                            <h3><%= link_to 'GHOSTWRITE.IO', root_path, :class => "navbar-brand" %></h3>
+                            
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><%= link_to 'ABOUT', "/about" %></li>
+                 				        <li><%= link_to 'BLOG', "/blog" %> </li>
+                                <li><%= link_to 'JUST TO BE SOCIAL', "/which-patriot-are-you" %></li> 
+                              </ul>
+                          </nav><!--/.end nav -->
+                       </div>
+                    </div><!--/.end clearfix-->
+                  </div><!-- end cover-container -->
+                 
 
-             				 <% end %>
-                        
-                            </li>
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
-                </nav>
-            </div><!-- end menu-wrapper -->
-        </header><!-- end header -->
+       
 		
 
 
 	
-	<%= yield %>
+	         <%= yield %>
+
+
+    </div><!--end menu-wrapper -->
+   </div><!--end site-wrapper-inner -->
+ </div><!--end site-wrapper -->
 
 
 	<%= render 'devise/sessions/new' %>
