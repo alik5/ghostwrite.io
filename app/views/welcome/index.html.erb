@@ -3,14 +3,19 @@
       <div class="cover-image">
        <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-12"> 
-            <%=image_tag 'baby.png', :class => "cover" %>
+         
+            
+               <div class="col-xs-12 col-md-12"> 
+                   <%=image_tag 'baby.png', :class => "cover" %>
+              </div>
+            </div>
+            
               <div class="justify">
                 <h2><a data-menuanchor="secondPage" href="#secondPage"><span>WRITE</span></a> ||    <span><%= link_to "SIGN UP", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></span> ||<a data-menuanchor="lastPage" href="#lastPage"><span>LEARN MORE</span></a></h2>
                   <br>
                   <a data-menuanchor="firstPage" href="#secondPage"><h3><span>START<i class="fa fa-chevron-circle-down"></i></span></h3></a>
+                
               </div>
-            </div><!-- cols -->
           </div><!-- row -->
         </div><!-- container -->
       </div><!-- cover-image -->

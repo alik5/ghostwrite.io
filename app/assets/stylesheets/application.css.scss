@@ -58,20 +58,13 @@ body {
 }
 
 
-
-  .cover-image {
-      margin: 0;
-      height: 50%;
-      text-align: center; 
-}
-
-  .cover {
-    width: 100%;
-    float: right;
+  .small-cover {
+    display: none; 
   }
-.cover-letter-600 {
+
+  .cover-letter-600 {
   margin-top: 25px; 
-}
+  }
 
 
 
@@ -274,6 +267,14 @@ small, .small {
   float: right;
   margin-top: -200px; 
   position: relative; 
+}
+
+
+@media only screen and (max-width: 767px) {
+    .cover {
+      width: 100%;
+      margin-top: 10px; 
+    }
 }
 
 .cover-stock {
