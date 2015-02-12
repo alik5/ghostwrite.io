@@ -34,7 +34,11 @@
                            </div> 
                              <div id="navbar" class="navbar-collapse collapse">
                               <ul class="nav navbar-nav navbar-right" id="menu">
-                                  <li><%= link_to "LOG IN", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", 'data-type' => "html" %></li>
+                                    <% if user_signed_in? %>
+                                     <li><%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete %></li>
+                                    <% else %>
+                                     <li><%= link_to "LOG IN", new_user_session_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal", 'data-type' => "html" %></li>
+                                    <% end %>
                                   <li data-menuanchor="firstPage"><a href="#lastPage">ABOUT</a></li>
                    				        <li><%= link_to 'BLOG', "/blog" %> </li>
                                   <li><%= link_to 'JUST TO BE SOCIAL', "/which-patriot-are-you" %></li> 
