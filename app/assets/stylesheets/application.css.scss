@@ -57,7 +57,7 @@ body {
     line-height: 18px;
 }
 
-@media only screen and (min-width: 768px) {
+
 
   .cover-image {
       margin: 0;
@@ -69,36 +69,10 @@ body {
     width: 100%;
     float: right;
   }
-}
-    
-
-@media only screen and (max-width: 767px) {
-.cover-image {
-      margin: 0;
-      height: 50%;
-      text-align: center; 
+.cover-letter-600 {
+  margin-top: 25px; 
 }
 
-  .cover {
-    width: 100%;
-    float: right;
-  }
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-
-  .cover-image {
-      margin: 0;
-      height: 50%;
-      text-align: center; 
-}
-
-  .cover {
-    width: 100%;
-    float: right;
-  }
-}
-    /* portrait phones */
 
 
 /* Typography */
@@ -1028,10 +1002,6 @@ div.form-body textarea {
 
 #ghostwrite_photo {
   margin-left: 100px; 
-}
-
-.ghostwrite_body {
-  background-color: #FFF; 
 }
 
 .confirmation-list {

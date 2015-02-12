@@ -15,7 +15,6 @@ gem 'aws-s3', :require => 'aws/s3'
 gem 'aws-sdk'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'font-awesome-sass'
-gem 'scrollmagicjs-rails'
 gem 'redis'
 # Use the Indeed API to search job listings
 gem 'indeed-ruby'

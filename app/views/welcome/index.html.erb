@@ -1,20 +1,21 @@
 <div id="fullpage">
   <div class="section">
-    <div class="cover-image" id="pin-1">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12"> 
-             <%=image_tag 'baby.png', :class => "cover" %>
+      <div class="cover-image">
+       <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12"> 
+            <%=image_tag 'baby.png', :class => "cover" %>
               <div class="justify">
                 <h2><a data-menuanchor="secondPage" href="#secondPage"><span>WRITE</span></a> ||    <span><%= link_to "SIGN UP", new_user_registration_path, :remote => true, 'data-toggle' => "modal", 'data-target' => "#ajax-modal-2", 'data-type' => "html" %></span> ||<a data-menuanchor="lastPage" href="#lastPage"><span>LEARN MORE</span></a></h2>
-                <br>
-                <a data-menuanchor="firstPage" href="#secondPage"><h3><span>START<i class="fa fa-chevron-circle-down"></i></span></h3></a>
+                  <br>
+                  <a data-menuanchor="firstPage" href="#secondPage"><h3><span>START<i class="fa fa-chevron-circle-down"></i></span></h3></a>
               </div>
-          </div><!-- cols -->
-        </div><!-- row -->
-      </div><!-- container -->
-    </div><!-- cover-image -->
-  </div><!-- section -->
+            </div><!-- cols -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- cover-image -->
+    </div><!-- section -->
+       
 
       <div class="section"> 
         <section class="white-wrapper">
@@ -50,8 +51,8 @@
         </section><!-- end white -->
       </div>
 
-    <div>
-        <%=image_tag 'cover-letter.png', :class => "cover-stock" %>
+    <div class="cover-letter-600">
+        <%=image_tag 'cover-letter-600.png', :class => "cover-stock" %>
       </div>
   
     <section class="white-wrapper">

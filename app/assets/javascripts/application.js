@@ -28,8 +28,6 @@
 //= require letters
 //= require jquery.cookie
 //= require wow
-//= require greensock/TweenMax.min
-//= require jquery.scrollmagic
 //= require sweet-alert
 //= require_tree .
 
