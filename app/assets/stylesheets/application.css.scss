@@ -955,6 +955,9 @@ section .post-header {
     border-top-color: #E5E5E5;
     padding: 20px; 
 }
+.blog {
+  width: 100%;
+}
 
 .blog-head {
   color: #595959;
@@ -993,9 +996,7 @@ section .post-header {
   list-style: none;
  }
 
- .ghostwrite_body {
-  margin-bottom: -15px; 
- }
+
 
 .hint-box {
   text-align: center; 
@@ -1030,7 +1031,7 @@ div.form-body textarea {
 }
 
 .ghostwrite_body {
-  height: 50%;
+  background-color: #FFF; 
 }
 
 .confirmation-list {
