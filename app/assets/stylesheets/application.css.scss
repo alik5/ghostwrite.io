@@ -51,11 +51,54 @@ body {
     font-family: 'Raleway', Arial, sans-serif;
     background: #32b7a4;
     color:#494c50;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.1em;
     line-height: 18px;
 }
+
+@media only screen and (min-width: 768px) {
+
+  .cover-image {
+      margin: 0;
+      height: 50%;
+      text-align: center; 
+}
+
+  .cover {
+    width: 100%;
+    float: right;
+  }
+}
+    
+
+@media only screen and (max-width: 767px) {
+.cover-image {
+      margin: 0;
+      height: 50%;
+      text-align: center; 
+}
+
+  .cover {
+    width: 100%;
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+  .cover-image {
+      margin: 0;
+      height: 50%;
+      text-align: center; 
+}
+
+  .cover {
+    width: 100%;
+    float: right;
+  }
+}
+    /* portrait phones */
 
 
 /* Typography */
@@ -261,10 +304,14 @@ small, .small {
 
 .cover-stock {
   width: 100%;
-  height: auto;
-  position: relative;
-  margin: 0;
+  height: 100%;
+  
 
+}
+
+#quote {
+  margin: 25px; 
+  color: #fff;
 }
 
 .get-started {
@@ -496,11 +543,8 @@ div.modal-body  {
 }
 
 .white-wrapper2 {
-  position: relative;
-  display: block;
   z-index:1000;
-  margin: 0 auto;
-  background: transparent;
+  background: #32b7a4;
 }
 
 
@@ -1096,6 +1140,10 @@ span#down  {
 
 .justify span {
   color: #fff; 
+}
+
+.justify span:hover {
+  color: #24FFCB; 
 }
 
 .justify h2 {
