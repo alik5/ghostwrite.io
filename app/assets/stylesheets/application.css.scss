@@ -253,13 +253,14 @@ small, .small {
 
 /*******Carousel*******************/
 
+@media only screen and (min-width: 1000px) {
 
-.cover-image {
+  .cover-image {
       margin: 0;
       height: 100%;
       overflow: hidden;
       text-align: center; 
-}
+  }
 
 .cover {
   width: 100%;
@@ -267,10 +268,13 @@ small, .small {
   float: right;
   margin-top: -200px; 
   position: relative; 
+  }
+   
 }
 
 
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: 999px) {
     .cover {
       width: 100%;
       margin-top: 10px; 
