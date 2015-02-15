@@ -15,6 +15,10 @@
    
   				<%= render 'letters/templates/thank_you' %>
 
+  				<% elsif @letter.letter_type.name.to_s == "To Senator/State Official"  %>
+   
+  				<%= render 'letters/templates/to_senate %>
+
  				<% else %>
  				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 					<h2 class= "header_text"></h2>
