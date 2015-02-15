@@ -17,9 +17,10 @@
 
   				<% elsif @letter.letter_type.name.to_s == "To Senator/State Official"  %>
    
-  				<%= render 'letters/templates/to_senate %>
+  				<%= render 'letters/templates/to_senate' %>
 
  				<% else %>
+ 				
  				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
 					<h2 class= "header_text"></h2>
   						<div class="fieldset">
@@ -32,19 +33,11 @@
 											
 										</div>
 
-			
-				<div class="wisi">
-			 	  
-			 	 
-
-			 	  
-
-
 				
-			</div>	
-		</div>
+								</div>	
+							</div>
 
-		<div class"nextElement">
+				<div class"nextElement">
 
 					<div class="contsnextprev"><span class="next floatright">Continue <i class="fa fa-angle-double-right fa-3x"></i></span></div>
 					<div class="contsnextprev" style="display:none;"><span class="prev floatleft">Back <i class="fa fa-angle-double-left fa-3x"></i></span></div>
@@ -58,7 +51,6 @@
 
 
 				<% end %>
-		<div>
 
 	</div>
 
