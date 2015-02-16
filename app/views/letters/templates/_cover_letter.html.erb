@@ -1,27 +1,32 @@
+<!--Upload this file to your server-->
 
-<div class="col-md-8">
-	<div class="letter-output">
-		<p>Dear <%= @letter.properties["company"] %> Team,<p>
-			<br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!--Add the title of your typeform below-->
+	<title>Cover Letter (free)</title>
 
-		<p>I am interested in being considered for the <%= @letter.properties["position"] %> position. My previous experience as a <%= @letter.properties["background"] %> make me an excellent candidate. I am <%=@letter.properties["one_word"] %>, and have so much to offer <%=@letter.properties["company"] %>. <p>
+	<!--CSS styles that ensure your typeform takes up all the available screen space (DO NOT EDIT!)-->
+<style type="text/css">
+		html{
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		iframe{
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top:0;
+			border:0;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://ghostwriteio.typeform.com/to/CsM67w"></iframe>
+	<script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+</body>
+</html>
 
-	
-		<p>My skills include <%=@letter.properties["skill1"] %>. <%= @letter.properties["education"] %>.
-		 <%=@letter.properties["interest"] %>. contribute to a <%=@letter.properties["companydoes"] %>.</p> 
-
-
-		<p>I look forward to learning more about the position. Please contact me with any questions you may have, or to arrange an interview. I would be grateful for the opportunity to speak with you.</p>
-		<br>
-
-		<p>Thank you,</p> 
-
-		<br>
-		<br>
-		<% if user_signed_in? %> 
-		<%= current_user.full_name %>
-
-		<% end %>
-	</div>
-</div>
 

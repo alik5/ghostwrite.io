@@ -23,6 +23,10 @@
    
   				<%= render 'letters/templates/sympathy' %>
 
+  				<% elsif @letter.letter_type.name.to_s == "Cover Letter"  %>
+   
+  				<%= render 'letters/templates/cover_letter' %>
+
  				<% else %>
  				
  				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
