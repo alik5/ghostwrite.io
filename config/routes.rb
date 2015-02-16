@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'personal', to: 'letters#personal_index', as: :personal
   get 'custom', to: 'ghostwrites#new', as: :custom
   get 'about', to: 'static_pages#about', as: :about
-  get 'which-patriot-are-you', to: 'static_pages#examples', as: :examples
+  get 'which-snl-are-you', to: 'static_pages#examples', as: :examples
   get 'contact', to: 'static_pages#contact', as: :contact
   get 'search', to: 'static_pages#search', as: :search
   get '/sitemap.xml', to: 'welcome#sitemap', as: :sitemap
