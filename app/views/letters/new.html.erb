@@ -19,6 +19,10 @@
    
   				<%= render 'letters/templates/to_senate' %>
 
+  				<% elsif @letter.letter_type.name.to_s == "Sympathy Note"  %>
+   
+  				<%= render 'letters/templates/sympathy' %>
+
  				<% else %>
  				
  				<%= simple_form_for(@letter, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
