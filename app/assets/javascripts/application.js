@@ -25,7 +25,6 @@
 //= require nprogress
 //= require nprogress-turbolinks
 //= require nprogress-ajax
-//= require letters
 //= require jquery.cookie
 //= require wow
 //= require sweet-alert
