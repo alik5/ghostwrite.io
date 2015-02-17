@@ -468,6 +468,7 @@ i {
 
 .about p {
   font-size: 1.5em;
+  margin-left: 30px; 
 }
 
 
@@ -586,10 +587,6 @@ div.modal-body  {
     color: #24FFCB;
   }
 
-  .business-submit-div {
-    padding: 20px 0 20px 0;
-    margin-left: 15%; 
-  }
 
   #business_description { 
   color: black;
@@ -919,9 +916,6 @@ div.letter_types {
   color: #24FFCB;
 }
 
-.span-adjustment {
-  margin-left: -5%; 
-}
 
 .hint {
   /*display: none;*/
@@ -1164,9 +1158,7 @@ span#down  {
   color: #24ffcb;
 }
 
-.icons li {
-  margin-bottom: 20px;  
-}
+
 
 
 
