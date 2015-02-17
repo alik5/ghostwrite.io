@@ -63,7 +63,7 @@ body {
   }
 
   .cover-letter-600 {
-  margin-top: 25px; 
+  margin: 25px 5px 25px 0; 
   }
 
 
@@ -288,9 +288,7 @@ small, .small {
     }
 
      .justify {
-    left: 0;
-    text-align:center;
-    width: 75%
+    display: none;
  }
 
 }
