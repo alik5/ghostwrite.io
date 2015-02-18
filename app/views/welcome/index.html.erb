@@ -35,13 +35,17 @@
                           
                         </div>
                       <% end %>
-                      <%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
-                        <div class="select-tag">
-                        <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.all, :id, :name), { :class => "select-control" } %>
-                        <br>
-                      </div><!--end select tag -->
-                    </div> <!--end col-md -->
-                  </div> <!--end row --> 
+                      </div> <!--end col-md -->
+                    </div> <!--end row --> 
+                    <div class="row">
+                      <div class="col-xs-6 col-md-4 col-md-offset-5">
+                        <%= form_tag new_letter_path, method: :get, :class => "letter-form" do %>
+                          <div class="select-tag">
+                            <%= select_tag :letter_type_id, options_from_collection_for_select(LetterType.all, :id, :name), { :class => 'select-tag' } %>
+                          </div>
+                      </div>
+                    </div><!--end select tag -->
+                    
                     <div class="row">
                          <ul style="list-style:none;">
                           <li><div class= "col-xs-6 col-md-4 col-md-offset-5"><%= submit_tag "Let's go!", :class => "business-submit" %>
