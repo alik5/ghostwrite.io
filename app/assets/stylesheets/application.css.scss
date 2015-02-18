@@ -457,14 +457,7 @@ i {
   	height: 400px;
   }
 
-.about {
-	float: left; 
-	line-height: 1.2em; 
-	color: #32b7a4;
-	text-align: left; 
-	background-color: #fff; 
-	padding: 20px 0 30px 25px; 
-}
+
 
 .about p {
   font-size: 1.5em;
@@ -537,10 +530,24 @@ div.modal-body  {
   background: #fff;
 }
 
-.white-wrapper2 {
+.white-wrapper-about {
+  position: relative;
+  display: block;
+  z-index:1000;
+  padding:150px 0;
+  margin: 0;
+  background: #fff;
+}
+
+.green-wrapper {
+  position: relative;
+  display: block;
+  padding: 150px 0;
   z-index:1000;
   background: #32b7a4;
 }
+
+
 
 
 .btn-xlarge {
@@ -1152,6 +1159,12 @@ span#down  {
   color: white;
   list-style: none; 
   text-align: center; 
+}
+
+.icons p {
+  color: #000;
+  margin-top: 10px; 
+  font-size: 1.5em; 
 }
 
 .icons li:hover {
