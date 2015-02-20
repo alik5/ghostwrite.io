@@ -245,10 +245,10 @@ small, .small {
   text-align: center;
   margin: 8px 10px 6px 0px;
   text-transform: uppercase;
-  color: #494c50;
+  color: #FFF;
   line-height: 1;
   padding: 7px 20px;
-  border:1px solid #494c50;
+  border:1px solid #FFF;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -1176,6 +1176,10 @@ span#down  {
 
 #icons {
   margin-right: 20px; 
+}
+
+.icons a {
+  text-align: center; 
 }
 
 

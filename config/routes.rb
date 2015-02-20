@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'search', to: 'static_pages#search', as: :search
   get '/sitemap.xml', to: 'welcome#sitemap', as: :sitemap
   get 'index', to: 'welcome#index', as: :index
+  get 'thanks', to: 'letters#thanks', as: :thanks
 
  
  resources :ghostwrites

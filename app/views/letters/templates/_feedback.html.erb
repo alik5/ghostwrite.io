@@ -1,3 +1,19 @@
-<h1> Thank You for your feedback! </h1>
+<h1> Thank You for trying Ghostwrite.io! </h1>
 
+<h2>Have feedback </h2>
 <%= link_to 'Back', "/" %>
+
+<div class="col-md-4 jobs-results">
+	<div class="jobs-results">
+	<% unless @jobs.empty? %>
+		<% unless @jobs['results'].empty? %>
+			<h3>Jobs Near <%= @jobs['results'].first['formattedLocation']%></h3>
+		<% end %>
+		<% @jobs['results'].each do |job| %>
+			<div class="col-md-12">
+				<p><a href="<%= job['url'] %>"><%= job['jobtitle'] %> : <%= job['company'] %></a></p>
+			</div>
+		<% end %>
+	<% end %>
+	</div>
+</div>

@@ -4,6 +4,7 @@ class LettersController < ApplicationController
 	respond_to :html
 	layout 'application'
 	layout "forms", :only => :new
+	layout "forms", :only => :thanks
 
  def index
 		@letter= Letter.all
@@ -73,6 +74,11 @@ class LettersController < ApplicationController
 	
 	# GET
 	def show
+
+	end
+
+	def thanks
+
 
 	end
 
