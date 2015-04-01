@@ -253,7 +253,6 @@ PLATFORMS
 
 DEPENDENCIES
   actionview-encoded_mail_to
-  animate-rails
   autoprefixer-rails
   aws-s3
   aws-sdk
