@@ -34,7 +34,7 @@ gem 'rails', '4.1.6'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
-
+gem 'animate-rails'
 gem 'jquery-easing-rails'
 gem 'nprogress-rails'
 gem 'wow-rails'
